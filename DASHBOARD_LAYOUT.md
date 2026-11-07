@@ -1,28 +1,12 @@
-# Power BI Dashboard Architecture & Wireframe
+# CareFlow dashboard layout
 
-## Executive Summary (1920 x 1080)
+The two-page Executive Dashboard and Process Mining report layout, theme,
+visual grid, PBIP implementation steps, and model relationship guidance are in
+[docs/careflow_executive_report_spec.md](docs/careflow_executive_report_spec.md).
 
-- **Canvas:** pale slate background, navy headings, deep-teal chart accents,
-  soft-gray/white cards, and slate body text.
-- **Top bar (y=16-152):** report title and model-refresh timestamp, followed by
-  date-range and department slicers. An activity slicer is included because the
-  loaded event log has no clinical service-line field.
-- **KPI row (y=170-300):** total patient cases, average pathway duration in
-  fractional days, average wait between consecutive events in hours, and
-  repeated-activity rework rate.
-- **Analysis row (y=340-780):** bottleneck chart by activity on the left and
-  pathway-variant case frequency on the right, sorted from most frequent.
-- **Detail row (y=800-1060):** department/activity wait-time matrix.
+The reusable executive/process-mining measures are in
+[dax/careflow_executive_measures.dax](dax/careflow_executive_measures.dax).
 
-## Additional Report Page
-
-Clinical Pathway Rework & Loop Analysis shows rework cases by department and an
-activity-repeat matrix, using the same 1920 x 1080 canvas and visual theme.
-
-## Data Readiness Notes
-
-The loaded event table currently contains only `Case_ID`, `Activity_Name`,
-`Timestamp`, and `Department`. The provided baseline metadata does not join to
-the loaded event IDs, and no `IsStandardPath` or clinical service-line field
-exists in the model. Consequently, adherence-to-guideline and service-line
-filtering are intentionally not displayed until those inputs are reconciled.
+The current PBIP and sample model do not include every clinical dimension or
+outcome in the design. The specification identifies which visuals remain
+unavailable until validated source data and approved targets are connected.
