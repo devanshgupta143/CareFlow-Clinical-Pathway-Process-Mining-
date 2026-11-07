@@ -1,0 +1,2501 @@
+case_id,total_length_of_stay_days,total_process_time_hours,is_readmitted,patient_satisfaction_pct,delayed_discharge_reason
+P0001,2.7,20.8,0,87,Medication delay
+P0002,3.8,16.3,0,93,Patient refusal
+P0003,6.0,20.4,0,87,Medication delay
+P0004,4.0,23.0,0,93,Waiting for test results
+P0005,6.1,13.4,0,93,Patient refusal
+P0006,1.1,23.1,0,94,Waiting for test results
+P0007,4.3,18.2,0,92,Waiting for test results
+P0008,7.1,14.3,0,98,Bed availability
+P0009,5.9,18.5,1,87,None
+P0010,2.4,14.6,1,86,Patient refusal
+P0011,1.6,19.9,0,95,None
+P0012,3.1,17.3,0,94,Medication delay
+P0013,5.8,22.0,1,95,Patient refusal
+P0014,6.0,16.2,0,98,None
+P0015,3.6,21.8,0,92,Waiting for test results
+P0016,4.3,23.8,0,91,Waiting for test results
+P0017,2.4,20.0,0,90,Medication delay
+P0018,1.7,23.4,0,94,Waiting for test results
+P0019,4.5,18.7,0,88,Bed availability
+P0020,3.0,15.8,0,89,Waiting for test results
+P0021,6.6,18.6,0,92,Bed availability
+P0022,3.5,17.5,0,97,Waiting for test results
+P0023,6.8,14.0,0,88,Patient refusal
+P0024,5.9,12.2,0,100,Waiting for test results
+P0025,5.3,20.0,0,100,Patient refusal
+P0026,6.9,13.1,0,92,Waiting for test results
+P0027,3.1,19.1,0,94,None
+P0028,8.2,15.0,0,88,Patient refusal
+P0029,5.7,19.3,0,91,Medication delay
+P0030,4.2,18.5,0,93,Patient refusal
+P0031,2.7,20.1,0,85,None
+P0032,7.1,18.6,0,95,Waiting for test results
+P0033,7.0,20.5,0,85,Bed availability
+P0034,3.1,21.5,0,93,Patient refusal
+P0035,6.3,21.7,0,89,Bed availability
+P0036,7.4,22.2,0,97,None
+P0037,4.2,14.9,0,90,Waiting for test results
+P0038,6.2,17.5,0,97,Patient refusal
+P0039,5.8,19.5,0,89,Medication delay
+P0040,7.0,17.6,0,92,None
+P0041,5.9,19.6,0,94,Medication delay
+P0042,4.1,23.4,1,96,Waiting for test results
+P0043,2.6,14.6,0,95,Patient refusal
+P0044,4.6,21.3,0,88,Bed availability
+P0045,5.7,18.6,0,94,Bed availability
+P0046,7.2,13.1,0,96,Patient refusal
+P0047,5.3,21.7,0,85,Medication delay
+P0048,3.3,15.9,0,87,None
+P0049,1.3,16.7,0,85,Waiting for test results
+P0050,5.3,18.9,0,98,Waiting for test results
+P0051,5.7,18.4,0,96,Bed availability
+P0052,4.3,17.6,0,93,Medication delay
+P0053,2.1,12.7,0,95,None
+P0054,2.9,22.2,0,89,Bed availability
+P0055,4.8,12.2,0,91,Bed availability
+P0056,4.1,20.1,0,99,Medication delay
+P0057,7.6,18.7,0,88,Waiting for test results
+P0058,8.0,22.1,0,89,Waiting for test results
+P0059,4.4,13.3,0,85,Medication delay
+P0060,3.7,12.8,0,88,Patient refusal
+P0061,4.0,21.8,0,86,Patient refusal
+P0062,1.6,19.2,0,94,Bed availability
+P0063,3.7,21.6,0,85,Waiting for test results
+P0064,8.2,12.3,0,97,None
+P0065,5.1,15.5,0,90,Medication delay
+P0066,1.6,23.7,0,99,Bed availability
+P0067,5.8,18.6,0,94,Medication delay
+P0068,3.2,23.5,0,97,Waiting for test results
+P0069,3.0,15.0,0,94,None
+P0070,3.1,19.2,0,100,Waiting for test results
+P0071,3.8,23.8,0,96,Patient refusal
+P0072,6.3,15.6,0,96,Bed availability
+P0073,4.3,17.0,0,91,Bed availability
+P0074,3.1,15.6,0,94,Patient refusal
+P0075,6.6,14.6,0,93,None
+P0076,4.6,14.4,0,95,Waiting for test results
+P0077,4.9,22.7,0,99,Waiting for test results
+P0078,8.0,12.1,0,99,Patient refusal
+P0079,8.2,17.7,0,96,Bed availability
+P0080,6.4,17.9,0,99,Patient refusal
+P0081,3.2,14.2,0,98,Bed availability
+P0082,2.9,16.2,0,88,Waiting for test results
+P0083,7.1,20.8,0,95,Waiting for test results
+P0084,7.4,15.6,0,99,None
+P0085,6.4,18.7,0,95,Waiting for test results
+P0086,1.7,23.8,0,95,None
+P0087,4.5,20.8,0,89,Medication delay
+P0088,7.8,19.9,1,98,Waiting for test results
+P0089,3.2,21.9,0,86,Waiting for test results
+P0090,6.1,15.4,0,86,Waiting for test results
+P0091,7.3,16.1,0,97,None
+P0092,6.3,19.6,0,95,Bed availability
+P0093,6.8,20.7,0,92,Medication delay
+P0094,3.3,23.4,0,97,Patient refusal
+P0095,7.1,16.7,0,91,Medication delay
+P0096,5.4,18.4,0,98,Bed availability
+P0097,2.7,16.5,0,89,Bed availability
+P0098,7.1,13.4,0,88,Medication delay
+P0099,2.5,21.0,0,87,Medication delay
+P0100,3.3,14.9,0,96,Medication delay
+P0101,7.1,23.6,0,100,Bed availability
+P0102,1.9,21.3,0,96,Bed availability
+P0103,2.2,13.7,0,91,Patient refusal
+P0104,7.2,21.1,0,100,Waiting for test results
+P0105,8.3,21.9,0,95,Patient refusal
+P0106,2.2,23.2,0,96,Waiting for test results
+P0107,4.6,14.7,0,88,Waiting for test results
+P0108,7.7,13.7,0,97,Bed availability
+P0109,4.7,13.4,0,87,Bed availability
+P0110,6.8,17.1,0,89,Waiting for test results
+P0111,3.3,20.9,0,88,Waiting for test results
+P0112,4.7,18.1,1,90,Bed availability
+P0113,7.9,15.8,0,96,Waiting for test results
+P0114,8.3,24.0,0,92,Waiting for test results
+P0115,7.9,22.8,0,96,Bed availability
+P0116,2.0,21.2,0,88,Waiting for test results
+P0117,4.9,20.1,0,90,Waiting for test results
+P0118,1.2,12.8,0,99,Patient refusal
+P0119,5.6,19.8,0,100,Waiting for test results
+P0120,5.5,12.4,0,93,Waiting for test results
+P0121,7.0,20.4,0,85,Medication delay
+P0122,1.4,13.8,0,89,Patient refusal
+P0123,6.0,21.8,0,94,Waiting for test results
+P0124,2.9,12.8,0,88,Medication delay
+P0125,8.1,12.9,0,97,Waiting for test results
+P0126,6.0,15.6,0,97,Medication delay
+P0127,1.7,18.5,0,97,Bed availability
+P0128,5.3,14.8,0,97,None
+P0129,5.1,22.3,0,85,Patient refusal
+P0130,2.1,19.3,0,86,Bed availability
+P0131,5.5,13.1,0,98,Patient refusal
+P0132,7.2,18.1,0,88,Medication delay
+P0133,3.0,16.9,1,85,Bed availability
+P0134,4.8,19.9,0,96,Medication delay
+P0135,8.5,15.1,0,97,Medication delay
+P0136,2.7,14.7,0,98,Patient refusal
+P0137,8.4,22.7,0,89,Waiting for test results
+P0138,1.3,14.4,0,85,None
+P0139,7.7,23.9,0,100,Bed availability
+P0140,6.0,19.8,1,88,Bed availability
+P0141,4.7,19.3,0,91,Bed availability
+P0142,5.8,17.5,0,93,Bed availability
+P0143,7.1,14.2,0,99,Waiting for test results
+P0144,4.6,17.9,0,99,Waiting for test results
+P0145,4.8,17.6,0,90,Waiting for test results
+P0146,1.8,16.9,0,85,Patient refusal
+P0147,5.1,16.5,0,90,Bed availability
+P0148,6.5,18.6,0,100,None
+P0149,7.3,18.6,0,91,Waiting for test results
+P0150,1.2,13.7,0,91,Waiting for test results
+P0151,7.9,16.7,0,95,None
+P0152,1.9,12.5,0,93,Waiting for test results
+P0153,4.1,18.4,0,92,None
+P0154,1.2,18.2,0,99,Bed availability
+P0155,1.2,20.6,1,87,Waiting for test results
+P0156,8.0,13.3,0,94,Medication delay
+P0157,1.9,12.1,0,87,Waiting for test results
+P0158,2.5,19.0,0,96,Waiting for test results
+P0159,3.1,16.3,0,95,None
+P0160,4.0,19.1,0,93,Bed availability
+P0161,8.0,12.5,0,92,Waiting for test results
+P0162,5.4,22.8,0,93,Bed availability
+P0163,4.1,16.0,0,100,Bed availability
+P0164,8.4,22.4,0,98,Medication delay
+P0165,6.6,13.1,0,85,None
+P0166,4.1,14.3,0,85,Medication delay
+P0167,2.3,18.7,0,94,Medication delay
+P0168,1.7,15.2,0,86,Medication delay
+P0169,8.5,21.4,0,97,Bed availability
+P0170,5.2,18.0,0,88,Patient refusal
+P0171,4.1,16.2,0,93,Waiting for test results
+P0172,7.3,22.0,0,88,Waiting for test results
+P0173,1.2,16.2,0,90,Bed availability
+P0174,3.7,16.8,0,89,None
+P0175,3.3,18.7,0,97,Waiting for test results
+P0176,2.3,21.4,0,100,Patient refusal
+P0177,5.5,16.7,0,96,Patient refusal
+P0178,5.6,13.0,0,97,Waiting for test results
+P0179,5.7,19.6,0,94,None
+P0180,3.8,16.9,0,97,Waiting for test results
+P0181,5.6,15.3,0,91,Bed availability
+P0182,3.5,22.1,0,86,Waiting for test results
+P0183,6.1,15.7,0,86,Patient refusal
+P0184,6.2,13.9,0,92,Waiting for test results
+P0185,7.7,17.8,0,94,Bed availability
+P0186,5.6,16.4,0,95,Medication delay
+P0187,5.3,22.0,0,93,Waiting for test results
+P0188,1.6,14.6,0,88,Medication delay
+P0189,5.0,19.2,0,95,Bed availability
+P0190,2.0,22.7,1,92,Waiting for test results
+P0191,6.4,21.5,0,88,Medication delay
+P0192,5.2,15.9,0,89,Waiting for test results
+P0193,4.7,19.8,0,92,Waiting for test results
+P0194,7.9,14.8,0,89,Patient refusal
+P0195,6.5,13.7,0,85,Bed availability
+P0196,7.8,17.8,0,87,Waiting for test results
+P0197,7.7,21.8,1,93,Waiting for test results
+P0198,7.8,17.2,0,89,Medication delay
+P0199,2.4,21.1,0,93,Medication delay
+P0200,6.7,12.8,0,99,None
+P0201,8.4,12.5,0,86,Waiting for test results
+P0202,4.4,14.1,0,91,None
+P0203,6.8,22.9,0,89,Waiting for test results
+P0204,5.4,17.7,0,87,Medication delay
+P0205,5.6,20.3,0,90,None
+P0206,6.5,19.5,0,100,Medication delay
+P0207,6.5,14.5,0,98,Bed availability
+P0208,3.5,16.1,0,100,Patient refusal
+P0209,7.3,16.1,0,90,Medication delay
+P0210,6.9,21.3,0,99,Bed availability
+P0211,1.8,21.2,0,85,Medication delay
+P0212,2.8,12.9,0,95,Bed availability
+P0213,8.3,21.1,0,89,Waiting for test results
+P0214,7.3,15.4,0,89,Bed availability
+P0215,5.1,14.8,0,87,Medication delay
+P0216,6.7,19.9,0,94,Bed availability
+P0217,7.2,16.3,0,85,Waiting for test results
+P0218,8.3,13.6,0,98,None
+P0219,1.8,17.8,0,89,Medication delay
+P0220,5.3,16.0,0,94,Waiting for test results
+P0221,3.1,15.1,0,90,None
+P0222,2.6,20.8,0,93,Patient refusal
+P0223,8.2,20.2,1,96,None
+P0224,1.1,13.2,0,99,Bed availability
+P0225,2.9,17.6,0,99,None
+P0226,1.8,18.5,0,88,None
+P0227,5.1,12.0,0,100,Waiting for test results
+P0228,5.7,16.3,0,99,Medication delay
+P0229,4.4,20.1,0,89,Patient refusal
+P0230,1.9,19.1,0,87,Patient refusal
+P0231,7.9,12.5,0,97,Patient refusal
+P0232,6.2,19.2,0,87,Medication delay
+P0233,1.4,16.4,0,93,Bed availability
+P0234,1.7,20.9,0,97,None
+P0235,7.4,17.5,0,95,Waiting for test results
+P0236,7.7,19.1,0,85,Bed availability
+P0237,1.1,20.0,0,99,Patient refusal
+P0238,5.1,21.5,0,87,Medication delay
+P0239,6.5,21.0,0,91,Patient refusal
+P0240,2.4,22.6,0,97,None
+P0241,7.5,14.8,0,95,Bed availability
+P0242,7.9,20.5,0,90,Patient refusal
+P0243,6.8,23.4,0,89,Waiting for test results
+P0244,3.7,15.9,0,91,Medication delay
+P0245,3.1,16.2,0,87,Waiting for test results
+P0246,4.1,18.7,0,89,Waiting for test results
+P0247,4.1,17.9,0,92,Waiting for test results
+P0248,2.2,15.3,0,96,Waiting for test results
+P0249,3.8,17.8,0,90,Waiting for test results
+P0250,1.2,21.8,0,89,Medication delay
+P0251,6.9,23.0,0,91,Waiting for test results
+P0252,7.9,23.0,0,100,Bed availability
+P0253,1.6,17.9,0,99,Medication delay
+P0254,6.2,23.7,0,90,Waiting for test results
+P0255,6.8,13.3,0,100,Waiting for test results
+P0256,4.7,15.1,0,85,None
+P0257,6.1,18.9,0,90,Bed availability
+P0258,6.0,15.0,0,87,None
+P0259,3.5,18.0,0,95,Waiting for test results
+P0260,4.6,14.5,0,94,Bed availability
+P0261,7.4,22.9,0,86,Bed availability
+P0262,2.4,14.9,0,99,Bed availability
+P0263,7.8,16.9,0,87,Bed availability
+P0264,2.6,13.3,0,93,Bed availability
+P0265,6.2,21.5,0,97,Waiting for test results
+P0266,6.9,15.3,0,100,Bed availability
+P0267,1.0,14.4,0,87,Waiting for test results
+P0268,8.1,23.1,0,92,None
+P0269,6.4,14.3,0,93,Waiting for test results
+P0270,1.6,17.6,0,97,Medication delay
+P0271,8.3,18.7,0,93,Waiting for test results
+P0272,7.7,15.8,0,89,Bed availability
+P0273,1.9,13.1,0,90,Patient refusal
+P0274,7.3,13.8,0,100,Bed availability
+P0275,2.9,14.9,0,97,Waiting for test results
+P0276,4.2,21.1,0,90,Bed availability
+P0277,7.3,18.3,0,86,Bed availability
+P0278,6.7,17.4,0,95,None
+P0279,7.1,19.4,0,97,Patient refusal
+P0280,4.2,13.4,0,99,None
+P0281,2.7,12.7,1,95,Bed availability
+P0282,2.0,15.5,0,98,Patient refusal
+P0283,2.3,22.3,0,87,Bed availability
+P0284,6.9,23.4,0,86,Bed availability
+P0285,3.2,14.1,0,98,Bed availability
+P0286,6.0,19.7,0,86,None
+P0287,6.2,22.7,0,97,Patient refusal
+P0288,8.4,13.3,1,96,Waiting for test results
+P0289,4.9,15.0,0,91,Patient refusal
+P0290,8.5,20.3,0,98,Patient refusal
+P0291,3.3,16.5,0,85,Patient refusal
+P0292,2.0,13.7,0,99,Medication delay
+P0293,1.6,23.5,0,86,None
+P0294,1.2,18.3,0,87,Waiting for test results
+P0295,3.8,21.9,0,91,Waiting for test results
+P0296,3.3,16.9,0,91,Patient refusal
+P0297,7.3,14.6,0,94,Waiting for test results
+P0298,3.6,17.5,0,85,None
+P0299,7.2,16.3,0,85,Waiting for test results
+P0300,2.6,14.4,0,97,Waiting for test results
+P0301,7.6,12.0,0,86,Patient refusal
+P0302,8.3,17.1,0,92,Waiting for test results
+P0303,6.7,19.5,0,87,None
+P0304,7.5,21.4,0,99,Bed availability
+P0305,4.3,14.9,0,86,Waiting for test results
+P0306,8.3,19.7,0,87,Bed availability
+P0307,4.6,21.2,0,97,Waiting for test results
+P0308,2.5,14.1,0,88,Waiting for test results
+P0309,6.2,15.8,0,92,None
+P0310,2.3,20.5,0,100,Medication delay
+P0311,3.2,18.2,0,86,Bed availability
+P0312,1.5,12.5,0,91,Medication delay
+P0313,7.5,14.7,0,91,Bed availability
+P0314,3.5,17.0,0,97,Patient refusal
+P0315,1.8,18.6,1,100,Waiting for test results
+P0316,3.3,21.8,0,90,Medication delay
+P0317,6.3,20.5,0,90,Bed availability
+P0318,1.6,13.3,0,95,Bed availability
+P0319,4.6,12.8,0,92,Medication delay
+P0320,2.6,20.4,0,88,Bed availability
+P0321,6.4,12.5,0,95,Bed availability
+P0322,1.5,14.6,0,100,None
+P0323,5.8,14.8,0,85,Waiting for test results
+P0324,4.9,23.7,0,94,Patient refusal
+P0325,1.9,14.1,0,91,Waiting for test results
+P0326,4.3,18.1,0,89,Patient refusal
+P0327,2.2,14.3,1,96,Bed availability
+P0328,6.2,19.8,0,92,Waiting for test results
+P0329,4.9,14.3,0,98,Waiting for test results
+P0330,4.9,19.9,0,90,Waiting for test results
+P0331,1.6,13.0,0,87,Bed availability
+P0332,4.2,16.4,0,95,Patient refusal
+P0333,4.9,19.9,1,95,Waiting for test results
+P0334,7.5,22.5,0,86,Waiting for test results
+P0335,2.7,15.1,0,88,Medication delay
+P0336,8.0,20.9,0,96,Waiting for test results
+P0337,4.7,17.5,0,89,Patient refusal
+P0338,7.4,20.7,0,90,None
+P0339,5.9,18.9,0,100,Waiting for test results
+P0340,5.5,23.6,0,97,Waiting for test results
+P0341,5.8,22.9,0,100,Waiting for test results
+P0342,4.9,19.0,0,88,Patient refusal
+P0343,8.2,14.1,0,85,Waiting for test results
+P0344,5.5,14.6,0,89,Medication delay
+P0345,5.5,17.0,0,98,Bed availability
+P0346,4.9,22.5,0,100,Waiting for test results
+P0347,2.1,18.8,0,96,Medication delay
+P0348,1.6,14.9,0,86,Waiting for test results
+P0349,6.1,12.5,0,90,Medication delay
+P0350,4.0,23.1,0,86,None
+P0351,2.2,19.9,0,97,Bed availability
+P0352,2.2,14.4,0,93,Waiting for test results
+P0353,8.3,20.8,0,94,Waiting for test results
+P0354,5.7,13.8,0,97,Waiting for test results
+P0355,2.9,22.7,0,85,Waiting for test results
+P0356,5.0,16.5,0,91,Medication delay
+P0357,1.3,14.3,0,93,None
+P0358,7.5,23.7,0,97,Medication delay
+P0359,2.8,12.5,0,93,None
+P0360,7.2,14.6,0,90,Waiting for test results
+P0361,4.7,17.5,0,90,Waiting for test results
+P0362,1.2,21.9,0,86,Waiting for test results
+P0363,5.7,13.5,0,88,Bed availability
+P0364,3.5,16.3,0,87,None
+P0365,3.4,16.7,0,100,Patient refusal
+P0366,5.0,17.9,0,92,Bed availability
+P0367,1.4,13.7,0,89,Bed availability
+P0368,6.6,20.4,0,98,Medication delay
+P0369,4.2,13.9,0,97,None
+P0370,1.6,19.2,0,85,Waiting for test results
+P0371,8.4,21.0,0,91,Waiting for test results
+P0372,7.6,21.7,0,90,None
+P0373,7.5,21.6,0,100,Waiting for test results
+P0374,4.0,22.3,0,89,Bed availability
+P0375,4.0,12.9,0,99,Medication delay
+P0376,5.1,23.4,0,91,Bed availability
+P0377,4.9,20.0,0,86,Waiting for test results
+P0378,5.6,15.9,0,95,Waiting for test results
+P0379,3.8,16.2,0,85,Bed availability
+P0380,5.1,14.0,0,94,Patient refusal
+P0381,2.7,17.5,0,91,Patient refusal
+P0382,6.9,22.1,0,95,Bed availability
+P0383,5.7,21.4,0,93,Patient refusal
+P0384,2.5,22.1,0,97,Patient refusal
+P0385,4.1,17.8,0,91,Medication delay
+P0386,5.5,18.4,0,89,Waiting for test results
+P0387,2.5,22.2,0,97,Waiting for test results
+P0388,2.9,16.9,0,96,Bed availability
+P0389,3.1,14.5,0,93,Medication delay
+P0390,1.1,21.4,0,85,None
+P0391,6.2,17.5,0,88,Patient refusal
+P0392,8.1,12.9,0,97,Waiting for test results
+P0393,1.7,21.2,0,96,Bed availability
+P0394,3.9,17.4,0,91,Patient refusal
+P0395,3.7,14.5,0,98,Bed availability
+P0396,7.7,18.9,0,88,Waiting for test results
+P0397,2.3,20.2,0,95,None
+P0398,7.3,18.3,0,89,Patient refusal
+P0399,6.5,12.2,0,92,Medication delay
+P0400,8.1,15.3,0,95,Patient refusal
+P0401,4.4,14.6,0,88,Waiting for test results
+P0402,7.1,19.6,0,88,None
+P0403,1.7,18.3,0,96,Bed availability
+P0404,4.5,12.7,1,88,Bed availability
+P0405,7.0,19.5,0,87,Waiting for test results
+P0406,2.4,21.8,0,90,Bed availability
+P0407,4.3,22.9,0,89,Bed availability
+P0408,7.9,19.7,0,100,Medication delay
+P0409,1.8,22.6,0,97,Patient refusal
+P0410,6.1,14.7,0,98,Patient refusal
+P0411,7.2,18.0,0,89,Patient refusal
+P0412,7.5,13.9,0,92,Patient refusal
+P0413,7.9,20.0,0,92,Bed availability
+P0414,5.0,22.3,0,85,Bed availability
+P0415,1.3,21.6,0,92,Patient refusal
+P0416,7.7,22.3,0,94,None
+P0417,6.2,19.8,0,88,Waiting for test results
+P0418,1.2,21.2,0,95,None
+P0419,4.5,23.9,0,85,Waiting for test results
+P0420,4.3,17.6,0,100,Medication delay
+P0421,6.1,22.3,0,86,Bed availability
+P0422,1.5,17.1,0,85,Bed availability
+P0423,3.8,19.0,0,89,Bed availability
+P0424,2.7,15.8,0,92,Bed availability
+P0425,7.0,16.1,0,98,Bed availability
+P0426,4.9,18.4,0,98,Bed availability
+P0427,6.5,20.7,0,87,Waiting for test results
+P0428,4.2,15.3,0,95,Waiting for test results
+P0429,7.0,12.1,0,85,Bed availability
+P0430,6.5,15.9,0,93,Bed availability
+P0431,3.0,13.8,0,100,Waiting for test results
+P0432,7.6,22.1,0,100,Bed availability
+P0433,6.2,12.3,0,91,None
+P0434,5.0,21.4,0,95,Waiting for test results
+P0435,6.5,23.3,1,85,Patient refusal
+P0436,6.4,21.1,0,85,Patient refusal
+P0437,7.8,18.4,0,85,None
+P0438,1.6,16.8,0,92,Waiting for test results
+P0439,4.9,22.3,0,87,None
+P0440,8.5,20.6,0,93,Bed availability
+P0441,4.5,23.9,1,91,Waiting for test results
+P0442,6.8,23.2,0,91,Waiting for test results
+P0443,8.4,13.1,0,89,Waiting for test results
+P0444,5.0,22.6,0,90,None
+P0445,2.3,21.0,1,99,Bed availability
+P0446,7.5,23.1,0,99,Bed availability
+P0447,6.5,16.0,0,95,None
+P0448,3.3,18.7,0,99,Medication delay
+P0449,6.6,20.9,0,97,Medication delay
+P0450,1.3,22.0,0,91,None
+P0451,2.0,19.0,0,97,Medication delay
+P0452,6.5,17.7,0,96,Medication delay
+P0453,6.0,21.5,1,87,Waiting for test results
+P0454,1.7,18.6,0,91,None
+P0455,2.7,19.3,0,96,Bed availability
+P0456,3.0,23.5,0,97,Medication delay
+P0457,7.1,22.9,0,100,Medication delay
+P0458,7.7,20.2,0,95,Medication delay
+P0459,4.2,15.3,0,92,None
+P0460,7.3,17.2,0,91,Medication delay
+P0461,3.1,17.5,0,95,Waiting for test results
+P0462,2.6,20.4,0,93,Bed availability
+P0463,8.4,16.5,0,97,Medication delay
+P0464,4.8,18.4,0,97,Bed availability
+P0465,2.7,19.3,0,87,Medication delay
+P0466,2.0,12.8,1,99,Bed availability
+P0467,8.2,22.6,0,85,Bed availability
+P0468,2.1,14.9,0,93,Waiting for test results
+P0469,3.3,20.6,0,94,Bed availability
+P0470,5.6,14.0,0,89,Medication delay
+P0471,5.9,16.3,0,85,Patient refusal
+P0472,2.7,20.6,0,93,Bed availability
+P0473,1.6,14.4,0,91,Medication delay
+P0474,3.0,18.4,0,94,Medication delay
+P0475,3.3,15.7,0,100,Waiting for test results
+P0476,3.5,16.2,0,99,Waiting for test results
+P0477,3.4,18.7,0,91,Medication delay
+P0478,3.1,16.4,0,88,Bed availability
+P0479,8.2,16.3,0,91,Waiting for test results
+P0480,8.5,23.5,0,95,Patient refusal
+P0481,4.5,22.7,0,89,Medication delay
+P0482,6.8,18.9,0,89,Waiting for test results
+P0483,7.6,23.3,0,97,Waiting for test results
+P0484,4.1,14.5,0,96,Bed availability
+P0485,1.3,22.2,0,85,Waiting for test results
+P0486,2.5,16.8,0,93,Medication delay
+P0487,2.0,19.2,0,94,Bed availability
+P0488,2.7,14.2,0,95,Medication delay
+P0489,5.3,17.8,0,97,Bed availability
+P0490,4.2,12.3,0,88,Waiting for test results
+P0491,4.9,21.4,0,86,Patient refusal
+P0492,7.7,17.6,0,94,Waiting for test results
+P0493,1.5,23.6,0,97,Waiting for test results
+P0494,7.6,23.4,1,93,Waiting for test results
+P0495,5.8,15.9,0,93,None
+P0496,7.3,19.7,0,88,Waiting for test results
+P0497,5.7,15.9,0,98,Patient refusal
+P0498,7.3,22.3,0,92,Waiting for test results
+P0499,3.3,18.1,0,94,Patient refusal
+P0500,8.5,17.3,1,89,Medication delay
+P0501,2.4,18.2,0,97,Patient refusal
+P0502,1.8,21.9,0,96,Medication delay
+P0503,5.3,23.4,0,100,Bed availability
+P0504,1.5,17.0,0,91,Waiting for test results
+P0505,3.0,14.4,0,87,Bed availability
+P0506,8.3,13.2,0,89,Medication delay
+P0507,7.9,23.3,0,97,Patient refusal
+P0508,4.9,21.1,0,94,Bed availability
+P0509,3.3,19.0,0,90,Medication delay
+P0510,1.5,14.4,0,85,Waiting for test results
+P0511,6.3,22.8,0,93,Bed availability
+P0512,2.3,20.9,0,97,Waiting for test results
+P0513,2.8,19.4,0,89,Bed availability
+P0514,3.5,20.7,1,99,Waiting for test results
+P0515,1.4,16.7,0,92,Patient refusal
+P0516,5.8,14.1,0,93,None
+P0517,3.5,20.0,0,91,Waiting for test results
+P0518,3.5,22.7,0,98,Waiting for test results
+P0519,5.0,19.5,1,88,Patient refusal
+P0520,3.2,13.2,0,89,Waiting for test results
+P0521,6.2,21.8,0,90,Bed availability
+P0522,5.7,19.1,0,96,Patient refusal
+P0523,1.2,22.5,0,85,Medication delay
+P0524,4.7,15.2,0,87,Patient refusal
+P0525,5.7,22.5,0,95,Patient refusal
+P0526,5.5,14.2,0,86,Bed availability
+P0527,5.8,14.6,0,96,Medication delay
+P0528,6.1,12.8,0,95,Bed availability
+P0529,8.1,22.5,0,97,None
+P0530,4.6,20.7,0,90,Bed availability
+P0531,2.0,15.4,0,89,Bed availability
+P0532,8.3,14.7,0,92,Patient refusal
+P0533,4.6,14.7,1,96,Patient refusal
+P0534,6.3,22.2,0,91,Waiting for test results
+P0535,3.1,19.0,0,85,Waiting for test results
+P0536,4.7,23.1,0,88,Bed availability
+P0537,2.8,19.7,0,86,Medication delay
+P0538,2.6,19.0,1,87,Medication delay
+P0539,8.3,20.1,0,91,Waiting for test results
+P0540,1.1,22.0,0,91,Bed availability
+P0541,6.5,23.5,0,96,Waiting for test results
+P0542,1.6,14.8,0,93,Waiting for test results
+P0543,2.5,15.2,0,91,Waiting for test results
+P0544,6.4,18.5,0,96,Bed availability
+P0545,7.7,16.1,0,89,Medication delay
+P0546,5.1,16.7,0,97,Waiting for test results
+P0547,5.1,13.2,0,85,Waiting for test results
+P0548,5.5,20.1,0,100,Waiting for test results
+P0549,6.4,20.6,0,99,Bed availability
+P0550,4.5,20.4,0,86,Waiting for test results
+P0551,2.7,22.4,0,100,Waiting for test results
+P0552,1.5,13.0,0,96,Bed availability
+P0553,6.6,16.7,0,85,Waiting for test results
+P0554,2.1,21.1,0,87,Medication delay
+P0555,8.1,18.1,0,90,Waiting for test results
+P0556,7.9,22.3,0,100,Bed availability
+P0557,8.3,14.3,0,98,Waiting for test results
+P0558,2.4,19.8,0,92,Bed availability
+P0559,2.5,12.6,0,100,Medication delay
+P0560,1.4,13.3,0,93,Waiting for test results
+P0561,8.3,15.2,0,88,Waiting for test results
+P0562,2.1,22.7,0,97,Waiting for test results
+P0563,3.6,15.3,0,92,Bed availability
+P0564,2.2,14.6,0,91,Patient refusal
+P0565,4.9,14.8,0,86,Medication delay
+P0566,8.0,14.9,1,90,Patient refusal
+P0567,6.7,12.8,0,85,Waiting for test results
+P0568,1.6,23.9,0,88,Medication delay
+P0569,4.7,17.6,0,91,Bed availability
+P0570,2.5,23.1,0,88,Waiting for test results
+P0571,6.5,18.8,0,89,None
+P0572,7.0,22.6,0,93,None
+P0573,7.7,21.8,0,95,Bed availability
+P0574,7.6,15.0,0,88,Medication delay
+P0575,1.9,14.8,0,100,None
+P0576,8.4,12.0,0,89,Waiting for test results
+P0577,5.6,18.3,0,94,Waiting for test results
+P0578,7.1,14.8,0,94,Medication delay
+P0579,6.5,15.6,0,100,Medication delay
+P0580,1.1,21.4,0,98,Waiting for test results
+P0581,3.5,19.9,0,93,Bed availability
+P0582,5.3,23.1,0,92,Bed availability
+P0583,6.8,20.0,0,91,Bed availability
+P0584,4.1,22.9,0,90,Bed availability
+P0585,1.9,20.0,0,87,Bed availability
+P0586,1.8,18.1,0,91,Waiting for test results
+P0587,8.3,22.3,0,88,Medication delay
+P0588,7.1,24.0,0,98,None
+P0589,2.6,21.6,0,93,Waiting for test results
+P0590,7.1,16.9,0,90,Medication delay
+P0591,5.1,12.7,0,97,Waiting for test results
+P0592,5.3,21.8,0,92,Waiting for test results
+P0593,7.5,15.9,0,93,Bed availability
+P0594,3.1,14.1,0,100,Patient refusal
+P0595,1.8,20.7,0,88,Waiting for test results
+P0596,4.1,16.1,0,90,Waiting for test results
+P0597,2.7,23.5,1,87,Waiting for test results
+P0598,7.7,22.7,0,92,Medication delay
+P0599,7.9,15.3,0,96,None
+P0600,2.0,13.4,0,91,Bed availability
+P0601,2.7,21.8,0,95,None
+P0602,8.1,13.4,0,89,Waiting for test results
+P0603,4.9,19.5,0,87,Medication delay
+P0604,4.6,21.7,0,96,Waiting for test results
+P0605,6.9,15.8,0,98,Bed availability
+P0606,3.7,21.9,0,97,Medication delay
+P0607,3.0,20.8,0,90,Bed availability
+P0608,4.1,13.9,0,98,Patient refusal
+P0609,6.9,20.7,0,90,Waiting for test results
+P0610,1.3,20.2,1,94,Waiting for test results
+P0611,2.8,13.1,0,100,Waiting for test results
+P0612,8.5,12.4,0,98,Waiting for test results
+P0613,1.5,13.5,0,94,Waiting for test results
+P0614,4.1,13.1,0,94,Waiting for test results
+P0615,7.6,16.3,0,87,Patient refusal
+P0616,5.7,23.8,0,94,Patient refusal
+P0617,5.5,12.6,0,87,Patient refusal
+P0618,5.0,16.4,0,92,Waiting for test results
+P0619,8.4,17.7,0,88,Bed availability
+P0620,7.2,22.8,0,88,None
+P0621,7.1,13.2,0,89,Patient refusal
+P0622,1.0,22.2,0,97,None
+P0623,3.2,19.3,0,95,Waiting for test results
+P0624,6.4,21.2,0,89,Medication delay
+P0625,2.5,14.8,0,95,Bed availability
+P0626,2.0,17.9,0,96,Bed availability
+P0627,2.8,14.5,0,88,Bed availability
+P0628,6.5,17.9,0,99,Waiting for test results
+P0629,4.6,12.7,0,100,Waiting for test results
+P0630,6.2,16.9,0,87,Bed availability
+P0631,6.2,14.8,0,98,None
+P0632,4.4,17.7,0,90,Waiting for test results
+P0633,4.9,14.4,0,86,Patient refusal
+P0634,2.3,22.8,0,95,Patient refusal
+P0635,8.2,23.1,0,95,Bed availability
+P0636,1.8,22.3,0,88,Bed availability
+P0637,1.6,22.0,0,100,Waiting for test results
+P0638,6.5,23.4,0,98,Bed availability
+P0639,5.2,19.3,0,100,Waiting for test results
+P0640,4.3,15.6,0,100,Medication delay
+P0641,2.0,22.2,0,86,Waiting for test results
+P0642,6.5,20.2,0,94,Patient refusal
+P0643,7.3,23.8,0,96,Waiting for test results
+P0644,2.8,15.1,0,99,Bed availability
+P0645,2.1,13.1,0,99,Bed availability
+P0646,5.3,18.8,0,98,None
+P0647,1.9,20.7,0,100,Waiting for test results
+P0648,4.3,13.9,0,99,Patient refusal
+P0649,7.6,15.2,0,99,Bed availability
+P0650,7.4,18.9,0,87,Bed availability
+P0651,7.8,18.9,0,87,Waiting for test results
+P0652,1.9,16.6,0,90,Waiting for test results
+P0653,6.8,13.2,0,94,Waiting for test results
+P0654,7.1,20.8,1,91,Medication delay
+P0655,7.7,21.3,1,100,None
+P0656,5.9,22.8,0,93,None
+P0657,6.1,24.0,0,98,Patient refusal
+P0658,4.0,21.2,0,90,Bed availability
+P0659,3.5,23.6,0,94,Bed availability
+P0660,5.2,16.0,0,91,Medication delay
+P0661,1.2,12.8,0,99,Medication delay
+P0662,5.6,18.0,0,94,Medication delay
+P0663,8.1,17.8,0,92,Waiting for test results
+P0664,4.9,21.8,0,90,Waiting for test results
+P0665,5.7,23.6,0,85,Patient refusal
+P0666,4.1,15.8,0,90,Patient refusal
+P0667,1.3,16.3,0,93,None
+P0668,7.6,23.1,0,94,Patient refusal
+P0669,3.1,18.6,1,92,Waiting for test results
+P0670,6.0,23.8,0,90,None
+P0671,2.1,13.5,0,95,Medication delay
+P0672,1.7,13.0,0,88,Patient refusal
+P0673,5.4,23.7,0,86,Waiting for test results
+P0674,4.2,15.0,0,89,Waiting for test results
+P0675,5.6,17.2,0,95,Patient refusal
+P0676,2.0,22.3,0,97,None
+P0677,8.2,17.7,0,94,Bed availability
+P0678,8.4,17.8,0,89,Waiting for test results
+P0679,2.9,20.8,0,95,Waiting for test results
+P0680,2.9,19.8,0,99,Bed availability
+P0681,4.7,12.4,0,97,Medication delay
+P0682,7.2,15.2,0,95,Patient refusal
+P0683,3.0,12.6,0,96,Medication delay
+P0684,5.3,23.9,0,89,None
+P0685,2.0,14.4,0,92,Medication delay
+P0686,1.9,21.8,1,92,Waiting for test results
+P0687,7.7,15.5,0,92,Medication delay
+P0688,8.1,23.4,0,99,Patient refusal
+P0689,3.4,16.8,0,93,Patient refusal
+P0690,5.2,18.2,0,88,Bed availability
+P0691,5.2,22.5,0,94,None
+P0692,5.1,21.6,0,89,Waiting for test results
+P0693,3.8,22.0,1,98,Patient refusal
+P0694,3.1,22.4,0,90,None
+P0695,6.9,23.3,0,86,Waiting for test results
+P0696,7.1,19.1,0,85,None
+P0697,8.2,21.5,0,89,None
+P0698,3.5,23.0,0,86,Bed availability
+P0699,3.5,12.6,0,93,Medication delay
+P0700,1.8,14.8,0,88,Bed availability
+P0701,6.2,13.0,0,85,None
+P0702,3.5,17.3,1,100,Waiting for test results
+P0703,2.5,22.8,0,93,Bed availability
+P0704,2.1,16.3,0,86,Bed availability
+P0705,5.3,15.5,0,96,None
+P0706,2.9,19.0,0,89,Waiting for test results
+P0707,2.6,13.6,0,94,None
+P0708,7.6,13.7,0,90,Waiting for test results
+P0709,1.5,22.9,0,88,Bed availability
+P0710,3.9,18.2,0,95,None
+P0711,1.0,14.1,0,94,Bed availability
+P0712,6.3,20.1,0,85,Waiting for test results
+P0713,7.6,16.9,0,85,Medication delay
+P0714,4.5,16.5,0,90,Medication delay
+P0715,7.3,22.9,0,86,Bed availability
+P0716,4.1,12.1,0,97,Waiting for test results
+P0717,5.8,23.5,0,100,None
+P0718,3.7,14.8,0,91,None
+P0719,6.4,23.3,0,95,None
+P0720,3.5,22.1,0,94,Bed availability
+P0721,3.0,16.6,0,94,Waiting for test results
+P0722,5.8,20.8,0,96,None
+P0723,5.8,14.0,0,85,Medication delay
+P0724,7.1,23.2,1,96,Bed availability
+P0725,5.0,19.5,0,90,None
+P0726,7.8,13.8,0,99,Waiting for test results
+P0727,5.6,21.5,0,90,Patient refusal
+P0728,6.8,17.7,0,93,Waiting for test results
+P0729,1.4,14.2,0,95,Waiting for test results
+P0730,5.9,15.9,1,87,Waiting for test results
+P0731,3.8,17.1,0,87,Waiting for test results
+P0732,8.3,20.0,0,100,Waiting for test results
+P0733,7.7,14.8,0,90,Waiting for test results
+P0734,8.2,20.1,0,95,Waiting for test results
+P0735,4.0,15.7,0,98,Bed availability
+P0736,1.3,20.9,0,98,Medication delay
+P0737,4.1,14.5,0,87,Patient refusal
+P0738,5.3,19.2,0,92,Patient refusal
+P0739,5.4,23.2,0,90,Waiting for test results
+P0740,1.3,15.3,0,94,Bed availability
+P0741,3.5,16.0,0,100,None
+P0742,2.4,16.9,0,89,Waiting for test results
+P0743,7.5,16.6,0,86,Waiting for test results
+P0744,2.4,21.0,0,90,Waiting for test results
+P0745,6.0,17.1,0,85,Bed availability
+P0746,2.6,20.6,0,89,Waiting for test results
+P0747,6.5,23.5,0,100,Medication delay
+P0748,1.3,23.5,0,95,Bed availability
+P0749,4.1,23.0,0,87,Bed availability
+P0750,2.7,17.5,0,96,Patient refusal
+P0751,3.3,22.1,0,95,Waiting for test results
+P0752,8.1,19.2,0,92,Waiting for test results
+P0753,1.5,23.1,0,98,Waiting for test results
+P0754,5.7,12.3,0,95,Waiting for test results
+P0755,4.8,22.9,0,96,Bed availability
+P0756,8.0,23.0,0,100,Waiting for test results
+P0757,2.4,15.7,0,94,Waiting for test results
+P0758,6.5,12.2,0,98,Bed availability
+P0759,8.0,18.6,0,98,Patient refusal
+P0760,4.8,19.6,0,97,Waiting for test results
+P0761,6.5,12.8,0,85,Bed availability
+P0762,3.6,19.1,0,92,Bed availability
+P0763,4.4,15.7,0,90,Bed availability
+P0764,4.6,18.7,0,99,Waiting for test results
+P0765,4.0,19.0,0,88,None
+P0766,5.5,12.7,0,90,Waiting for test results
+P0767,1.1,23.1,0,96,None
+P0768,4.2,18.8,0,100,None
+P0769,4.0,15.3,0,98,Bed availability
+P0770,8.0,19.8,0,85,Waiting for test results
+P0771,2.6,14.0,0,86,Waiting for test results
+P0772,6.3,15.9,0,90,Medication delay
+P0773,2.9,17.4,0,92,Patient refusal
+P0774,4.7,18.4,0,88,Bed availability
+P0775,3.4,13.5,0,98,Bed availability
+P0776,7.1,19.1,0,94,Waiting for test results
+P0777,5.3,18.4,0,95,Waiting for test results
+P0778,3.6,18.2,0,88,Patient refusal
+P0779,7.1,21.5,0,91,Bed availability
+P0780,5.3,22.7,1,90,Patient refusal
+P0781,1.1,20.9,0,92,Patient refusal
+P0782,3.1,12.7,0,91,Medication delay
+P0783,5.1,23.7,0,98,Waiting for test results
+P0784,7.8,17.7,0,85,Patient refusal
+P0785,5.0,21.8,0,98,Patient refusal
+P0786,5.0,18.9,0,91,None
+P0787,7.3,13.5,0,91,Waiting for test results
+P0788,2.7,14.8,0,100,Bed availability
+P0789,7.5,14.8,0,86,Medication delay
+P0790,5.7,20.6,0,89,Waiting for test results
+P0791,2.3,13.2,0,86,Waiting for test results
+P0792,1.5,16.3,0,85,Waiting for test results
+P0793,2.5,21.8,0,100,None
+P0794,3.3,16.9,0,89,Patient refusal
+P0795,1.2,20.1,0,96,Waiting for test results
+P0796,6.0,15.8,0,87,Waiting for test results
+P0797,4.3,19.9,0,88,Medication delay
+P0798,3.0,23.3,1,90,Waiting for test results
+P0799,1.1,18.2,0,94,Patient refusal
+P0800,7.2,13.7,0,99,Patient refusal
+P0801,2.9,13.4,0,92,None
+P0802,1.2,15.9,0,93,Waiting for test results
+P0803,8.3,13.8,0,89,Waiting for test results
+P0804,8.4,18.7,0,95,Waiting for test results
+P0805,2.8,13.7,0,87,Medication delay
+P0806,8.3,15.7,0,89,None
+P0807,1.6,24.0,0,90,None
+P0808,4.8,22.1,0,94,Bed availability
+P0809,7.6,21.0,0,88,Waiting for test results
+P0810,6.8,18.6,0,89,Bed availability
+P0811,8.4,14.2,0,96,Waiting for test results
+P0812,2.2,24.0,0,99,Bed availability
+P0813,7.6,21.1,0,89,Patient refusal
+P0814,5.0,22.4,0,85,Bed availability
+P0815,4.7,13.4,0,95,Patient refusal
+P0816,8.2,13.9,0,97,Medication delay
+P0817,3.4,20.8,0,94,Patient refusal
+P0818,1.5,12.3,0,88,Medication delay
+P0819,1.7,12.0,1,88,None
+P0820,7.8,16.0,0,92,Medication delay
+P0821,2.1,16.3,0,85,Bed availability
+P0822,7.3,18.0,0,99,Medication delay
+P0823,2.1,23.3,0,91,None
+P0824,1.4,16.0,0,92,Waiting for test results
+P0825,4.8,22.6,0,95,Bed availability
+P0826,1.8,21.1,0,96,Medication delay
+P0827,2.6,22.3,0,85,None
+P0828,4.3,21.3,0,85,None
+P0829,1.2,16.8,0,93,Waiting for test results
+P0830,7.2,20.6,0,95,Patient refusal
+P0831,1.3,12.1,0,88,Medication delay
+P0832,1.0,14.0,0,86,Waiting for test results
+P0833,4.0,14.0,0,85,Patient refusal
+P0834,2.0,12.7,0,100,Bed availability
+P0835,1.6,14.7,0,92,Medication delay
+P0836,7.8,15.8,0,86,Waiting for test results
+P0837,3.0,19.3,0,93,Patient refusal
+P0838,7.2,14.4,0,92,Patient refusal
+P0839,2.3,21.3,0,100,Waiting for test results
+P0840,2.4,16.2,0,90,Bed availability
+P0841,6.9,19.3,0,97,Waiting for test results
+P0842,2.8,21.2,0,90,Waiting for test results
+P0843,3.9,14.6,0,96,Waiting for test results
+P0844,8.2,15.6,0,88,Bed availability
+P0845,8.3,21.8,0,87,Bed availability
+P0846,2.6,16.1,0,91,Bed availability
+P0847,6.5,15.2,0,85,Medication delay
+P0848,3.3,22.2,0,88,Waiting for test results
+P0849,5.9,22.6,0,96,Patient refusal
+P0850,2.7,15.0,0,98,Medication delay
+P0851,1.1,18.1,0,98,Bed availability
+P0852,5.3,13.7,0,99,Waiting for test results
+P0853,6.0,18.8,0,90,Bed availability
+P0854,5.0,23.4,0,87,Medication delay
+P0855,8.5,18.4,0,93,Waiting for test results
+P0856,3.6,19.7,0,86,Waiting for test results
+P0857,4.9,22.8,0,87,Bed availability
+P0858,5.7,13.1,0,85,Bed availability
+P0859,3.0,15.9,0,90,Medication delay
+P0860,2.4,22.9,0,97,Patient refusal
+P0861,7.1,21.5,0,93,Medication delay
+P0862,4.0,17.6,0,98,Waiting for test results
+P0863,1.5,17.4,0,98,Waiting for test results
+P0864,7.9,17.2,0,92,Waiting for test results
+P0865,8.0,13.8,0,87,None
+P0866,3.2,20.9,0,89,Waiting for test results
+P0867,1.9,23.3,0,86,Medication delay
+P0868,4.7,13.4,0,92,None
+P0869,6.2,22.0,0,87,Medication delay
+P0870,8.4,23.1,0,100,Bed availability
+P0871,1.0,16.2,0,88,Bed availability
+P0872,1.9,15.3,1,92,Medication delay
+P0873,1.1,16.7,0,95,Waiting for test results
+P0874,4.8,23.6,0,86,Medication delay
+P0875,1.8,19.9,1,99,Patient refusal
+P0876,6.6,15.5,0,95,Medication delay
+P0877,7.1,22.9,1,97,Bed availability
+P0878,1.1,14.6,1,88,None
+P0879,6.4,17.2,0,99,Bed availability
+P0880,3.6,16.2,0,94,Patient refusal
+P0881,4.4,15.6,0,89,Patient refusal
+P0882,1.4,18.3,0,96,Waiting for test results
+P0883,1.9,23.2,0,97,Bed availability
+P0884,7.4,21.6,0,93,Waiting for test results
+P0885,7.5,23.1,0,90,Patient refusal
+P0886,1.5,19.4,0,90,Bed availability
+P0887,4.3,20.3,0,91,Bed availability
+P0888,6.2,12.4,0,94,Medication delay
+P0889,6.5,13.6,0,85,Medication delay
+P0890,6.5,15.4,0,95,Medication delay
+P0891,6.3,19.9,0,98,Patient refusal
+P0892,6.1,17.2,0,90,Waiting for test results
+P0893,5.9,23.7,0,97,Bed availability
+P0894,8.3,22.3,0,99,Waiting for test results
+P0895,8.1,15.9,0,96,None
+P0896,1.8,14.1,0,94,Waiting for test results
+P0897,1.3,19.5,0,93,Waiting for test results
+P0898,7.2,17.7,0,100,Waiting for test results
+P0899,5.8,23.4,0,85,None
+P0900,1.3,13.2,0,99,Bed availability
+P0901,7.6,20.4,0,93,Waiting for test results
+P0902,6.2,16.6,0,91,Medication delay
+P0903,4.5,13.7,0,88,Bed availability
+P0904,1.5,21.5,0,95,Waiting for test results
+P0905,4.0,18.6,0,99,Bed availability
+P0906,5.9,18.5,0,88,Bed availability
+P0907,2.7,22.9,0,98,Medication delay
+P0908,3.5,19.6,0,95,Bed availability
+P0909,6.6,23.2,0,95,Patient refusal
+P0910,3.0,23.7,0,94,Waiting for test results
+P0911,7.8,20.0,0,92,Waiting for test results
+P0912,5.0,19.0,0,85,None
+P0913,1.0,12.2,0,90,Waiting for test results
+P0914,1.2,24.0,0,89,Bed availability
+P0915,6.6,23.9,0,87,Waiting for test results
+P0916,4.7,19.4,1,100,None
+P0917,7.1,13.3,0,100,Patient refusal
+P0918,1.2,23.1,0,95,Waiting for test results
+P0919,3.1,20.8,0,96,Medication delay
+P0920,4.2,18.2,1,96,Bed availability
+P0921,5.1,13.2,0,97,Medication delay
+P0922,1.1,12.4,0,86,Waiting for test results
+P0923,3.4,19.1,0,88,None
+P0924,8.2,20.9,0,87,Waiting for test results
+P0925,1.9,15.7,0,94,Patient refusal
+P0926,5.1,19.5,0,100,Patient refusal
+P0927,3.3,15.2,0,96,Waiting for test results
+P0928,2.2,14.4,0,97,Bed availability
+P0929,2.8,18.9,0,88,Bed availability
+P0930,3.8,17.7,0,85,None
+P0931,5.8,22.1,0,90,Bed availability
+P0932,6.4,18.8,0,98,Bed availability
+P0933,1.3,21.1,0,92,Waiting for test results
+P0934,1.6,15.0,0,88,Bed availability
+P0935,1.9,22.1,0,95,Waiting for test results
+P0936,6.9,13.4,0,88,Medication delay
+P0937,8.3,17.7,0,100,Bed availability
+P0938,1.6,16.0,0,98,Medication delay
+P0939,5.5,19.4,0,96,Bed availability
+P0940,2.0,19.8,0,85,Waiting for test results
+P0941,4.1,19.2,0,88,Bed availability
+P0942,4.9,16.3,0,94,Waiting for test results
+P0943,5.4,23.1,1,98,Waiting for test results
+P0944,6.7,13.1,0,94,Bed availability
+P0945,6.0,13.2,0,99,Waiting for test results
+P0946,5.8,20.3,0,89,Bed availability
+P0947,3.2,22.8,1,96,Waiting for test results
+P0948,6.6,22.8,0,94,Bed availability
+P0949,7.1,12.2,0,96,Bed availability
+P0950,2.4,22.6,0,87,Bed availability
+P0951,6.6,23.7,0,92,Medication delay
+P0952,5.5,12.0,0,90,Medication delay
+P0953,7.0,16.1,0,91,Waiting for test results
+P0954,7.9,20.0,0,98,None
+P0955,2.0,12.8,0,100,Medication delay
+P0956,3.8,14.6,0,87,Waiting for test results
+P0957,5.9,18.0,0,91,Waiting for test results
+P0958,3.9,14.2,0,92,None
+P0959,4.8,19.1,0,93,Patient refusal
+P0960,2.3,23.3,0,85,Medication delay
+P0961,4.5,22.5,0,94,Medication delay
+P0962,4.7,21.2,0,97,Waiting for test results
+P0963,4.2,17.4,0,85,None
+P0964,5.3,22.0,0,91,Waiting for test results
+P0965,3.1,19.7,1,86,Waiting for test results
+P0966,1.8,16.8,0,97,Waiting for test results
+P0967,8.4,18.2,0,87,Medication delay
+P0968,3.6,15.9,0,96,Waiting for test results
+P0969,5.1,19.3,0,91,Waiting for test results
+P0970,1.0,18.5,0,85,Bed availability
+P0971,5.9,23.1,0,86,Waiting for test results
+P0972,8.0,20.1,0,100,Waiting for test results
+P0973,6.1,16.4,0,91,None
+P0974,6.6,13.2,0,89,Bed availability
+P0975,2.4,15.4,0,87,Patient refusal
+P0976,3.3,18.5,0,90,None
+P0977,7.6,16.8,0,86,None
+P0978,4.9,20.7,0,94,Patient refusal
+P0979,6.8,16.7,0,85,Bed availability
+P0980,6.1,23.4,0,92,Waiting for test results
+P0981,4.0,17.8,0,88,Bed availability
+P0982,4.3,22.0,0,91,Bed availability
+P0983,2.1,15.9,0,100,Bed availability
+P0984,7.5,16.2,0,99,Waiting for test results
+P0985,6.8,19.1,1,88,Medication delay
+P0986,1.1,14.0,1,100,Medication delay
+P0987,8.1,23.5,0,98,Medication delay
+P0988,2.5,21.0,0,91,Patient refusal
+P0989,3.2,13.9,0,98,Patient refusal
+P0990,4.0,14.0,0,86,Bed availability
+P0991,2.0,18.7,0,96,Waiting for test results
+P0992,1.6,20.7,0,88,Waiting for test results
+P0993,2.4,20.6,0,94,Bed availability
+P0994,4.6,18.5,0,99,Waiting for test results
+P0995,1.9,23.7,0,97,Waiting for test results
+P0996,7.9,20.4,0,92,Medication delay
+P0997,5.1,21.4,0,92,Waiting for test results
+P0998,2.7,21.5,0,90,Medication delay
+P0999,6.1,13.0,1,100,Waiting for test results
+P1000,7.4,20.9,0,87,Bed availability
+P1001,4.0,21.1,1,86,Waiting for test results
+P1002,1.5,22.5,0,92,Waiting for test results
+P1003,2.7,22.1,0,87,Medication delay
+P1004,2.8,18.7,0,85,Patient refusal
+P1005,3.5,21.9,0,99,Bed availability
+P1006,3.8,17.9,0,91,Bed availability
+P1007,3.2,20.2,0,99,Bed availability
+P1008,3.9,18.1,0,85,Waiting for test results
+P1009,5.5,15.4,1,93,Waiting for test results
+P1010,6.5,22.0,0,93,Patient refusal
+P1011,8.5,22.7,1,87,Bed availability
+P1012,1.5,18.9,0,86,Bed availability
+P1013,4.5,22.3,0,86,Patient refusal
+P1014,6.7,13.5,0,93,None
+P1015,4.0,12.4,0,97,Waiting for test results
+P1016,4.2,19.9,0,99,Waiting for test results
+P1017,8.0,17.4,0,89,Waiting for test results
+P1018,3.3,12.2,0,88,Medication delay
+P1019,6.0,18.2,0,95,Bed availability
+P1020,7.5,20.0,0,87,Waiting for test results
+P1021,1.7,15.0,0,91,Medication delay
+P1022,2.6,16.5,0,97,Bed availability
+P1023,8.3,22.2,0,96,Medication delay
+P1024,3.1,18.6,0,91,None
+P1025,5.7,22.9,0,91,Patient refusal
+P1026,2.5,20.3,0,96,Medication delay
+P1027,4.5,20.4,0,95,Patient refusal
+P1028,5.3,21.1,0,86,Medication delay
+P1029,7.4,13.8,0,100,Bed availability
+P1030,2.7,18.4,0,89,Waiting for test results
+P1031,5.0,20.4,0,100,Patient refusal
+P1032,5.2,15.4,0,89,Waiting for test results
+P1033,7.4,20.9,0,96,Bed availability
+P1034,7.5,12.4,0,87,Waiting for test results
+P1035,3.3,15.7,0,87,Bed availability
+P1036,1.1,19.7,0,90,Medication delay
+P1037,5.0,16.5,0,94,Bed availability
+P1038,7.9,14.7,0,92,Patient refusal
+P1039,3.6,23.4,0,96,Medication delay
+P1040,2.3,18.5,0,88,Medication delay
+P1041,8.3,22.2,0,88,Waiting for test results
+P1042,1.4,15.7,1,99,Bed availability
+P1043,5.5,13.2,0,93,Bed availability
+P1044,2.0,20.9,0,89,Bed availability
+P1045,1.1,18.8,0,96,Bed availability
+P1046,3.2,14.2,0,86,Bed availability
+P1047,6.2,19.3,0,85,Waiting for test results
+P1048,5.7,14.9,0,86,Bed availability
+P1049,1.9,20.7,0,95,Medication delay
+P1050,7.2,16.0,0,97,Bed availability
+P1051,2.2,16.5,1,95,Bed availability
+P1052,8.0,15.9,0,95,Medication delay
+P1053,2.9,14.7,0,96,Patient refusal
+P1054,5.3,19.8,0,93,Waiting for test results
+P1055,5.2,12.9,0,92,Bed availability
+P1056,4.7,12.6,0,91,Bed availability
+P1057,4.4,22.5,0,87,None
+P1058,4.8,17.5,0,87,Waiting for test results
+P1059,4.3,16.6,0,86,Bed availability
+P1060,6.8,22.3,1,97,None
+P1061,7.1,19.9,0,100,Waiting for test results
+P1062,8.3,16.2,1,96,Bed availability
+P1063,4.5,15.0,0,99,Medication delay
+P1064,1.3,17.5,0,97,Waiting for test results
+P1065,4.0,20.4,0,96,Medication delay
+P1066,2.7,16.1,0,91,Medication delay
+P1067,4.9,12.3,0,85,Medication delay
+P1068,2.1,18.1,0,97,Bed availability
+P1069,4.0,21.1,0,93,Medication delay
+P1070,2.1,14.5,0,88,Medication delay
+P1071,3.0,12.7,0,90,Bed availability
+P1072,4.6,19.9,0,87,Medication delay
+P1073,3.2,19.1,0,86,Bed availability
+P1074,5.2,13.2,0,89,Medication delay
+P1075,5.1,18.1,0,93,Bed availability
+P1076,1.9,22.5,0,94,Waiting for test results
+P1077,2.4,16.1,0,86,None
+P1078,4.4,22.4,0,86,Waiting for test results
+P1079,3.5,21.1,0,93,None
+P1080,5.5,22.2,0,96,Patient refusal
+P1081,6.1,14.5,0,93,None
+P1082,4.6,19.5,0,99,None
+P1083,5.2,17.0,0,86,Bed availability
+P1084,6.1,12.0,0,89,Waiting for test results
+P1085,2.8,13.4,0,85,Waiting for test results
+P1086,4.0,20.1,1,89,Waiting for test results
+P1087,2.9,13.9,0,96,Patient refusal
+P1088,3.5,13.0,0,89,Medication delay
+P1089,6.8,16.3,0,99,Waiting for test results
+P1090,4.2,21.5,0,95,Bed availability
+P1091,2.0,12.9,0,88,Patient refusal
+P1092,7.3,21.6,0,87,Waiting for test results
+P1093,2.8,12.8,0,100,Medication delay
+P1094,6.6,22.2,0,86,Patient refusal
+P1095,2.0,22.5,0,89,Waiting for test results
+P1096,3.3,12.8,0,95,Bed availability
+P1097,8.4,15.0,0,90,Waiting for test results
+P1098,4.4,17.9,0,95,Waiting for test results
+P1099,1.1,15.8,0,90,Patient refusal
+P1100,3.3,22.1,0,100,None
+P1101,7.4,12.6,0,93,Medication delay
+P1102,1.7,15.0,0,96,None
+P1103,5.7,13.6,0,92,Waiting for test results
+P1104,3.4,18.7,0,96,Medication delay
+P1105,5.5,17.8,0,88,Bed availability
+P1106,6.0,16.6,0,90,Bed availability
+P1107,4.9,20.7,0,85,None
+P1108,6.4,17.4,0,95,Patient refusal
+P1109,6.4,13.6,0,96,Bed availability
+P1110,2.1,20.0,0,96,None
+P1111,2.0,16.5,0,85,Waiting for test results
+P1112,8.2,17.0,0,98,Patient refusal
+P1113,4.4,22.2,0,90,Bed availability
+P1114,5.8,12.4,0,91,Bed availability
+P1115,3.8,14.7,0,88,None
+P1116,7.2,21.8,0,89,Medication delay
+P1117,8.1,16.1,0,92,Waiting for test results
+P1118,2.5,15.2,0,97,Waiting for test results
+P1119,8.1,15.0,0,92,Bed availability
+P1120,2.8,20.2,1,85,None
+P1121,5.4,18.1,0,99,Waiting for test results
+P1122,8.0,12.9,0,98,Patient refusal
+P1123,8.4,23.1,0,90,Waiting for test results
+P1124,8.2,19.4,0,99,Waiting for test results
+P1125,5.2,20.0,0,87,None
+P1126,3.9,16.1,0,91,None
+P1127,8.4,16.8,0,89,Bed availability
+P1128,6.9,23.6,0,87,Waiting for test results
+P1129,6.1,14.6,1,93,Bed availability
+P1130,1.9,16.6,0,92,Patient refusal
+P1131,6.3,20.8,0,95,Waiting for test results
+P1132,6.8,20.8,0,88,None
+P1133,6.8,18.4,0,86,Waiting for test results
+P1134,5.0,12.1,0,96,Medication delay
+P1135,8.4,23.6,0,91,Medication delay
+P1136,5.3,14.0,0,89,Bed availability
+P1137,5.1,13.7,0,87,Bed availability
+P1138,6.2,21.2,0,89,Bed availability
+P1139,3.5,14.5,0,98,Patient refusal
+P1140,8.1,16.7,0,93,Medication delay
+P1141,1.0,21.8,0,98,Medication delay
+P1142,2.8,23.1,0,94,Bed availability
+P1143,2.7,23.8,0,85,None
+P1144,6.0,16.4,0,86,Bed availability
+P1145,8.5,12.0,0,96,None
+P1146,2.0,18.1,0,92,Waiting for test results
+P1147,2.6,20.1,0,96,None
+P1148,4.7,15.4,0,94,Patient refusal
+P1149,6.8,22.0,0,88,Medication delay
+P1150,4.1,23.8,0,97,Bed availability
+P1151,4.7,18.4,0,90,Waiting for test results
+P1152,2.8,20.3,0,88,Waiting for test results
+P1153,7.8,13.8,1,88,Bed availability
+P1154,7.3,15.9,0,97,Waiting for test results
+P1155,3.5,13.5,0,95,Bed availability
+P1156,4.0,16.5,0,89,None
+P1157,2.3,12.7,0,91,Waiting for test results
+P1158,7.9,21.4,0,88,Waiting for test results
+P1159,3.4,20.8,0,99,Patient refusal
+P1160,4.1,20.3,1,98,None
+P1161,4.5,21.3,1,98,Waiting for test results
+P1162,8.1,12.4,0,97,Bed availability
+P1163,2.8,16.5,0,87,Patient refusal
+P1164,6.4,12.7,0,86,Waiting for test results
+P1165,7.1,18.0,0,85,Medication delay
+P1166,3.0,17.5,0,95,Medication delay
+P1167,6.8,14.5,0,96,Waiting for test results
+P1168,4.7,13.1,0,94,Medication delay
+P1169,1.2,19.4,0,91,Waiting for test results
+P1170,5.5,21.8,0,96,Patient refusal
+P1171,7.4,15.6,0,100,None
+P1172,6.1,23.8,0,87,Waiting for test results
+P1173,4.5,17.6,0,95,Bed availability
+P1174,2.6,16.5,0,85,Waiting for test results
+P1175,3.5,15.0,1,95,None
+P1176,4.1,22.3,0,88,Waiting for test results
+P1177,4.2,20.5,0,85,Waiting for test results
+P1178,2.2,14.9,0,90,Patient refusal
+P1179,2.4,13.7,0,97,None
+P1180,2.3,23.4,0,99,Bed availability
+P1181,6.9,12.5,0,89,Bed availability
+P1182,4.0,19.7,0,97,Patient refusal
+P1183,3.6,17.6,0,85,Waiting for test results
+P1184,2.7,23.5,0,85,Medication delay
+P1185,3.1,21.7,0,99,Waiting for test results
+P1186,1.2,16.1,0,92,Medication delay
+P1187,5.8,18.0,0,87,Bed availability
+P1188,4.5,12.3,0,89,Waiting for test results
+P1189,7.0,13.1,0,86,Bed availability
+P1190,2.5,15.6,0,92,Waiting for test results
+P1191,4.8,23.9,1,94,Medication delay
+P1192,4.8,12.8,0,95,Bed availability
+P1193,7.7,21.5,0,86,Bed availability
+P1194,6.6,13.8,0,99,Waiting for test results
+P1195,3.8,21.3,1,97,None
+P1196,7.5,12.8,0,98,Waiting for test results
+P1197,7.3,17.9,0,95,None
+P1198,7.8,18.6,0,97,None
+P1199,2.0,16.8,0,95,Bed availability
+P1200,7.7,12.9,0,88,Waiting for test results
+P1201,6.6,23.1,0,92,Bed availability
+P1202,2.1,21.3,0,97,Patient refusal
+P1203,1.2,20.6,0,98,Medication delay
+P1204,3.5,20.5,0,90,Medication delay
+P1205,5.9,17.4,0,99,Medication delay
+P1206,4.5,23.6,0,94,Medication delay
+P1207,6.9,22.6,0,91,Medication delay
+P1208,5.2,22.6,0,87,Patient refusal
+P1209,8.3,24.0,0,92,Waiting for test results
+P1210,5.2,22.6,0,95,Waiting for test results
+P1211,5.1,14.6,0,96,Bed availability
+P1212,6.8,18.3,0,98,None
+P1213,3.6,22.2,0,93,Patient refusal
+P1214,6.7,12.7,0,90,Bed availability
+P1215,1.6,18.2,0,89,Waiting for test results
+P1216,4.3,14.6,0,89,Bed availability
+P1217,1.1,20.3,0,91,Waiting for test results
+P1218,7.7,19.5,1,99,Waiting for test results
+P1219,6.9,17.6,0,98,Waiting for test results
+P1220,2.7,17.5,0,99,None
+P1221,4.3,22.5,0,97,Medication delay
+P1222,2.3,13.2,0,97,Waiting for test results
+P1223,4.9,14.6,1,87,Waiting for test results
+P1224,8.3,17.1,0,88,Medication delay
+P1225,5.6,19.6,0,100,None
+P1226,2.9,17.9,0,92,Bed availability
+P1227,3.1,21.8,0,97,Bed availability
+P1228,5.5,14.1,0,88,Medication delay
+P1229,1.9,20.9,0,87,Waiting for test results
+P1230,5.5,14.6,0,98,Medication delay
+P1231,7.4,13.1,0,96,Bed availability
+P1232,1.6,17.2,0,87,Bed availability
+P1233,6.7,15.4,0,89,Waiting for test results
+P1234,6.2,22.8,0,98,Patient refusal
+P1235,7.5,20.5,0,92,Waiting for test results
+P1236,7.6,20.4,0,97,None
+P1237,7.3,22.5,0,100,None
+P1238,5.5,14.6,0,96,Medication delay
+P1239,5.5,22.5,0,91,Waiting for test results
+P1240,3.9,21.2,0,98,Waiting for test results
+P1241,1.5,16.4,0,89,Waiting for test results
+P1242,6.8,12.1,0,92,Bed availability
+P1243,7.9,22.7,0,88,Patient refusal
+P1244,4.2,18.4,0,91,Bed availability
+P1245,4.8,17.4,0,96,None
+P1246,6.7,18.6,0,92,Waiting for test results
+P1247,4.4,20.7,0,100,Waiting for test results
+P1248,5.8,13.5,0,87,Waiting for test results
+P1249,6.9,23.2,0,98,Patient refusal
+P1250,4.8,12.6,0,89,Waiting for test results
+P1251,4.4,20.2,0,91,Patient refusal
+P1252,7.4,18.6,0,90,Patient refusal
+P1253,8.5,17.2,0,86,None
+P1254,3.6,13.8,0,88,Waiting for test results
+P1255,7.0,20.5,0,93,Waiting for test results
+P1256,4.2,14.5,0,87,Bed availability
+P1257,1.2,12.9,0,88,Bed availability
+P1258,6.3,12.2,0,87,Bed availability
+P1259,2.7,14.1,0,97,Medication delay
+P1260,3.3,19.4,0,99,Medication delay
+P1261,3.2,14.6,0,91,None
+P1262,5.9,16.6,0,93,None
+P1263,5.2,15.3,0,97,Waiting for test results
+P1264,1.9,16.9,0,86,Medication delay
+P1265,7.5,17.4,0,91,Waiting for test results
+P1266,1.4,13.1,0,100,Bed availability
+P1267,4.4,19.9,0,100,Bed availability
+P1268,8.1,19.2,0,97,None
+P1269,6.8,12.1,0,86,Medication delay
+P1270,2.6,23.2,0,94,Medication delay
+P1271,6.6,18.0,0,93,None
+P1272,2.6,22.9,1,89,Medication delay
+P1273,2.6,14.0,0,96,Waiting for test results
+P1274,3.2,15.5,0,96,Bed availability
+P1275,7.4,19.0,0,88,Bed availability
+P1276,4.4,13.2,0,85,Patient refusal
+P1277,5.5,21.6,0,96,None
+P1278,4.9,13.8,0,92,Bed availability
+P1279,3.6,17.1,0,88,Waiting for test results
+P1280,8.1,20.3,0,88,Bed availability
+P1281,6.2,22.3,0,86,Medication delay
+P1282,4.4,14.8,0,97,None
+P1283,3.1,12.4,0,92,Medication delay
+P1284,6.6,16.9,0,97,Waiting for test results
+P1285,6.7,19.2,0,92,Bed availability
+P1286,1.7,15.9,0,97,Waiting for test results
+P1287,7.3,18.9,0,92,Medication delay
+P1288,4.8,12.6,0,95,Bed availability
+P1289,3.0,23.6,0,90,Bed availability
+P1290,1.6,18.9,0,96,Medication delay
+P1291,2.4,17.9,0,86,Patient refusal
+P1292,5.4,21.2,0,85,Bed availability
+P1293,1.9,12.5,0,89,None
+P1294,4.2,16.2,0,90,Waiting for test results
+P1295,6.4,13.4,1,96,None
+P1296,6.7,23.0,1,96,Waiting for test results
+P1297,5.7,20.2,0,85,Waiting for test results
+P1298,1.0,17.8,0,94,Waiting for test results
+P1299,3.6,20.4,0,92,None
+P1300,8.4,20.2,0,87,Patient refusal
+P1301,1.2,18.0,0,97,None
+P1302,4.3,22.3,1,88,Waiting for test results
+P1303,4.5,21.9,0,86,Waiting for test results
+P1304,8.4,21.8,0,96,None
+P1305,3.7,13.4,0,88,Bed availability
+P1306,6.8,22.1,0,86,Medication delay
+P1307,5.8,18.4,0,100,Bed availability
+P1308,1.9,14.8,0,89,Waiting for test results
+P1309,6.9,18.8,0,91,Waiting for test results
+P1310,5.4,22.3,0,96,None
+P1311,1.1,13.8,0,100,Waiting for test results
+P1312,2.6,15.7,0,87,Waiting for test results
+P1313,1.0,14.1,0,92,Bed availability
+P1314,6.4,12.6,1,92,None
+P1315,3.9,12.5,0,98,Waiting for test results
+P1316,1.7,16.5,0,90,Medication delay
+P1317,6.2,16.8,0,91,Medication delay
+P1318,3.7,15.6,0,89,Bed availability
+P1319,2.4,18.2,0,91,Waiting for test results
+P1320,2.2,18.4,0,86,Patient refusal
+P1321,4.4,16.1,0,86,Waiting for test results
+P1322,2.3,24.0,0,92,Medication delay
+P1323,5.9,14.8,0,99,Patient refusal
+P1324,4.7,16.5,0,94,Medication delay
+P1325,3.5,14.4,0,91,Medication delay
+P1326,1.1,22.2,0,93,Waiting for test results
+P1327,7.7,22.5,0,92,Bed availability
+P1328,4.8,13.9,0,98,Medication delay
+P1329,6.3,12.3,0,86,Waiting for test results
+P1330,2.9,20.7,0,89,Waiting for test results
+P1331,6.7,24.0,0,89,Medication delay
+P1332,4.5,12.9,0,87,Bed availability
+P1333,5.0,22.8,1,97,Patient refusal
+P1334,5.4,17.4,0,95,Waiting for test results
+P1335,6.4,21.1,0,93,Waiting for test results
+P1336,1.2,21.1,0,87,None
+P1337,8.2,13.5,0,100,Waiting for test results
+P1338,7.3,19.9,0,100,Medication delay
+P1339,1.9,23.1,0,86,Waiting for test results
+P1340,7.8,17.5,0,89,Bed availability
+P1341,1.1,13.2,0,91,Waiting for test results
+P1342,1.8,20.2,0,94,Waiting for test results
+P1343,7.1,19.9,0,90,Patient refusal
+P1344,1.7,20.2,0,99,Patient refusal
+P1345,4.3,16.6,0,89,Bed availability
+P1346,7.4,15.0,0,91,Medication delay
+P1347,1.9,16.7,1,89,Bed availability
+P1348,5.5,21.0,0,96,Patient refusal
+P1349,4.0,20.0,0,97,Waiting for test results
+P1350,5.0,19.2,1,94,Medication delay
+P1351,6.4,18.2,0,98,Patient refusal
+P1352,7.6,12.8,0,100,Waiting for test results
+P1353,8.4,22.7,0,87,Patient refusal
+P1354,1.6,13.9,0,93,Bed availability
+P1355,7.5,22.6,0,87,Bed availability
+P1356,3.3,12.5,0,99,Waiting for test results
+P1357,7.8,20.2,0,97,Waiting for test results
+P1358,5.7,23.5,0,97,Medication delay
+P1359,6.6,16.3,0,89,None
+P1360,7.3,21.3,0,92,Medication delay
+P1361,3.8,13.7,0,95,Patient refusal
+P1362,5.9,13.5,0,98,Medication delay
+P1363,1.6,22.4,0,94,None
+P1364,7.3,17.2,0,89,Waiting for test results
+P1365,1.9,18.8,1,99,Medication delay
+P1366,1.1,15.8,0,92,Medication delay
+P1367,1.1,20.1,0,89,Medication delay
+P1368,1.6,20.4,0,86,Bed availability
+P1369,1.7,20.4,0,92,Waiting for test results
+P1370,2.4,19.3,0,96,Bed availability
+P1371,3.7,22.6,0,93,Waiting for test results
+P1372,3.1,17.2,0,88,Bed availability
+P1373,2.2,23.0,0,96,Medication delay
+P1374,2.2,14.3,0,89,Bed availability
+P1375,3.8,21.1,0,91,Medication delay
+P1376,8.0,13.6,0,100,Medication delay
+P1377,7.7,15.0,0,89,Medication delay
+P1378,4.8,22.7,0,100,Waiting for test results
+P1379,1.6,20.9,0,90,None
+P1380,1.7,13.8,0,85,Medication delay
+P1381,6.6,14.6,1,86,None
+P1382,3.1,17.1,0,90,Medication delay
+P1383,1.8,20.7,0,97,Medication delay
+P1384,1.7,18.8,0,89,Bed availability
+P1385,1.3,12.9,0,89,Waiting for test results
+P1386,3.0,17.5,0,95,Waiting for test results
+P1387,2.7,23.2,0,94,Waiting for test results
+P1388,6.5,13.9,0,94,Medication delay
+P1389,1.7,12.6,0,97,Waiting for test results
+P1390,3.0,22.2,0,92,Medication delay
+P1391,1.7,20.1,0,85,Waiting for test results
+P1392,2.3,14.0,1,92,Waiting for test results
+P1393,5.9,19.7,0,87,None
+P1394,4.5,19.5,0,99,Waiting for test results
+P1395,3.8,19.2,0,90,Waiting for test results
+P1396,5.0,22.9,0,97,Bed availability
+P1397,4.3,21.4,0,86,Medication delay
+P1398,2.9,15.8,0,98,None
+P1399,3.4,20.6,1,100,None
+P1400,4.2,14.3,0,85,Waiting for test results
+P1401,5.2,23.4,0,87,Waiting for test results
+P1402,7.0,16.8,0,87,Medication delay
+P1403,2.9,23.8,0,94,Bed availability
+P1404,2.3,17.5,0,91,Waiting for test results
+P1405,5.2,15.8,0,96,Waiting for test results
+P1406,4.1,14.3,0,86,Waiting for test results
+P1407,3.7,21.6,0,94,Waiting for test results
+P1408,4.8,22.8,0,88,Waiting for test results
+P1409,7.1,16.3,0,86,Bed availability
+P1410,2.1,16.9,0,92,Patient refusal
+P1411,5.6,22.6,0,87,Bed availability
+P1412,7.8,17.8,0,98,Patient refusal
+P1413,8.0,19.8,0,93,Patient refusal
+P1414,3.0,23.7,0,98,Waiting for test results
+P1415,1.8,12.1,0,92,Medication delay
+P1416,7.0,13.0,0,94,Waiting for test results
+P1417,5.8,17.6,0,95,Waiting for test results
+P1418,7.2,17.0,0,86,Waiting for test results
+P1419,7.1,20.0,0,86,Bed availability
+P1420,3.5,19.4,0,94,Waiting for test results
+P1421,8.5,22.7,0,91,Medication delay
+P1422,2.9,19.8,0,86,Medication delay
+P1423,3.8,16.3,0,86,Waiting for test results
+P1424,2.4,15.0,0,87,Waiting for test results
+P1425,3.3,18.1,0,88,None
+P1426,2.2,20.9,0,96,Bed availability
+P1427,3.1,22.0,0,94,None
+P1428,4.5,17.9,0,86,Waiting for test results
+P1429,7.2,17.9,0,98,Waiting for test results
+P1430,7.5,21.1,0,100,Medication delay
+P1431,7.7,23.8,0,98,None
+P1432,5.6,12.8,0,89,Medication delay
+P1433,5.7,15.1,0,90,Waiting for test results
+P1434,7.3,16.4,0,97,Waiting for test results
+P1435,2.6,20.9,0,85,Waiting for test results
+P1436,3.5,20.0,0,89,Medication delay
+P1437,3.3,14.1,0,92,Waiting for test results
+P1438,6.5,13.5,0,95,Bed availability
+P1439,4.8,13.9,0,92,Bed availability
+P1440,1.8,18.8,0,93,Medication delay
+P1441,1.1,20.8,0,86,Medication delay
+P1442,3.9,18.7,0,92,Bed availability
+P1443,5.9,14.7,0,92,None
+P1444,2.5,14.9,0,85,Medication delay
+P1445,7.3,17.0,0,100,Patient refusal
+P1446,4.8,15.8,0,92,Medication delay
+P1447,3.6,13.5,0,93,Medication delay
+P1448,1.3,20.2,0,89,Waiting for test results
+P1449,3.2,20.0,0,85,Bed availability
+P1450,1.6,15.9,0,88,Waiting for test results
+P1451,4.8,21.0,0,85,Waiting for test results
+P1452,1.7,20.9,0,99,Bed availability
+P1453,4.6,15.0,0,96,Waiting for test results
+P1454,6.7,15.8,0,86,Waiting for test results
+P1455,4.0,18.4,1,91,Patient refusal
+P1456,6.1,16.1,0,100,Medication delay
+P1457,6.1,15.0,0,96,Waiting for test results
+P1458,2.4,20.0,0,85,Waiting for test results
+P1459,6.1,18.3,0,90,Waiting for test results
+P1460,8.3,13.8,0,92,None
+P1461,4.1,21.2,0,89,Bed availability
+P1462,6.5,21.3,0,86,Waiting for test results
+P1463,5.1,15.5,0,92,Patient refusal
+P1464,4.9,12.3,0,85,None
+P1465,3.2,21.1,0,85,Patient refusal
+P1466,8.4,13.6,0,87,Waiting for test results
+P1467,5.8,16.3,0,93,Waiting for test results
+P1468,6.0,16.0,1,95,Waiting for test results
+P1469,3.7,18.3,0,93,None
+P1470,1.1,13.3,1,98,Bed availability
+P1471,8.0,14.6,0,98,Waiting for test results
+P1472,2.0,20.4,0,86,Bed availability
+P1473,7.4,12.4,0,86,Medication delay
+P1474,5.1,22.2,0,86,Bed availability
+P1475,6.1,17.1,0,88,Bed availability
+P1476,5.1,12.8,0,88,Waiting for test results
+P1477,7.7,14.4,0,96,Medication delay
+P1478,2.8,22.3,0,98,Waiting for test results
+P1479,7.7,16.5,0,100,Medication delay
+P1480,6.6,13.7,0,86,Patient refusal
+P1481,4.1,16.8,0,96,Waiting for test results
+P1482,2.6,18.6,0,98,Bed availability
+P1483,8.4,18.1,0,86,Medication delay
+P1484,4.3,23.6,0,85,Bed availability
+P1485,4.4,14.2,0,99,Patient refusal
+P1486,5.0,22.7,0,87,Waiting for test results
+P1487,3.7,17.8,0,99,Medication delay
+P1488,1.8,23.3,0,87,Bed availability
+P1489,2.3,20.6,0,93,Waiting for test results
+P1490,1.3,13.4,1,91,Waiting for test results
+P1491,6.3,18.8,0,89,None
+P1492,7.8,20.7,0,90,Bed availability
+P1493,3.1,18.9,0,86,Waiting for test results
+P1494,2.9,23.0,0,91,Medication delay
+P1495,4.9,16.2,0,88,Medication delay
+P1496,7.8,13.5,0,96,None
+P1497,3.1,17.5,0,91,Waiting for test results
+P1498,6.6,20.5,0,86,Waiting for test results
+P1499,5.4,23.3,0,93,Waiting for test results
+P1500,2.7,16.5,0,97,Medication delay
+P1501,6.1,14.1,0,89,Medication delay
+P1502,6.6,12.9,0,95,Medication delay
+P1503,4.0,14.4,0,97,None
+P1504,5.5,16.7,0,95,Bed availability
+P1505,4.6,20.1,0,97,Bed availability
+P1506,6.1,20.2,0,91,Waiting for test results
+P1507,8.1,23.9,0,100,Patient refusal
+P1508,3.6,14.4,0,96,Medication delay
+P1509,8.1,17.0,0,87,Waiting for test results
+P1510,1.5,19.3,0,97,Waiting for test results
+P1511,6.7,22.7,0,100,Patient refusal
+P1512,7.9,16.6,0,88,Bed availability
+P1513,1.6,18.0,0,89,Patient refusal
+P1514,6.2,15.9,0,85,None
+P1515,3.3,23.3,0,94,Patient refusal
+P1516,4.6,16.8,0,96,Patient refusal
+P1517,8.2,16.5,0,94,Bed availability
+P1518,7.9,16.1,0,100,Waiting for test results
+P1519,3.0,23.4,0,92,None
+P1520,7.0,18.1,0,96,None
+P1521,5.8,13.0,0,93,Bed availability
+P1522,5.4,15.8,0,88,Bed availability
+P1523,2.8,16.5,0,96,Medication delay
+P1524,6.8,21.4,0,99,Patient refusal
+P1525,3.1,16.4,1,89,Medication delay
+P1526,4.2,13.5,0,95,Waiting for test results
+P1527,2.5,16.7,0,100,Waiting for test results
+P1528,2.8,17.4,1,90,Bed availability
+P1529,5.0,12.4,0,91,None
+P1530,8.1,21.1,0,99,Bed availability
+P1531,1.2,15.5,0,94,Waiting for test results
+P1532,1.1,15.3,0,96,Waiting for test results
+P1533,8.1,23.0,0,97,Waiting for test results
+P1534,3.0,19.6,0,98,Bed availability
+P1535,3.8,20.9,1,99,Waiting for test results
+P1536,3.9,15.9,0,97,None
+P1537,5.2,19.6,0,99,Waiting for test results
+P1538,2.4,15.1,0,89,Medication delay
+P1539,3.9,15.9,0,90,Patient refusal
+P1540,5.2,13.7,0,89,Patient refusal
+P1541,7.8,19.8,0,90,Medication delay
+P1542,4.4,23.0,0,94,Bed availability
+P1543,5.8,17.9,0,97,Bed availability
+P1544,5.2,18.4,0,88,Medication delay
+P1545,3.7,15.0,0,95,Medication delay
+P1546,2.1,23.1,0,89,None
+P1547,8.5,17.7,0,98,Bed availability
+P1548,1.1,19.4,0,89,Waiting for test results
+P1549,2.3,14.7,0,95,None
+P1550,4.0,15.7,0,99,Bed availability
+P1551,3.7,12.2,0,99,None
+P1552,4.0,13.1,0,91,None
+P1553,1.4,18.6,0,88,Waiting for test results
+P1554,7.0,14.8,0,98,None
+P1555,2.3,19.0,0,96,None
+P1556,4.5,23.0,0,88,Bed availability
+P1557,4.3,23.1,0,93,Waiting for test results
+P1558,5.9,12.4,0,89,Bed availability
+P1559,3.2,13.6,0,86,Medication delay
+P1560,3.1,21.0,0,92,None
+P1561,3.9,13.8,0,100,Waiting for test results
+P1562,5.8,20.9,0,88,Patient refusal
+P1563,4.7,22.1,0,93,Medication delay
+P1564,7.0,14.6,1,88,Bed availability
+P1565,4.0,14.5,0,90,Waiting for test results
+P1566,6.7,13.8,0,88,Bed availability
+P1567,6.2,20.4,0,93,Waiting for test results
+P1568,7.7,15.1,0,99,Waiting for test results
+P1569,2.7,15.5,0,100,Waiting for test results
+P1570,1.8,17.7,0,86,Waiting for test results
+P1571,1.4,21.2,0,94,Waiting for test results
+P1572,4.9,19.4,0,91,Bed availability
+P1573,6.9,17.3,0,93,Bed availability
+P1574,6.0,21.7,0,92,Bed availability
+P1575,6.6,17.4,1,98,Bed availability
+P1576,6.4,22.1,0,86,Waiting for test results
+P1577,7.0,16.7,0,99,None
+P1578,2.0,21.8,0,86,Medication delay
+P1579,6.8,21.9,0,94,None
+P1580,6.5,20.2,1,85,Waiting for test results
+P1581,1.2,20.6,0,96,Waiting for test results
+P1582,1.3,17.6,0,87,Waiting for test results
+P1583,2.9,19.6,0,100,None
+P1584,2.9,15.5,0,98,Waiting for test results
+P1585,6.9,17.5,0,87,Medication delay
+P1586,5.2,22.1,0,85,Medication delay
+P1587,4.2,22.2,0,94,Bed availability
+P1588,4.7,23.1,1,96,Bed availability
+P1589,7.3,17.6,0,89,None
+P1590,3.5,16.0,0,100,Bed availability
+P1591,4.6,18.9,0,100,Waiting for test results
+P1592,1.3,23.5,0,97,Patient refusal
+P1593,7.0,16.1,0,86,Waiting for test results
+P1594,3.2,14.1,0,90,Patient refusal
+P1595,4.5,19.2,0,98,None
+P1596,5.2,14.5,0,94,None
+P1597,4.0,16.3,0,95,Bed availability
+P1598,7.5,13.0,0,98,Bed availability
+P1599,1.8,15.8,0,86,Waiting for test results
+P1600,7.0,15.8,0,91,Bed availability
+P1601,8.1,21.6,0,85,Waiting for test results
+P1602,1.1,12.0,0,97,Bed availability
+P1603,6.3,18.9,0,98,Waiting for test results
+P1604,4.0,15.1,1,93,Medication delay
+P1605,1.2,12.9,0,95,Bed availability
+P1606,6.9,12.2,0,96,Patient refusal
+P1607,5.9,12.9,0,86,Bed availability
+P1608,4.2,13.0,0,99,Bed availability
+P1609,5.5,13.9,0,92,Waiting for test results
+P1610,1.8,20.2,1,93,Patient refusal
+P1611,4.7,19.9,0,97,None
+P1612,2.1,18.9,0,96,Bed availability
+P1613,3.0,19.4,0,99,Patient refusal
+P1614,4.2,14.7,0,98,Waiting for test results
+P1615,1.1,17.9,0,85,Waiting for test results
+P1616,2.3,15.7,0,90,Bed availability
+P1617,4.8,20.1,0,96,Waiting for test results
+P1618,8.3,20.8,0,95,Bed availability
+P1619,3.8,12.6,0,98,Patient refusal
+P1620,2.6,17.1,0,91,Waiting for test results
+P1621,5.6,18.9,0,92,Waiting for test results
+P1622,1.2,15.7,0,98,None
+P1623,7.3,21.3,0,89,Waiting for test results
+P1624,8.0,20.2,0,87,None
+P1625,5.1,12.9,0,89,Waiting for test results
+P1626,5.3,23.3,0,93,None
+P1627,3.2,15.8,0,100,Medication delay
+P1628,8.4,13.0,0,95,Bed availability
+P1629,8.3,13.9,0,86,Bed availability
+P1630,6.2,18.1,0,98,Bed availability
+P1631,4.3,12.3,0,93,Waiting for test results
+P1632,2.4,16.9,0,87,Waiting for test results
+P1633,1.4,12.9,0,98,None
+P1634,7.6,22.4,0,89,Medication delay
+P1635,8.4,16.5,0,97,Medication delay
+P1636,7.8,15.1,0,94,Patient refusal
+P1637,7.6,14.3,0,100,Bed availability
+P1638,7.8,15.0,0,89,Medication delay
+P1639,7.6,12.6,0,100,None
+P1640,4.3,15.5,0,90,Medication delay
+P1641,5.3,13.1,0,93,Waiting for test results
+P1642,2.8,23.2,0,93,Patient refusal
+P1643,4.8,14.6,0,99,Waiting for test results
+P1644,2.1,23.5,0,86,Waiting for test results
+P1645,3.3,15.3,0,92,None
+P1646,7.2,23.9,0,96,Medication delay
+P1647,2.1,21.6,0,86,Waiting for test results
+P1648,5.6,12.0,0,100,Patient refusal
+P1649,1.6,22.6,0,93,Patient refusal
+P1650,2.3,15.2,0,93,Waiting for test results
+P1651,6.9,23.3,0,98,Bed availability
+P1652,1.0,14.2,0,95,Bed availability
+P1653,6.9,21.6,0,92,Waiting for test results
+P1654,5.5,23.4,0,87,Medication delay
+P1655,1.9,17.5,0,100,Bed availability
+P1656,5.1,15.7,0,89,Waiting for test results
+P1657,2.9,21.8,0,96,Waiting for test results
+P1658,4.4,17.0,0,93,Medication delay
+P1659,3.1,17.3,1,98,Medication delay
+P1660,1.2,18.0,0,86,Medication delay
+P1661,6.6,16.1,0,85,Waiting for test results
+P1662,5.2,17.2,0,94,Medication delay
+P1663,7.3,23.8,0,100,Medication delay
+P1664,1.9,19.8,0,97,Medication delay
+P1665,2.1,14.8,0,88,Medication delay
+P1666,5.6,15.5,0,90,Bed availability
+P1667,4.9,16.4,0,89,Bed availability
+P1668,7.4,18.5,0,98,Waiting for test results
+P1669,4.4,21.0,0,100,Patient refusal
+P1670,1.9,18.2,0,97,Waiting for test results
+P1671,6.6,14.9,0,85,Bed availability
+P1672,1.5,22.6,1,88,Waiting for test results
+P1673,8.5,22.2,0,92,Patient refusal
+P1674,5.2,23.5,0,100,Waiting for test results
+P1675,3.3,20.4,0,100,Patient refusal
+P1676,2.7,23.2,1,87,Bed availability
+P1677,1.6,23.0,0,97,Waiting for test results
+P1678,1.2,23.5,0,98,Waiting for test results
+P1679,1.4,22.4,0,89,Waiting for test results
+P1680,5.5,19.1,0,85,Medication delay
+P1681,7.5,16.3,0,94,Bed availability
+P1682,8.3,13.4,0,90,Bed availability
+P1683,7.2,19.7,0,90,Waiting for test results
+P1684,8.0,16.0,0,94,Bed availability
+P1685,2.9,17.0,0,85,Medication delay
+P1686,2.3,15.9,0,87,Waiting for test results
+P1687,2.2,13.4,0,91,Waiting for test results
+P1688,5.2,16.3,0,86,Bed availability
+P1689,2.9,18.3,0,95,Medication delay
+P1690,8.3,17.9,0,92,Patient refusal
+P1691,3.7,17.8,0,94,Bed availability
+P1692,4.2,15.8,0,90,Medication delay
+P1693,7.9,15.2,0,94,Waiting for test results
+P1694,4.2,14.9,0,91,Bed availability
+P1695,4.3,15.1,0,92,Medication delay
+P1696,5.1,19.8,0,93,Waiting for test results
+P1697,6.6,20.1,0,97,Patient refusal
+P1698,7.8,21.2,0,91,Bed availability
+P1699,7.9,17.7,0,90,Medication delay
+P1700,6.7,17.5,1,100,Waiting for test results
+P1701,5.9,15.9,0,92,None
+P1702,7.1,17.0,0,87,Bed availability
+P1703,1.3,18.7,0,89,Waiting for test results
+P1704,5.8,20.5,0,86,Bed availability
+P1705,4.6,17.8,0,96,Medication delay
+P1706,4.7,12.7,0,100,Patient refusal
+P1707,1.7,13.9,0,85,Bed availability
+P1708,2.2,17.7,0,94,Waiting for test results
+P1709,4.6,18.3,0,94,Waiting for test results
+P1710,3.8,17.6,0,87,Waiting for test results
+P1711,5.6,19.1,0,97,Bed availability
+P1712,5.6,22.4,0,91,None
+P1713,1.4,19.7,0,96,Bed availability
+P1714,3.0,19.2,0,99,Waiting for test results
+P1715,4.0,15.3,0,97,Bed availability
+P1716,3.1,12.6,0,94,Waiting for test results
+P1717,2.8,13.5,0,85,Waiting for test results
+P1718,8.4,16.7,0,100,Medication delay
+P1719,1.9,12.1,0,98,Waiting for test results
+P1720,3.2,13.6,0,97,Waiting for test results
+P1721,4.9,19.4,0,86,None
+P1722,4.6,21.8,0,91,Patient refusal
+P1723,6.5,15.4,1,87,Bed availability
+P1724,4.4,14.1,0,86,Waiting for test results
+P1725,7.0,19.8,0,87,Patient refusal
+P1726,6.0,15.8,0,96,Waiting for test results
+P1727,3.3,23.6,0,93,Waiting for test results
+P1728,7.4,14.9,0,91,None
+P1729,5.5,19.2,0,91,Waiting for test results
+P1730,6.1,12.9,0,98,Patient refusal
+P1731,4.4,18.2,0,86,Patient refusal
+P1732,5.6,12.5,0,93,Patient refusal
+P1733,8.0,22.7,0,97,Bed availability
+P1734,6.5,13.0,0,92,Waiting for test results
+P1735,4.0,13.7,0,94,Bed availability
+P1736,1.2,19.9,0,86,Medication delay
+P1737,5.7,21.0,0,100,None
+P1738,7.6,12.3,0,90,Waiting for test results
+P1739,4.5,21.8,0,91,Waiting for test results
+P1740,6.8,18.0,0,92,Waiting for test results
+P1741,8.0,17.8,0,99,Waiting for test results
+P1742,3.2,14.2,0,99,Bed availability
+P1743,7.6,16.2,0,86,Medication delay
+P1744,8.3,16.1,0,92,Waiting for test results
+P1745,3.6,13.0,0,93,None
+P1746,3.9,13.1,0,94,Waiting for test results
+P1747,5.2,16.2,0,89,Bed availability
+P1748,6.4,22.2,0,97,Patient refusal
+P1749,7.0,17.3,0,86,Bed availability
+P1750,2.0,21.9,0,88,Bed availability
+P1751,5.7,21.9,0,92,None
+P1752,1.7,17.4,0,93,Waiting for test results
+P1753,4.2,15.9,0,95,Bed availability
+P1754,1.0,16.0,0,89,Bed availability
+P1755,3.8,19.8,0,96,Waiting for test results
+P1756,2.3,22.6,0,100,Medication delay
+P1757,7.7,13.0,0,96,Bed availability
+P1758,5.5,23.0,0,88,Waiting for test results
+P1759,7.8,18.2,0,85,None
+P1760,7.5,17.1,1,93,Bed availability
+P1761,3.9,19.8,0,94,Medication delay
+P1762,6.0,19.2,0,88,Patient refusal
+P1763,4.4,14.6,0,98,None
+P1764,3.3,23.7,0,92,Waiting for test results
+P1765,6.2,15.7,1,97,Waiting for test results
+P1766,8.0,20.0,0,89,Waiting for test results
+P1767,4.3,23.9,0,98,Medication delay
+P1768,4.9,12.7,0,87,Patient refusal
+P1769,6.6,15.6,0,96,Bed availability
+P1770,2.3,14.8,0,93,Bed availability
+P1771,4.9,16.9,0,86,Waiting for test results
+P1772,2.4,24.0,0,97,None
+P1773,8.1,22.3,0,89,Medication delay
+P1774,6.7,22.7,0,92,Medication delay
+P1775,4.0,18.1,0,87,Bed availability
+P1776,8.3,23.6,0,97,Waiting for test results
+P1777,8.0,22.4,0,89,Waiting for test results
+P1778,7.3,23.8,0,86,None
+P1779,1.2,14.8,0,86,Waiting for test results
+P1780,8.3,13.4,0,98,Waiting for test results
+P1781,5.5,16.7,0,92,Bed availability
+P1782,4.5,17.4,0,90,Medication delay
+P1783,3.9,17.8,1,94,None
+P1784,6.2,19.4,0,99,Waiting for test results
+P1785,5.3,12.7,0,90,Bed availability
+P1786,2.3,19.4,0,92,Medication delay
+P1787,7.7,22.5,0,98,Waiting for test results
+P1788,8.3,13.9,0,93,Patient refusal
+P1789,2.9,22.9,0,96,Waiting for test results
+P1790,4.5,13.0,1,87,Medication delay
+P1791,5.9,21.4,1,90,Medication delay
+P1792,6.9,14.6,0,99,Bed availability
+P1793,1.5,21.3,0,88,Waiting for test results
+P1794,2.4,15.8,0,86,Bed availability
+P1795,2.0,21.2,0,92,Bed availability
+P1796,8.5,19.0,0,90,Bed availability
+P1797,5.7,22.3,0,93,Bed availability
+P1798,1.1,12.0,0,89,Waiting for test results
+P1799,1.1,17.4,0,89,Medication delay
+P1800,2.4,19.9,0,100,Bed availability
+P1801,5.9,16.1,0,86,Bed availability
+P1802,1.1,14.2,0,86,Bed availability
+P1803,3.5,12.3,0,86,Waiting for test results
+P1804,3.2,17.2,0,97,Bed availability
+P1805,2.6,18.5,0,88,Waiting for test results
+P1806,3.3,22.7,1,92,Patient refusal
+P1807,4.9,15.6,0,96,Medication delay
+P1808,5.1,18.7,0,94,Waiting for test results
+P1809,5.9,14.2,0,85,Waiting for test results
+P1810,4.1,13.1,0,98,None
+P1811,1.1,14.8,0,97,Waiting for test results
+P1812,1.2,12.2,0,88,Medication delay
+P1813,3.1,13.0,0,100,Medication delay
+P1814,4.3,16.0,1,95,Waiting for test results
+P1815,2.1,15.8,0,87,Medication delay
+P1816,4.7,15.1,0,97,Waiting for test results
+P1817,6.7,15.4,0,91,Bed availability
+P1818,2.8,15.7,0,92,Medication delay
+P1819,1.5,18.7,0,97,Patient refusal
+P1820,5.6,19.9,0,92,Bed availability
+P1821,3.3,21.7,0,96,Bed availability
+P1822,6.2,23.8,0,88,Bed availability
+P1823,2.9,16.9,0,98,Bed availability
+P1824,2.4,21.1,0,99,Waiting for test results
+P1825,4.5,17.1,0,91,Patient refusal
+P1826,2.2,23.4,0,99,Bed availability
+P1827,3.8,21.7,0,97,None
+P1828,3.8,20.5,1,89,None
+P1829,6.5,18.0,0,88,Waiting for test results
+P1830,6.4,23.7,0,92,Waiting for test results
+P1831,6.5,13.3,0,96,Waiting for test results
+P1832,3.3,19.6,0,85,None
+P1833,2.6,12.7,0,98,Waiting for test results
+P1834,3.4,23.8,0,97,Medication delay
+P1835,4.7,20.2,0,96,Waiting for test results
+P1836,6.4,23.5,1,100,Waiting for test results
+P1837,3.6,19.8,0,85,Waiting for test results
+P1838,4.8,13.2,0,94,Medication delay
+P1839,3.5,19.1,0,98,Waiting for test results
+P1840,1.0,12.8,0,92,None
+P1841,2.3,18.1,0,93,Medication delay
+P1842,4.7,17.6,0,88,None
+P1843,2.5,18.6,0,100,None
+P1844,1.8,16.4,0,97,Waiting for test results
+P1845,8.2,16.5,0,89,Medication delay
+P1846,1.5,16.2,0,98,Patient refusal
+P1847,1.7,13.7,0,100,Patient refusal
+P1848,7.6,17.7,0,98,Medication delay
+P1849,4.0,13.6,0,90,Medication delay
+P1850,5.0,19.6,0,86,Waiting for test results
+P1851,1.6,12.8,0,100,Medication delay
+P1852,4.7,22.3,0,91,Patient refusal
+P1853,2.5,21.3,0,89,Bed availability
+P1854,4.2,13.9,0,94,None
+P1855,6.4,18.2,0,98,Bed availability
+P1856,7.7,16.7,0,95,None
+P1857,8.1,16.9,0,90,Waiting for test results
+P1858,4.7,12.6,0,87,Patient refusal
+P1859,6.0,18.4,0,86,Waiting for test results
+P1860,3.0,18.6,0,93,Bed availability
+P1861,7.2,21.1,0,97,Waiting for test results
+P1862,4.1,21.9,0,99,Patient refusal
+P1863,5.5,21.1,0,100,Bed availability
+P1864,5.1,16.0,0,97,Waiting for test results
+P1865,4.8,16.7,0,96,Patient refusal
+P1866,5.9,12.2,0,85,Medication delay
+P1867,3.1,18.8,0,100,Patient refusal
+P1868,5.7,20.0,0,85,Medication delay
+P1869,4.7,21.6,0,100,Waiting for test results
+P1870,1.0,16.8,0,94,Patient refusal
+P1871,4.4,14.3,0,87,Bed availability
+P1872,8.5,16.9,0,86,Patient refusal
+P1873,4.7,17.6,0,93,Waiting for test results
+P1874,5.4,16.4,0,95,Waiting for test results
+P1875,7.7,16.6,0,91,Patient refusal
+P1876,5.3,19.7,0,93,Bed availability
+P1877,7.9,15.9,0,95,Waiting for test results
+P1878,4.7,15.1,1,96,None
+P1879,6.7,13.3,0,99,Bed availability
+P1880,7.3,17.2,0,92,Bed availability
+P1881,4.1,20.8,0,95,Medication delay
+P1882,3.7,23.2,0,89,Waiting for test results
+P1883,7.1,17.1,0,95,Bed availability
+P1884,7.7,20.5,0,87,Bed availability
+P1885,7.9,17.2,0,92,Waiting for test results
+P1886,3.7,12.5,0,87,Bed availability
+P1887,5.6,12.7,0,96,Bed availability
+P1888,5.1,15.7,0,98,Bed availability
+P1889,2.8,23.9,0,88,None
+P1890,5.3,23.5,0,97,Bed availability
+P1891,7.6,14.9,0,94,Waiting for test results
+P1892,2.1,14.7,0,96,Medication delay
+P1893,2.7,14.6,0,99,Bed availability
+P1894,6.1,15.6,0,94,Bed availability
+P1895,2.8,12.9,0,91,Waiting for test results
+P1896,1.4,12.7,0,98,Patient refusal
+P1897,5.2,19.7,0,97,None
+P1898,3.6,17.0,0,96,Bed availability
+P1899,1.7,19.0,1,89,None
+P1900,4.8,21.4,0,96,Waiting for test results
+P1901,7.7,16.5,0,88,None
+P1902,5.3,19.5,0,87,Bed availability
+P1903,1.9,15.4,0,92,Waiting for test results
+P1904,3.0,20.1,0,93,Waiting for test results
+P1905,3.5,22.6,0,91,Bed availability
+P1906,2.5,22.2,0,96,Medication delay
+P1907,7.4,19.7,0,88,Waiting for test results
+P1908,2.5,17.7,0,93,Medication delay
+P1909,2.8,15.3,0,99,Waiting for test results
+P1910,4.9,19.9,0,95,Waiting for test results
+P1911,3.1,13.2,1,88,Bed availability
+P1912,4.9,14.8,0,90,Waiting for test results
+P1913,1.1,22.1,0,98,Waiting for test results
+P1914,7.1,13.0,0,94,Bed availability
+P1915,7.3,16.9,0,85,None
+P1916,3.2,15.8,1,92,None
+P1917,6.6,24.0,0,96,Waiting for test results
+P1918,7.9,19.2,0,100,Waiting for test results
+P1919,8.1,18.3,0,96,None
+P1920,6.6,22.7,0,91,Patient refusal
+P1921,5.8,20.2,0,99,Waiting for test results
+P1922,4.7,21.7,0,98,None
+P1923,1.6,23.2,0,100,Bed availability
+P1924,3.5,17.7,0,86,Waiting for test results
+P1925,7.5,23.1,0,87,Bed availability
+P1926,6.9,20.1,0,90,Medication delay
+P1927,2.7,24.0,0,94,Waiting for test results
+P1928,8.0,21.1,0,90,Medication delay
+P1929,1.8,12.6,0,95,Waiting for test results
+P1930,1.2,21.7,0,96,None
+P1931,7.0,15.9,0,100,None
+P1932,3.0,13.3,0,92,Medication delay
+P1933,1.4,14.4,0,92,Bed availability
+P1934,7.7,15.2,0,87,Bed availability
+P1935,5.6,17.9,0,86,Waiting for test results
+P1936,3.8,12.0,0,92,Patient refusal
+P1937,6.5,18.8,0,88,Waiting for test results
+P1938,2.9,13.6,0,95,Bed availability
+P1939,7.3,20.0,0,95,Patient refusal
+P1940,3.2,17.3,0,91,Waiting for test results
+P1941,1.1,22.9,0,86,None
+P1942,2.9,20.6,0,98,Waiting for test results
+P1943,5.8,14.1,0,99,Patient refusal
+P1944,6.4,13.9,0,94,Waiting for test results
+P1945,5.5,20.8,0,96,Patient refusal
+P1946,8.3,13.2,0,87,Waiting for test results
+P1947,4.4,19.7,1,99,Patient refusal
+P1948,2.1,19.7,0,85,Patient refusal
+P1949,3.0,23.7,0,94,Waiting for test results
+P1950,7.5,16.3,0,100,Waiting for test results
+P1951,2.1,12.3,0,97,Waiting for test results
+P1952,7.0,23.1,0,85,Waiting for test results
+P1953,6.4,17.9,1,92,None
+P1954,1.5,23.2,0,91,Bed availability
+P1955,1.6,13.9,0,89,None
+P1956,6.1,19.7,0,95,None
+P1957,6.4,19.9,1,92,Patient refusal
+P1958,5.9,15.5,0,95,None
+P1959,4.0,14.4,0,96,Waiting for test results
+P1960,5.8,16.3,0,96,Medication delay
+P1961,2.5,17.2,0,91,Waiting for test results
+P1962,4.8,18.9,0,88,None
+P1963,5.5,13.0,0,92,Waiting for test results
+P1964,3.6,15.0,0,96,Waiting for test results
+P1965,1.9,21.4,1,91,Waiting for test results
+P1966,1.8,13.5,0,95,Bed availability
+P1967,7.9,20.3,0,100,Patient refusal
+P1968,8.1,17.1,0,98,Patient refusal
+P1969,6.6,21.1,0,86,None
+P1970,1.7,23.4,0,100,Bed availability
+P1971,1.5,22.4,1,97,Medication delay
+P1972,1.1,14.7,0,95,Waiting for test results
+P1973,1.4,20.5,0,98,None
+P1974,2.1,23.4,0,91,Bed availability
+P1975,7.9,15.7,0,85,None
+P1976,7.5,16.7,0,100,Patient refusal
+P1977,6.1,17.1,0,89,Waiting for test results
+P1978,6.8,17.2,0,91,Bed availability
+P1979,1.0,14.1,0,98,Patient refusal
+P1980,1.7,21.2,0,94,Medication delay
+P1981,3.8,22.3,0,97,None
+P1982,6.2,16.5,0,93,Patient refusal
+P1983,4.6,12.8,1,93,Waiting for test results
+P1984,7.1,18.6,0,97,Bed availability
+P1985,2.7,19.6,0,85,Bed availability
+P1986,4.3,20.9,0,98,None
+P1987,2.2,15.1,0,86,Medication delay
+P1988,8.3,14.2,0,91,Medication delay
+P1989,4.2,22.8,0,90,Patient refusal
+P1990,5.2,13.2,1,100,Medication delay
+P1991,7.3,21.7,0,100,Patient refusal
+P1992,1.2,19.3,0,87,None
+P1993,5.7,21.3,0,87,None
+P1994,7.1,18.2,0,86,Medication delay
+P1995,4.0,18.1,0,92,Waiting for test results
+P1996,3.4,19.4,0,93,Waiting for test results
+P1997,2.1,12.3,0,86,Patient refusal
+P1998,8.4,19.4,0,96,Medication delay
+P1999,1.6,21.5,0,97,Patient refusal
+P2000,6.7,13.6,0,91,None
+P2001,3.0,13.8,0,95,Bed availability
+P2002,2.7,18.5,0,95,Bed availability
+P2003,1.7,19.2,0,93,Waiting for test results
+P2004,4.3,19.3,0,86,Waiting for test results
+P2005,5.1,14.8,0,95,Bed availability
+P2006,8.3,18.9,0,90,Patient refusal
+P2007,3.3,18.3,0,93,Waiting for test results
+P2008,1.6,12.5,0,95,Waiting for test results
+P2009,3.3,14.5,0,96,Patient refusal
+P2010,2.5,12.9,0,87,Waiting for test results
+P2011,8.2,17.6,0,98,Medication delay
+P2012,2.9,12.0,1,85,Bed availability
+P2013,2.7,17.1,0,86,Waiting for test results
+P2014,6.8,22.1,0,96,Patient refusal
+P2015,5.6,22.3,0,98,Bed availability
+P2016,5.0,19.2,0,94,Bed availability
+P2017,8.5,14.4,0,100,Bed availability
+P2018,6.5,14.6,0,94,Medication delay
+P2019,2.3,12.8,0,91,Medication delay
+P2020,1.3,14.6,1,90,None
+P2021,4.1,24.0,0,94,Waiting for test results
+P2022,5.0,14.2,0,97,Waiting for test results
+P2023,3.7,16.1,0,100,Bed availability
+P2024,4.3,23.3,0,91,Medication delay
+P2025,7.7,23.1,0,91,Waiting for test results
+P2026,3.7,22.2,0,93,Patient refusal
+P2027,8.4,21.2,0,99,Medication delay
+P2028,1.3,15.3,0,88,Waiting for test results
+P2029,2.0,20.3,0,90,Waiting for test results
+P2030,1.1,13.2,0,88,Waiting for test results
+P2031,5.7,12.9,0,91,Waiting for test results
+P2032,4.7,12.4,0,92,Waiting for test results
+P2033,3.2,18.5,0,94,Waiting for test results
+P2034,7.4,20.5,0,87,Waiting for test results
+P2035,5.3,20.5,0,98,Bed availability
+P2036,3.3,23.8,0,85,None
+P2037,8.0,14.0,0,87,Waiting for test results
+P2038,6.3,12.1,0,92,Waiting for test results
+P2039,3.3,17.5,0,88,None
+P2040,1.5,23.2,0,91,Waiting for test results
+P2041,4.5,12.3,0,89,None
+P2042,5.6,16.3,0,88,None
+P2043,1.8,15.1,0,97,Bed availability
+P2044,6.7,18.2,0,91,Medication delay
+P2045,3.1,22.2,0,88,Patient refusal
+P2046,2.7,14.9,0,100,Waiting for test results
+P2047,7.0,14.8,0,87,None
+P2048,6.8,23.1,0,95,Medication delay
+P2049,7.4,20.3,0,92,Patient refusal
+P2050,6.0,17.3,1,87,Waiting for test results
+P2051,1.2,21.1,0,99,Bed availability
+P2052,2.5,12.5,1,97,Patient refusal
+P2053,6.8,23.0,0,88,Bed availability
+P2054,1.6,12.1,0,93,Medication delay
+P2055,7.3,18.2,0,86,Patient refusal
+P2056,4.4,21.5,0,87,Patient refusal
+P2057,1.6,12.3,0,92,Waiting for test results
+P2058,7.2,13.5,0,87,Medication delay
+P2059,2.1,16.2,0,86,Medication delay
+P2060,3.9,16.9,0,98,Waiting for test results
+P2061,5.7,17.5,0,87,Medication delay
+P2062,1.6,20.9,0,97,Bed availability
+P2063,5.1,21.2,0,94,Waiting for test results
+P2064,3.3,19.9,0,92,None
+P2065,5.6,23.1,0,93,Bed availability
+P2066,3.6,21.1,0,95,Bed availability
+P2067,3.4,18.8,0,91,Medication delay
+P2068,7.7,17.8,0,100,Bed availability
+P2069,6.1,17.3,0,94,Bed availability
+P2070,2.9,19.5,0,100,Medication delay
+P2071,4.8,18.3,0,94,Medication delay
+P2072,1.6,12.8,0,92,Medication delay
+P2073,4.5,13.3,0,95,Bed availability
+P2074,2.8,12.1,0,90,Patient refusal
+P2075,2.8,20.2,0,90,Waiting for test results
+P2076,3.9,18.2,0,91,Waiting for test results
+P2077,5.5,16.6,0,85,Medication delay
+P2078,7.0,20.2,1,90,Bed availability
+P2079,6.0,14.0,0,85,Waiting for test results
+P2080,4.2,24.0,0,86,Patient refusal
+P2081,5.1,13.7,0,89,Medication delay
+P2082,6.3,20.8,0,90,Patient refusal
+P2083,7.0,15.8,0,98,None
+P2084,5.8,19.3,0,90,Waiting for test results
+P2085,1.0,20.8,0,97,Medication delay
+P2086,2.0,12.7,0,90,Waiting for test results
+P2087,6.4,21.2,0,91,Medication delay
+P2088,1.1,21.9,0,89,Patient refusal
+P2089,4.1,22.3,0,90,Medication delay
+P2090,2.1,22.2,0,92,Waiting for test results
+P2091,1.3,22.6,0,88,Bed availability
+P2092,5.8,20.1,1,85,Bed availability
+P2093,5.7,13.1,0,94,Patient refusal
+P2094,4.6,14.2,0,87,Medication delay
+P2095,7.1,22.3,0,89,None
+P2096,8.4,13.1,0,88,Medication delay
+P2097,5.0,14.9,1,96,Bed availability
+P2098,8.0,22.1,0,99,Bed availability
+P2099,8.2,17.9,0,87,Bed availability
+P2100,5.4,15.1,1,87,Medication delay
+P2101,3.8,20.3,0,91,Waiting for test results
+P2102,7.3,16.5,0,100,Bed availability
+P2103,7.9,21.5,0,98,Bed availability
+P2104,2.8,17.6,0,87,None
+P2105,1.0,16.0,0,90,Patient refusal
+P2106,7.2,20.1,0,85,Bed availability
+P2107,5.6,19.6,0,97,Waiting for test results
+P2108,1.4,22.7,0,88,Bed availability
+P2109,2.1,12.9,0,97,Waiting for test results
+P2110,5.4,17.0,0,94,Patient refusal
+P2111,1.7,16.4,0,99,Waiting for test results
+P2112,2.6,23.0,0,93,Waiting for test results
+P2113,1.8,14.1,0,93,None
+P2114,3.4,24.0,0,98,Bed availability
+P2115,4.1,18.8,0,97,Waiting for test results
+P2116,3.6,14.0,0,99,Medication delay
+P2117,5.0,12.9,0,94,Waiting for test results
+P2118,7.4,14.4,0,91,Bed availability
+P2119,1.6,16.1,0,86,Bed availability
+P2120,4.7,20.6,0,95,Medication delay
+P2121,4.9,19.0,0,88,Bed availability
+P2122,2.3,13.4,0,93,Patient refusal
+P2123,7.9,13.6,0,99,Medication delay
+P2124,4.7,21.4,1,97,Bed availability
+P2125,5.7,17.5,0,93,None
+P2126,3.0,14.8,0,99,Bed availability
+P2127,1.3,23.8,0,87,Patient refusal
+P2128,7.1,13.3,0,93,Medication delay
+P2129,4.6,14.8,0,98,Waiting for test results
+P2130,2.2,16.2,0,95,Waiting for test results
+P2131,2.5,23.7,0,93,Waiting for test results
+P2132,6.7,22.0,0,86,Bed availability
+P2133,3.9,14.6,0,93,Bed availability
+P2134,4.5,23.1,0,97,None
+P2135,5.9,14.0,0,98,Waiting for test results
+P2136,4.7,14.2,0,96,Bed availability
+P2137,2.1,13.3,0,99,Patient refusal
+P2138,4.0,22.8,0,87,Waiting for test results
+P2139,2.5,22.9,0,96,Waiting for test results
+P2140,2.0,14.4,0,89,Medication delay
+P2141,3.6,15.5,0,95,Patient refusal
+P2142,4.5,12.8,0,91,Medication delay
+P2143,1.8,18.6,0,91,Waiting for test results
+P2144,1.3,15.7,0,100,Medication delay
+P2145,6.5,22.2,0,87,Patient refusal
+P2146,1.6,12.9,0,88,Waiting for test results
+P2147,2.0,21.3,0,92,Patient refusal
+P2148,8.2,23.5,0,88,Waiting for test results
+P2149,2.6,20.6,0,94,Waiting for test results
+P2150,1.5,14.4,0,93,Waiting for test results
+P2151,7.0,17.3,0,91,Waiting for test results
+P2152,8.0,18.8,0,91,None
+P2153,4.5,23.3,0,90,Medication delay
+P2154,2.8,15.1,0,95,Patient refusal
+P2155,6.4,23.1,0,100,Bed availability
+P2156,5.4,16.9,0,96,Medication delay
+P2157,7.9,15.6,1,87,Waiting for test results
+P2158,2.2,21.9,0,96,Waiting for test results
+P2159,8.1,22.7,0,96,Waiting for test results
+P2160,7.7,12.5,0,96,Waiting for test results
+P2161,6.7,18.3,0,94,Waiting for test results
+P2162,5.7,16.8,0,85,Waiting for test results
+P2163,4.3,14.9,0,98,Medication delay
+P2164,4.2,17.9,0,90,Waiting for test results
+P2165,1.7,13.6,0,99,Patient refusal
+P2166,4.8,12.3,0,90,Bed availability
+P2167,5.7,23.1,1,90,Medication delay
+P2168,7.7,12.2,0,95,Bed availability
+P2169,3.1,15.9,0,100,Medication delay
+P2170,6.5,18.6,0,98,Waiting for test results
+P2171,4.7,14.7,0,93,Waiting for test results
+P2172,6.7,23.8,0,99,Waiting for test results
+P2173,4.6,20.6,0,100,Patient refusal
+P2174,7.2,21.4,0,99,Bed availability
+P2175,8.2,14.2,0,94,Patient refusal
+P2176,3.1,12.4,0,96,Waiting for test results
+P2177,4.4,15.5,0,88,Waiting for test results
+P2178,8.3,12.1,0,94,Waiting for test results
+P2179,2.1,20.5,0,85,Patient refusal
+P2180,1.7,12.5,0,93,None
+P2181,1.5,18.5,0,88,Bed availability
+P2182,4.6,22.9,0,88,Medication delay
+P2183,4.5,17.6,0,93,Bed availability
+P2184,6.2,21.1,0,90,Medication delay
+P2185,7.2,13.9,0,100,Medication delay
+P2186,6.4,15.4,0,100,None
+P2187,6.1,16.5,0,98,Medication delay
+P2188,7.7,14.6,0,88,Bed availability
+P2189,7.6,18.0,1,88,None
+P2190,8.3,17.9,0,93,Waiting for test results
+P2191,8.4,21.0,0,95,Waiting for test results
+P2192,5.6,14.0,0,95,Bed availability
+P2193,4.4,15.8,0,93,Patient refusal
+P2194,6.2,22.0,0,99,Waiting for test results
+P2195,3.5,20.0,0,93,Medication delay
+P2196,4.1,14.9,0,86,Bed availability
+P2197,4.0,23.1,0,93,Bed availability
+P2198,5.7,16.0,0,99,Waiting for test results
+P2199,6.0,15.7,0,98,Waiting for test results
+P2200,1.4,16.4,0,89,Waiting for test results
+P2201,6.4,14.7,0,93,Medication delay
+P2202,1.3,12.3,0,87,Waiting for test results
+P2203,1.0,22.4,0,94,None
+P2204,2.3,13.6,0,91,Waiting for test results
+P2205,4.4,21.1,0,88,None
+P2206,6.2,18.3,0,90,None
+P2207,2.1,19.9,0,87,Waiting for test results
+P2208,5.3,15.1,0,87,Waiting for test results
+P2209,4.6,17.7,0,86,None
+P2210,2.6,20.8,0,98,Patient refusal
+P2211,1.2,15.7,0,85,Medication delay
+P2212,7.5,14.5,0,99,Waiting for test results
+P2213,2.6,17.9,0,88,Medication delay
+P2214,3.9,15.9,0,89,Waiting for test results
+P2215,7.2,15.7,0,90,Patient refusal
+P2216,4.4,14.6,0,86,Waiting for test results
+P2217,8.3,16.3,0,98,None
+P2218,7.4,14.4,0,98,Waiting for test results
+P2219,5.2,19.3,0,87,Medication delay
+P2220,6.8,16.8,0,100,Bed availability
+P2221,6.3,12.4,0,100,Patient refusal
+P2222,6.5,19.8,0,97,Waiting for test results
+P2223,1.8,23.7,0,94,None
+P2224,5.7,15.2,0,88,Waiting for test results
+P2225,2.2,20.6,0,85,Waiting for test results
+P2226,1.5,22.0,0,91,Waiting for test results
+P2227,5.2,17.5,0,98,Bed availability
+P2228,8.0,22.6,0,100,None
+P2229,5.8,18.6,0,91,Bed availability
+P2230,4.6,20.3,0,88,Patient refusal
+P2231,4.0,17.0,0,94,Waiting for test results
+P2232,8.4,16.8,0,90,None
+P2233,3.4,22.1,0,89,Waiting for test results
+P2234,2.9,15.7,0,97,Medication delay
+P2235,6.2,18.2,0,93,None
+P2236,6.4,17.6,1,88,Bed availability
+P2237,3.3,13.7,0,85,Waiting for test results
+P2238,8.0,15.1,1,88,None
+P2239,3.7,20.2,0,91,Bed availability
+P2240,1.6,14.9,0,86,Bed availability
+P2241,4.7,16.5,0,100,None
+P2242,3.5,20.8,0,99,Patient refusal
+P2243,5.0,17.4,0,91,Bed availability
+P2244,6.6,14.5,0,88,Waiting for test results
+P2245,6.8,22.0,0,91,Patient refusal
+P2246,7.7,12.6,0,100,Medication delay
+P2247,5.2,22.0,0,99,Patient refusal
+P2248,5.5,19.9,0,90,Waiting for test results
+P2249,2.1,21.6,0,100,Waiting for test results
+P2250,4.8,18.6,0,100,Waiting for test results
+P2251,6.0,22.4,0,94,Waiting for test results
+P2252,7.9,19.6,0,90,Medication delay
+P2253,2.6,16.6,0,100,Bed availability
+P2254,4.6,23.0,0,89,Patient refusal
+P2255,7.5,20.2,0,91,Bed availability
+P2256,2.3,23.9,0,93,Waiting for test results
+P2257,1.4,21.8,0,86,Medication delay
+P2258,6.8,17.3,0,91,Waiting for test results
+P2259,4.4,16.4,0,90,None
+P2260,6.9,21.6,0,86,Waiting for test results
+P2261,8.4,13.6,0,97,Waiting for test results
+P2262,1.1,20.1,0,96,None
+P2263,7.6,17.9,0,90,Bed availability
+P2264,5.7,18.7,0,89,Medication delay
+P2265,1.9,15.6,0,96,None
+P2266,2.1,14.8,0,88,None
+P2267,3.3,21.8,0,91,Patient refusal
+P2268,5.1,19.4,0,86,Waiting for test results
+P2269,7.8,12.6,0,93,Bed availability
+P2270,3.6,21.9,0,91,Waiting for test results
+P2271,2.0,19.6,0,93,Waiting for test results
+P2272,6.7,14.8,0,88,Waiting for test results
+P2273,4.6,20.2,0,97,Bed availability
+P2274,3.7,19.5,0,95,None
+P2275,4.1,17.3,0,89,Waiting for test results
+P2276,2.0,16.8,0,93,Waiting for test results
+P2277,1.6,18.0,0,88,Patient refusal
+P2278,5.7,17.4,0,99,Patient refusal
+P2279,4.4,17.1,0,97,Waiting for test results
+P2280,1.0,23.8,0,85,None
+P2281,8.3,17.0,0,96,Medication delay
+P2282,4.0,15.1,0,99,Bed availability
+P2283,7.0,19.0,0,93,None
+P2284,1.2,23.0,0,98,Waiting for test results
+P2285,5.3,13.3,0,97,Bed availability
+P2286,7.1,16.4,0,89,Waiting for test results
+P2287,1.9,18.8,0,100,Waiting for test results
+P2288,7.0,17.8,0,95,Waiting for test results
+P2289,7.5,15.0,0,91,Waiting for test results
+P2290,4.9,19.4,0,90,None
+P2291,1.9,19.0,0,89,Waiting for test results
+P2292,7.3,17.9,0,88,Waiting for test results
+P2293,6.9,12.5,0,98,None
+P2294,5.1,18.0,0,88,Bed availability
+P2295,7.6,13.3,0,95,Waiting for test results
+P2296,7.4,18.6,0,90,Waiting for test results
+P2297,5.0,19.3,0,94,Patient refusal
+P2298,5.0,22.8,0,95,Waiting for test results
+P2299,2.1,14.6,0,96,Bed availability
+P2300,5.9,18.2,0,89,Medication delay
+P2301,1.1,14.3,0,86,Waiting for test results
+P2302,1.6,19.2,0,87,None
+P2303,1.6,19.0,0,85,Medication delay
+P2304,3.1,16.0,1,90,Waiting for test results
+P2305,2.9,13.7,0,97,Waiting for test results
+P2306,3.1,14.7,0,87,Waiting for test results
+P2307,1.5,16.7,0,94,Waiting for test results
+P2308,4.7,20.7,0,90,Waiting for test results
+P2309,5.6,19.2,0,87,Medication delay
+P2310,1.2,22.2,0,87,None
+P2311,4.2,19.0,0,85,None
+P2312,2.2,23.8,0,98,Waiting for test results
+P2313,3.4,13.9,0,87,Bed availability
+P2314,4.8,16.7,0,98,None
+P2315,5.4,15.4,0,92,Waiting for test results
+P2316,3.8,18.1,0,98,Waiting for test results
+P2317,7.2,22.8,0,94,Bed availability
+P2318,1.8,15.6,0,96,None
+P2319,5.5,13.1,0,94,Patient refusal
+P2320,7.8,19.4,0,96,Waiting for test results
+P2321,6.2,22.0,0,90,Patient refusal
+P2322,5.4,19.7,0,99,Patient refusal
+P2323,5.8,20.1,0,90,Bed availability
+P2324,5.9,15.7,0,93,Waiting for test results
+P2325,1.9,17.9,0,88,Waiting for test results
+P2326,2.3,23.5,0,86,Bed availability
+P2327,2.1,20.4,0,99,Medication delay
+P2328,4.6,16.6,1,91,Waiting for test results
+P2329,5.5,15.2,0,87,Bed availability
+P2330,7.5,17.9,0,93,Waiting for test results
+P2331,4.2,22.9,0,96,Medication delay
+P2332,7.0,21.5,0,90,Waiting for test results
+P2333,2.2,12.7,0,96,Bed availability
+P2334,5.0,22.6,0,87,Medication delay
+P2335,2.2,12.2,0,91,Patient refusal
+P2336,7.2,13.0,0,89,Medication delay
+P2337,7.1,20.9,0,94,Waiting for test results
+P2338,5.0,19.7,0,88,Patient refusal
+P2339,5.0,14.9,0,98,Waiting for test results
+P2340,4.5,13.0,0,88,Waiting for test results
+P2341,4.7,19.6,0,95,Waiting for test results
+P2342,1.5,20.6,0,94,Patient refusal
+P2343,1.5,20.6,0,96,None
+P2344,7.4,18.0,0,93,Waiting for test results
+P2345,8.0,15.7,0,94,Waiting for test results
+P2346,6.2,21.7,0,95,Bed availability
+P2347,6.9,16.3,0,94,Waiting for test results
+P2348,8.2,22.5,0,89,None
+P2349,3.0,24.0,0,98,Medication delay
+P2350,3.4,16.8,0,100,Waiting for test results
+P2351,5.4,12.1,1,87,Waiting for test results
+P2352,5.8,17.7,0,99,Medication delay
+P2353,6.9,22.8,0,87,Medication delay
+P2354,2.9,18.8,0,93,Medication delay
+P2355,3.7,17.8,0,93,Waiting for test results
+P2356,4.6,15.5,0,92,None
+P2357,3.4,15.8,0,95,Bed availability
+P2358,3.3,13.9,0,86,Medication delay
+P2359,7.7,19.9,0,97,Bed availability
+P2360,3.7,19.6,0,88,None
+P2361,2.4,15.7,0,85,Medication delay
+P2362,5.5,19.5,0,87,Medication delay
+P2363,8.1,18.1,0,91,Patient refusal
+P2364,4.9,18.3,0,92,Bed availability
+P2365,2.5,22.1,1,85,Waiting for test results
+P2366,2.2,21.5,0,94,Waiting for test results
+P2367,8.1,15.2,0,100,Bed availability
+P2368,5.6,12.3,0,85,None
+P2369,3.3,15.4,0,90,None
+P2370,6.7,20.0,0,87,Medication delay
+P2371,2.2,15.3,0,96,Patient refusal
+P2372,1.6,12.8,0,89,Patient refusal
+P2373,3.5,14.0,0,93,Medication delay
+P2374,2.4,14.7,0,93,Medication delay
+P2375,3.9,23.7,0,96,Bed availability
+P2376,2.5,13.2,0,95,Waiting for test results
+P2377,6.2,20.4,0,99,Medication delay
+P2378,4.3,12.6,0,98,Bed availability
+P2379,8.1,16.8,0,95,Waiting for test results
+P2380,6.2,16.6,0,85,Waiting for test results
+P2381,5.1,15.5,0,89,Waiting for test results
+P2382,8.2,13.8,0,96,Waiting for test results
+P2383,4.7,23.6,0,95,Medication delay
+P2384,4.7,19.0,0,87,None
+P2385,1.3,12.8,0,94,Medication delay
+P2386,7.2,20.0,0,100,Waiting for test results
+P2387,7.9,19.6,0,97,Bed availability
+P2388,8.0,24.0,0,100,Waiting for test results
+P2389,1.8,16.9,0,90,Patient refusal
+P2390,2.9,14.2,0,94,Waiting for test results
+P2391,7.9,15.7,0,85,Waiting for test results
+P2392,7.5,23.6,0,94,Medication delay
+P2393,6.2,21.6,0,98,Medication delay
+P2394,2.0,23.0,0,92,Bed availability
+P2395,3.3,18.1,0,93,None
+P2396,3.4,19.5,0,95,Patient refusal
+P2397,2.6,15.1,1,86,Bed availability
+P2398,5.4,12.0,0,88,Waiting for test results
+P2399,1.8,17.6,1,89,Bed availability
+P2400,7.7,16.9,0,90,Bed availability
+P2401,2.1,14.4,0,87,None
+P2402,7.3,15.5,0,89,Waiting for test results
+P2403,7.5,16.2,0,85,Bed availability
+P2404,7.9,12.1,0,86,Medication delay
+P2405,5.3,16.0,0,88,Medication delay
+P2406,6.7,16.6,0,90,Bed availability
+P2407,5.1,15.7,0,92,Medication delay
+P2408,7.4,20.0,0,98,Bed availability
+P2409,5.7,19.0,0,92,Bed availability
+P2410,3.6,22.3,0,93,Medication delay
+P2411,8.0,23.5,0,92,Bed availability
+P2412,8.3,23.1,0,99,None
+P2413,4.8,18.2,0,96,Waiting for test results
+P2414,8.0,22.1,0,88,Waiting for test results
+P2415,2.0,22.6,0,88,Bed availability
+P2416,2.0,19.5,0,88,Medication delay
+P2417,2.8,15.5,1,96,None
+P2418,5.8,20.2,0,94,None
+P2419,5.5,14.3,0,98,Medication delay
+P2420,7.6,16.6,1,86,None
+P2421,1.8,14.3,0,94,Bed availability
+P2422,3.5,19.6,0,91,Patient refusal
+P2423,2.4,19.6,0,93,None
+P2424,7.2,23.0,1,89,Bed availability
+P2425,3.1,21.4,0,92,Patient refusal
+P2426,1.7,21.7,0,85,Patient refusal
+P2427,3.2,18.7,0,100,Waiting for test results
+P2428,8.0,15.8,0,96,Medication delay
+P2429,7.7,18.4,0,99,None
+P2430,2.6,21.0,0,89,Waiting for test results
+P2431,5.2,12.7,0,90,Bed availability
+P2432,3.4,14.5,0,96,Bed availability
+P2433,1.4,14.6,0,85,Waiting for test results
+P2434,6.0,13.2,0,85,Bed availability
+P2435,8.3,13.1,0,86,Waiting for test results
+P2436,4.2,14.9,0,100,Waiting for test results
+P2437,7.6,22.5,0,97,Medication delay
+P2438,8.3,22.9,0,96,Patient refusal
+P2439,7.6,23.5,0,94,Patient refusal
+P2440,2.8,21.7,0,91,Waiting for test results
+P2441,5.4,15.7,0,100,Waiting for test results
+P2442,6.3,21.7,0,95,None
+P2443,4.7,23.3,0,98,Bed availability
+P2444,2.6,14.6,1,87,Waiting for test results
+P2445,4.8,18.7,0,99,Bed availability
+P2446,7.6,18.9,0,96,Waiting for test results
+P2447,6.4,13.3,1,92,Patient refusal
+P2448,7.0,23.4,0,98,Bed availability
+P2449,7.9,18.3,0,90,Waiting for test results
+P2450,4.3,18.3,0,91,Patient refusal
+P2451,5.2,20.2,1,95,Bed availability
+P2452,1.7,23.8,0,93,Waiting for test results
+P2453,4.6,20.3,0,89,None
+P2454,6.4,13.3,0,89,Bed availability
+P2455,5.8,21.1,0,93,Bed availability
+P2456,6.4,16.0,0,90,Patient refusal
+P2457,2.0,18.1,0,95,None
+P2458,6.2,18.9,0,90,Bed availability
+P2459,4.9,22.6,0,91,Bed availability
+P2460,1.2,15.7,0,94,Bed availability
+P2461,1.5,13.5,0,99,None
+P2462,1.1,13.6,0,95,Patient refusal
+P2463,1.1,20.2,0,89,Medication delay
+P2464,2.6,19.5,0,85,Bed availability
+P2465,6.6,18.9,1,85,Waiting for test results
+P2466,6.3,21.4,0,87,Bed availability
+P2467,5.8,22.1,0,94,Medication delay
+P2468,1.8,23.1,0,94,Medication delay
+P2469,3.8,19.7,0,86,Patient refusal
+P2470,3.4,14.4,0,90,Waiting for test results
+P2471,1.3,12.2,0,87,Bed availability
+P2472,5.1,15.4,0,86,Bed availability
+P2473,4.1,17.4,0,91,Waiting for test results
+P2474,6.2,21.3,0,86,Waiting for test results
+P2475,3.2,15.2,0,92,Waiting for test results
+P2476,5.1,14.0,0,87,Waiting for test results
+P2477,7.2,21.8,0,86,Waiting for test results
+P2478,3.9,13.8,0,99,Waiting for test results
+P2479,4.2,21.9,0,97,Medication delay
+P2480,5.7,12.8,0,92,Medication delay
+P2481,7.9,19.3,0,86,Medication delay
+P2482,5.0,17.2,0,100,Waiting for test results
+P2483,3.8,17.4,0,93,Bed availability
+P2484,3.0,15.2,0,99,Bed availability
+P2485,6.6,16.2,0,100,Waiting for test results
+P2486,1.6,12.5,0,99,None
+P2487,3.1,16.2,0,98,Waiting for test results
+P2488,4.8,12.8,0,89,Bed availability
+P2489,6.7,20.4,0,99,Medication delay
+P2490,8.5,18.7,0,92,Bed availability
+P2491,3.0,14.3,0,99,Waiting for test results
+P2492,7.0,15.9,0,88,Medication delay
+P2493,7.9,16.9,0,96,None
+P2494,2.7,23.8,0,98,Medication delay
+P2495,4.9,18.7,0,90,Waiting for test results
+P2496,6.5,14.5,1,99,Patient refusal
+P2497,5.7,14.1,1,93,Waiting for test results
+P2498,5.9,20.7,0,96,Patient refusal
+P2499,6.9,18.2,0,96,Waiting for test results
+P2500,2.3,18.2,0,88,Waiting for test results

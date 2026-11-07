@@ -50,6 +50,12 @@ process-analysis measure set are documented in
 [docs/power_bi_integration.md](docs/power_bi_integration.md). The measures below
 use those exported table names:
 
+The CareFlow-specific measure pack (including prior-month comparisons,
+target variances, variant share, heatmap support, and data-readiness notes) is
+in [dax/careflow_executive_measures.dax](dax/careflow_executive_measures.dax)
+and the complete layout/model contract is in
+[docs/careflow_executive_report_spec.md](docs/careflow_executive_report_spec.md).
+
 ```DAX
 Total Patients =
     DISTINCTCOUNT(Events[CaseID])
