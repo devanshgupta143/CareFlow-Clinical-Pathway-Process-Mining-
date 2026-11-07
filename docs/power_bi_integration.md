@@ -2,11 +2,32 @@
 
 ## Run the processing pipeline
 
+Generate the dashboard-ready synthetic inputs from the repository root:
+
+```powershell
+python generate_data.py
+```
+
+By default this writes `data\clinical_events.csv` and
+`data\case_metadata.csv` for 12,482 synthetic cases. The case duration,
+process-time, readmission, and satisfaction averages are calibrated to the
+requested dashboard benchmarks. Override the population, seed, or output
+location with `--cases`, `--seed`, or `--output-dir`. These records are
+synthetic test data and must not be presented as real hospital outcomes.
+
+Run the PM4Py exporter directly on those generated files:
+
+```powershell
+python src\process_mining.py --input data\clinical_events.csv --case-metadata data\case_metadata.csv --output-dir data\processed
+```
+
 The script accepts CSV and PM4Py-readable XES/XES.GZ event logs. It accepts the
 CareFlow export (`Case_ID`, `Activity_Name`,
 `Start_Timestamp`, `End_Timestamp`) and common XES/CSV field names. Required
 event fields are case ID, activity, and a start/event timestamp. An end timestamp
 is optional; when absent, the event timestamp is used as both endpoints.
+When `ProcessTimeHours`/`process_time_hours` is present without an end timestamp,
+the exporter derives the event end from its start and process duration.
 Timestamps are parsed as UTC.
 
 From the repository root:

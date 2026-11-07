@@ -1,0 +1,303 @@
+// CareFlow executive and process-mining measures.
+// In the model contract, PM4Py Cases is renamed FactCases and Events is
+// renamed FactEvents. Other PM4Py dimension names are given in the report spec.
+// Add these as semantic-model measures; do not paste the comments as DAX.
+
+Total Patients =
+    DISTINCTCOUNT(FactCases[CaseID])
+
+Avg Length of Stay (Days) =
+    AVERAGE(FactCases[DurationDays])
+
+Total Process Time (Hours) =
+    SUM(FactCases[DurationHours])
+
+Readmission Rate (%) =
+VAR KnownCases =
+    CALCULATE(
+        COUNTROWS(FactCases),
+        KEEPFILTERS(NOT ISBLANK(FactCases[IsReadmitted]))
+    )
+VAR ReadmittedCases =
+    CALCULATE(
+        COUNTROWS(FactCases),
+        KEEPFILTERS(FactCases[IsReadmitted] = TRUE())
+    )
+RETURN
+    IF(KnownCases = 0, BLANK(), DIVIDE(ReadmittedCases, KnownCases))
+
+Patient Satisfaction (%) =
+    DIVIDE(AVERAGE(FactCases[PatientSatisfactionPct]), 100)
+
+Avg Stage Duration (Hours) =
+    AVERAGE(FactEvents[ActivityDurationHours])
+
+Avg Stage Wait (Hours) =
+    AVERAGE(FactEvents[WaitHours])
+
+Avg Transition Wait (Hours) =
+    AVERAGE(Transitions[WaitHours])
+
+Stage Event Count =
+    COUNTROWS(FactEvents)
+
+Stage Patients =
+    DISTINCTCOUNT(FactEvents[CaseID])
+
+Stage Completion (%) =
+    DIVIDE([Stage Patients], [Total Patients])
+
+Variant Cases =
+    DISTINCTCOUNT(FactCases[CaseID])
+
+Variant Share (%) =
+VAR AllVariantCases =
+    CALCULATE([Total Patients], REMOVEFILTERS(DimVariants))
+RETURN
+    DIVIDE([Variant Cases], AllVariantCases)
+
+Avg LOS Target (Days) =
+    CALCULATE(
+        AVERAGE(Targets[TargetValue]),
+        Targets[Metric] = "Avg LOS Days"
+    )
+
+LOS vs Target (%) =
+VAR TargetValue = [Avg LOS Target (Days)]
+RETURN
+    IF(
+        ISBLANK(TargetValue),
+        BLANK(),
+        DIVIDE([Avg Length of Stay (Days)] - TargetValue, TargetValue)
+    )
+
+Total Process Time Target (Hours) =
+    CALCULATE(
+        SUM(Targets[TargetValue]),
+        Targets[Metric] = "Total Process Time Hours"
+    )
+
+Process Time vs Target (%) =
+VAR TargetValue = [Total Process Time Target (Hours)]
+RETURN
+    IF(
+        ISBLANK(TargetValue),
+        BLANK(),
+        DIVIDE([Total Process Time (Hours)] - TargetValue, TargetValue)
+    )
+
+Avg Stage Duration Target (Hours) =
+    CALCULATE(
+        AVERAGE(Targets[TargetValue]),
+        Targets[Metric] = "Stage Duration Hours"
+    )
+
+Stage Duration vs Target (%) =
+VAR TargetValue = [Avg Stage Duration Target (Hours)]
+RETURN
+    IF(
+        ISBLANK(TargetValue),
+        BLANK(),
+        DIVIDE([Avg Stage Duration (Hours)] - TargetValue, TargetValue)
+    )
+
+Readmission Target (%) =
+    CALCULATE(
+        AVERAGE(Targets[TargetValue]),
+        Targets[Metric] = "Readmission Rate"
+    )
+
+Patient Satisfaction Target (%) =
+    CALCULATE(
+        AVERAGE(Targets[TargetValue]),
+        Targets[Metric] = "Patient Satisfaction"
+    )
+
+Readmission vs Target (pp) =
+VAR TargetValue = [Readmission Target (%)]
+RETURN
+    IF(
+        ISBLANK(TargetValue),
+        BLANK(),
+        [Readmission Rate (%)] - TargetValue
+    )
+
+Patient Satisfaction vs Target (pp) =
+VAR TargetValue = [Patient Satisfaction Target (%)]
+RETURN
+    IF(
+        ISBLANK(TargetValue),
+        BLANK(),
+        [Patient Satisfaction (%)] - TargetValue
+    )
+
+LOS Target Status =
+VAR ActualValue = [Avg Length of Stay (Days)]
+VAR TargetValue = [Avg LOS Target (Days)]
+RETURN
+    SWITCH(
+        TRUE(),
+        ISBLANK(ActualValue), "No data",
+        ISBLANK(TargetValue), "No target",
+        ActualValue <= TargetValue, "Favorable",
+        "Above target"
+    )
+
+Process Time Target Status =
+VAR ActualValue = [Total Process Time (Hours)]
+VAR TargetValue = [Total Process Time Target (Hours)]
+RETURN
+    SWITCH(
+        TRUE(),
+        ISBLANK(ActualValue), "No data",
+        ISBLANK(TargetValue), "No target",
+        ActualValue <= TargetValue, "Favorable",
+        "Above target"
+    )
+
+Stage Duration Target Status =
+VAR ActualValue = [Avg Stage Duration (Hours)]
+VAR TargetValue = [Avg Stage Duration Target (Hours)]
+RETURN
+    SWITCH(
+        TRUE(),
+        ISBLANK(ActualValue), "No data",
+        ISBLANK(TargetValue), "No target",
+        ActualValue <= TargetValue, "Favorable",
+        "Above target"
+    )
+
+Readmission Target Status =
+VAR ActualValue = [Readmission Rate (%)]
+VAR TargetValue = [Readmission Target (%)]
+RETURN
+    SWITCH(
+        TRUE(),
+        ISBLANK(ActualValue), "No data",
+        ISBLANK(TargetValue), "No target",
+        ActualValue <= TargetValue, "Favorable",
+        "Above target"
+    )
+
+Satisfaction Target Status =
+VAR ActualValue = [Patient Satisfaction (%)]
+VAR TargetValue = [Patient Satisfaction Target (%)]
+RETURN
+    SWITCH(
+        TRUE(),
+        ISBLANK(ActualValue), "No data",
+        ISBLANK(TargetValue), "No target",
+        ActualValue >= TargetValue, "Favorable",
+        "Below target"
+    )
+
+Total Patients Previous Month =
+    CALCULATE(
+        [Total Patients],
+        DATEADD(DimDate[Date], -1, MONTH)
+    )
+
+Patients vs Previous Month (%) =
+VAR PriorValue = [Total Patients Previous Month]
+RETURN
+    IF(
+        ISBLANK(PriorValue),
+        BLANK(),
+        DIVIDE([Total Patients] - PriorValue, PriorValue)
+    )
+
+Avg LOS Previous Month (Days) =
+    CALCULATE(
+        [Avg Length of Stay (Days)],
+        DATEADD(DimDate[Date], -1, MONTH)
+    )
+
+LOS vs Previous Month (%) =
+VAR PriorValue = [Avg LOS Previous Month (Days)]
+RETURN
+    IF(
+        ISBLANK(PriorValue),
+        BLANK(),
+        DIVIDE([Avg Length of Stay (Days)] - PriorValue, PriorValue)
+    )
+
+Total Process Time Previous Month (Hours) =
+    CALCULATE(
+        [Total Process Time (Hours)],
+        DATEADD(DimDate[Date], -1, MONTH)
+    )
+
+Process Time vs Previous Month (%) =
+VAR PriorValue = [Total Process Time Previous Month (Hours)]
+RETURN
+    IF(
+        ISBLANK(PriorValue),
+        BLANK(),
+        DIVIDE([Total Process Time (Hours)] - PriorValue, PriorValue)
+    )
+
+Readmission Rate Previous Month (%) =
+    CALCULATE(
+        [Readmission Rate (%)],
+        DATEADD(DimDate[Date], -1, MONTH)
+    )
+
+Readmission vs Previous Month (pp) =
+VAR PriorValue = [Readmission Rate Previous Month (%)]
+RETURN
+    IF(
+        ISBLANK(PriorValue),
+        BLANK(),
+        [Readmission Rate (%)] - PriorValue
+    )
+
+Patient Satisfaction Previous Month (%) =
+    CALCULATE(
+        [Patient Satisfaction (%)],
+        DATEADD(DimDate[Date], -1, MONTH)
+    )
+
+Satisfaction vs Previous Month (pp) =
+VAR PriorValue = [Patient Satisfaction Previous Month (%)]
+RETURN
+    IF(
+        ISBLANK(PriorValue),
+        BLANK(),
+        [Patient Satisfaction (%)] - PriorValue
+    )
+
+Events Heatmap Intensity =
+    COUNTROWS(FactEvents)
+
+Case Cycle Time (Hours) =
+    AVERAGE(FactCases[DurationHours])
+
+// Optional calculated columns on FactCases for the cycle-time histogram.
+// Add these only after importing the one-row-per-case DurationHours field.
+Cycle Time Band =
+VAR Hours = FactCases[DurationHours]
+RETURN
+    SWITCH(
+        TRUE(),
+        ISBLANK(Hours), BLANK(),
+        Hours <= 6, "0-6",
+        Hours <= 12, "6-12",
+        Hours <= 18, "12-18",
+        Hours <= 24, "18-24",
+        Hours <= 30, "24-30",
+        ">30"
+    )
+
+Cycle Time Band Sort =
+VAR Hours = FactCases[DurationHours]
+RETURN
+    SWITCH(
+        TRUE(),
+        ISBLANK(Hours), BLANK(),
+        Hours <= 6, 1,
+        Hours <= 12, 2,
+        Hours <= 18, 3,
+        Hours <= 24, 4,
+        Hours <= 30, 5,
+        6
+    )

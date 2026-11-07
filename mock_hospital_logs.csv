@@ -1,6 +1,0 @@
-Case_ID,Activity_Name,Timestamp,Department
-C001,Patient Check-in,2026-06-01 09:00:00,Reception
-C001,Triage Assessment,2026-06-01 09:15:00,Emergency
-C001,Doctor Consultation,2026-06-01 10:00:00,Consultation
-C002,Patient Check-in,2026-06-01 09:30:00,Reception
-C002,Triage Assessment,2026-06-01 09:45:00,Emergency

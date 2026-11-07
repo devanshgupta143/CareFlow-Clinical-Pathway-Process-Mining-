@@ -14,19 +14,28 @@ from pm4py.statistics.variants.log import get as variants_get
 
 INPUT_ALIASES = {
     "CaseID": ("CaseID", "Case_ID", "Case ID", "PatientID", "case:concept:name"),
-    "Activity": ("Activity", "Activity_Name", "Activity Name", "Action", "concept:name"),
+    "Activity": (
+        "Activity",
+        "Activity_Name",
+        "Activity Name",
+        "Action",
+        "event_activity",
+        "concept:name",
+    ),
     "StartTimestamp": (
         "StartTimestamp",
         "Start_Timestamp",
         "Start Timestamp",
         "Timestamp",
         "Time",
+        "event_time",
         "time:timestamp",
     ),
     "EndTimestamp": ("EndTimestamp", "End_Timestamp", "End Timestamp"),
+    "ProcessTimeHours": ("ProcessTimeHours", "Process_Time_Hours"),
     "Resource": ("Resource", "Resource_Name", "org:resource"),
     "Department": ("Department", "Ward"),
-    "Diagnosis": ("Diagnosis", "Diagnosis_Name"),
+    "Diagnosis": ("Diagnosis", "Diagnosis_Name", "primary_diagnosis"),
 }
 
 CASE_ALIASES = {
@@ -93,17 +102,22 @@ def load_events(path: str | Path) -> pd.DataFrame:
     activity_column = _require_column(raw, INPUT_ALIASES["Activity"], "activity")
     start_column = _require_column(raw, INPUT_ALIASES["StartTimestamp"], "timestamp")
     end_column = _column_name(raw, INPUT_ALIASES["EndTimestamp"])
+    process_time_column = _column_name(raw, INPUT_ALIASES["ProcessTimeHours"])
+    start_times = pd.to_datetime(raw[start_column], errors="coerce", utc=True)
+    if end_column:
+        end_times = pd.to_datetime(raw[end_column], errors="coerce", utc=True)
+    elif process_time_column:
+        process_hours = pd.to_numeric(raw[process_time_column], errors="coerce")
+        end_times = start_times + pd.to_timedelta(process_hours, unit="h")
+    else:
+        end_times = start_times
 
     events = pd.DataFrame(
         {
             "CaseID": _clean_text(raw[case_column]),
             "Activity": _clean_text(raw[activity_column]),
-            "StartTimestamp": pd.to_datetime(raw[start_column], errors="coerce", utc=True),
-            "EndTimestamp": (
-                pd.to_datetime(raw[end_column], errors="coerce", utc=True)
-                if end_column
-                else pd.to_datetime(raw[start_column], errors="coerce", utc=True)
-            ),
+            "StartTimestamp": start_times,
+            "EndTimestamp": end_times,
         }
     )
     for field in ("Resource", "Department", "Diagnosis"):
