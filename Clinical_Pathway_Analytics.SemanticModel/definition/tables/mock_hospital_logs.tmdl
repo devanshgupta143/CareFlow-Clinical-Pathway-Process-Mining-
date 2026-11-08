@@ -15,7 +15,7 @@ table mock_hospital_logs
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure 'Total Cases' = DISTINCTCOUNT('mock_hospital_logs'[Case_ID])
+	measure 'Total Cases' = DISTINCTCOUNT('mock_hospital_logs'[CaseID])
 		formatString: 0
 		lineageTag: 6b49dfff-6249-4555-a28e-73a2491ca0d6
 
@@ -113,12 +113,33 @@ table mock_hospital_logs
 
 	measure 'Avg Pathway Duration' =
 			AVERAGEX(
-			    VALUES('mock_hospital_logs'[Case_ID]),
-			    CALCULATE(MAX('mock_hospital_logs'[Timestamp]))
-			        - CALCULATE(MIN('mock_hospital_logs'[Timestamp]))
+			    VALUES('mock_hospital_logs'[CaseID]),
+			    CALCULATE(MAX('mock_hospital_logs'[DurationDays]))
 			)
 		formatString: 0.0
 		lineageTag: 5e3bf0ad-0030-491b-99d4-37f6bbf92683
+
+	measure 'Adherence Rate' =
+			DIVIDE(
+			    CALCULATE(
+			        [Total Cases],
+			        'mock_hospital_logs'[IsStandardPath] = TRUE()
+			    ),
+			    [Total Cases],
+			    0
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 7869a47f-bc37-46a8-88d5-4326d85b4413
+
+	measure 'Avg Wait Time Hours' =
+			AVERAGE('mock_hospital_logs'[Wait_Time_Hours])
+		formatString: 0.0
+		lineageTag: 38cf659a-a4e0-40bd-97d9-f187a9669636
+
+	measure 'Avg Processing Time Hours' =
+			AVERAGE('mock_hospital_logs'[Process_Time_Hours])
+		formatString: 0.0
+		lineageTag: c4ef84b7-a315-459e-81cc-4bcf113bc827
 
 	measure 'Pathway Variant Cases' = DISTINCTCOUNT('mock_hospital_logs'[Case_ID])
 		formatString: 0
@@ -135,6 +156,11 @@ table mock_hospital_logs
 		sourceColumn: Case_ID
 
 		annotation SummarizationSetBy = Automatic
+
+	column CaseID = 'mock_hospital_logs'[Case_ID]
+		dataType: string
+		lineageTag: b0f7d627-6ab5-4c65-8373-98165d9c7151
+		summarizeBy: none
 
 	column Activity_Name
 		dataType: string
@@ -166,6 +192,79 @@ table mock_hospital_logs
 
 		annotation SummarizationSetBy = Automatic
 
+	column Hospital
+		dataType: string
+		lineageTag: a46d494a-98c3-401b-9221-5a3ba19ba24a
+		summarizeBy: none
+		sourceColumn: Hospital
+
+	column Patient_Type
+		dataType: string
+		lineageTag: 1a30fb03-e312-4a56-a534-0adf4195bb62
+		summarizeBy: none
+		sourceColumn: Patient_Type
+
+	column Diagnosis
+		dataType: string
+		lineageTag: 3c120f58-03f1-46ec-8d3f-2ae02b069c84
+		summarizeBy: none
+		sourceColumn: Diagnosis
+
+	column Stage
+		dataType: string
+		lineageTag: 1dfb2457-c47c-451b-a71a-aaf7cafbf1ef
+		summarizeBy: none
+		sourceColumn: Stage
+
+	column Wait_Time_Hours
+		dataType: double
+		formatString: 0.0
+		lineageTag: 6ddc4686-86f3-469e-94ed-21b74c18452e
+		summarizeBy: none
+		sourceColumn: Wait_Time_Hours
+
+	column Process_Time_Hours
+		dataType: double
+		formatString: 0.0
+		lineageTag: 2d08dbfa-1061-44ed-8a5a-74af1ce4be4a
+		summarizeBy: none
+		sourceColumn: Process_Time_Hours
+
+	column DurationDays =
+			VAR CurrentCase = 'mock_hospital_logs'[CaseID]
+			VAR FirstEvent =
+			    CALCULATE(
+			        MIN('mock_hospital_logs'[Timestamp]),
+			        FILTER(ALL('mock_hospital_logs'), 'mock_hospital_logs'[CaseID] = CurrentCase)
+			    )
+			VAR LastEvent =
+			    CALCULATE(
+			        MAX('mock_hospital_logs'[Timestamp]),
+			        FILTER(ALL('mock_hospital_logs'), 'mock_hospital_logs'[CaseID] = CurrentCase)
+			    )
+			RETURN
+			        LastEvent - FirstEvent
+		dataType: double
+		formatString: 0.00
+		lineageTag: b0538057-1f5b-4a44-8edc-9e03af7ff663
+		summarizeBy: none
+
+	column IsStandardPath =
+			VAR CurrentCase = 'mock_hospital_logs'[CaseID]
+			VAR CasePath =
+			    CONCATENATEX(
+			        FILTER(ALL('mock_hospital_logs'), 'mock_hospital_logs'[CaseID] = CurrentCase),
+			        'mock_hospital_logs'[Stage],
+			        " > ",
+			        'mock_hospital_logs'[Timestamp],
+			        ASC
+			    )
+			RETURN
+			    CasePath = "Admission > Diagnosis > Treatment > Discharge"
+		dataType: boolean
+		lineageTag: 878d2205-b199-4f48-8656-38fbd3f4b00b
+		summarizeBy: none
+
 	column 'Pathway Variant' =
 			VAR CurrentCase = 'mock_hospital_logs'[Case_ID]
 			RETURN
@@ -187,11 +286,59 @@ table mock_hospital_logs
 		mode: import
 		source =
 				let
-				    Source = Csv.Document(File.Contents("C:\Users\Lenovo\CareFlow-Clinical-Pathway-Process-Mining\mock_hospital_logs.csv"),[Delimiter=",", Columns=4, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    Source = Csv.Document(
+				        File.Contents("C:\Users\Lenovo\CareFlow-Clinical-Pathway-Process-Mining\data\clinical_events.csv"),
+				        [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]
+				    ),
 				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
-				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Case_ID", type text}, {"Activity_Name", type text}, {"Timestamp", type datetime}, {"Department", type text}})
+				    #"Selected Columns" = Table.SelectColumns(
+				        #"Promoted Headers",
+				        {"case_id", "event_activity", "event_time", "department", "hospital", "patient_type", "primary_diagnosis", "stage", "wait_time_hours", "process_time_hours"}
+				    ),
+				    #"Renamed Columns" = Table.RenameColumns(
+				        #"Selected Columns",
+				        {
+				            {"case_id", "Case_ID"},
+				            {"event_activity", "Activity_Name"},
+				            {"event_time", "Timestamp"},
+				            {"department", "Department"},
+				            {"hospital", "Hospital"},
+				            {"patient_type", "Patient_Type"},
+				            {"primary_diagnosis", "Diagnosis"},
+				            {"stage", "Stage"},
+				            {"wait_time_hours", "Wait_Time_Hours"},
+				            {"process_time_hours", "Process_Time_Hours"}
+				        }
+				    ),
+				    #"Trimmed Text" = Table.TransformColumns(
+				        #"Renamed Columns",
+				        {
+				            {"Case_ID", each Text.Trim(Text.From(_)), type text},
+				            {"Activity_Name", each Text.Trim(Text.From(_)), type text},
+				            {"Department", each Text.Trim(Text.From(_)), type text},
+				            {"Hospital", each Text.Trim(Text.From(_)), type text},
+				            {"Patient_Type", each Text.Trim(Text.From(_)), type text},
+				            {"Diagnosis", each Text.Trim(Text.From(_)), type text},
+				            {"Stage", each Text.Trim(Text.From(_)), type text}
+				        }
+				    ),
+				    #"Changed Type" = Table.TransformColumnTypes(
+				        #"Trimmed Text",
+				        {
+				            {"Case_ID", type text},
+				            {"Activity_Name", type text},
+				            {"Timestamp", type datetime},
+				            {"Department", type text},
+				            {"Hospital", type text},
+				            {"Patient_Type", type text},
+				            {"Diagnosis", type text},
+				            {"Stage", type text},
+				            {"Wait_Time_Hours", type number},
+				            {"Process_Time_Hours", type number}
+				        },
+				        "en-US"
+				    )
 				in
 				    #"Changed Type"
 
 	annotation PBI_ResultType = Table
-

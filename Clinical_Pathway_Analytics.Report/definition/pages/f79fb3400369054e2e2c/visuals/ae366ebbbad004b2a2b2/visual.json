@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "ae366ebbbad004b2a2b2",
   "position": {
-    "x": 23.926507788576757,
-    "y": 368.10011982425777,
+    "x": 24,
+    "y": 370,
     "z": 7000,
-    "height": 439.87964318998803,
-    "width": 1120.864864864865,
+    "height": 400,
+    "width": 900,
     "tabOrder": 7000
   },
   "visual": {
@@ -23,11 +23,11 @@
                       "Entity": "mock_hospital_logs"
                     }
                   },
-                  "Property": "Activity_Name"
+                  "Property": "Stage"
                 }
               },
-              "queryRef": "mock_hospital_logs.Activity_Name",
-              "nativeQueryRef": "Activity_Name",
+              "queryRef": "mock_hospital_logs.Stage",
+              "nativeQueryRef": "Stage",
               "active": true
             }
           ]
@@ -42,11 +42,11 @@
                       "Entity": "mock_hospital_logs"
                     }
                   },
-                  "Property": "Avg Staging Time Hours"
+                  "Property": "Avg Wait Time Hours"
                 }
               },
-              "queryRef": "mock_hospital_logs.Avg Staging Time Hours",
-              "nativeQueryRef": "Avg Staging Time Hours"
+              "queryRef": "mock_hospital_logs.Avg Wait Time Hours",
+              "nativeQueryRef": "Avg Wait Time Hours"
             }
           ]
         }
@@ -61,7 +61,7 @@
                     "Entity": "mock_hospital_logs"
                   }
                 },
-                "Property": "Avg Staging Time Hours"
+                "Property": "Avg Wait Time Hours"
               }
             },
             "direction": "Descending"
@@ -220,7 +220,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Bottleneck Analysis - Average Wait by Activity (Hours)'"
+                  "Value": "'Bottleneck Analysis - Average Wait by Stage (Hours)'"
                 }
               }
             },

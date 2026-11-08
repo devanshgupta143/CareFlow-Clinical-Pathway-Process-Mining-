@@ -1,7 +1,16 @@
 # Power BI DAX Measures
 
-The current PBIP imports `mock_hospital_logs` with `Case_ID`, `Activity_Name`,
-`Timestamp`, and `Department`. Measures in the model use these actual columns.
+> **Current CareFlow dashboard:** use the canonical model export in
+> `scripts/build_powerbi_dataset.py` and measures in
+> [`dax/careflow_dashboard_measures.dax`](dax/careflow_dashboard_measures.dax).
+> For the requested `Fact_Clinical_Events` enterprise schema, use
+> [`dax/dax_measures.dax`](dax/dax_measures.dax).
+> The examples below document earlier `mock_hospital_logs` and PM4Py models;
+> their table names are not interchangeable with the current dashboard model.
+
+The legacy `Clinical_Pathway_Analytics` model imports `mock_hospital_logs`
+with `Case_ID`, `Activity_Name`, `Timestamp`, and `Department`. Measures in the
+model use these actual columns.
 
 ## Executive Metrics
 

@@ -7,3 +7,7 @@
 4. **Calculated Columns**:
    - Add `WaitTimeHours` = WaitTimeMinutes / 60
    - Add `Is_Bottleneck` = if WaitTimeMinutes > 60 then 1 else 0
+# Enterprise fact transformations are implemented in
+# [powerquery/transform_scripts.pq](powerquery/transform_scripts.pq), with
+# invocation and rejected-timestamp handling documented in
+# [docs/enterprise_power_bi_implementation.md](docs/enterprise_power_bi_implementation.md).

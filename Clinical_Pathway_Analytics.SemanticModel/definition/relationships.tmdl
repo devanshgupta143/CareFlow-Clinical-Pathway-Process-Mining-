@@ -1,5 +1,4 @@
-relationship 4e184445-1c4f-4bb8-b665-62cfc00c07f3
-	joinOnDateBehavior: datePartOnly
-	fromColumn: mock_hospital_logs.Timestamp
-	toColumn: LocalDateTable_dd4b67ac-6504-4c71-bbd9-ecaf46244498.Date
-
+relationship AutoDetected_Rel_1
+	fromColumn: clinical_events.Department
+	toColumn: dim_departments.Department_Name
+	fromCardinality: many

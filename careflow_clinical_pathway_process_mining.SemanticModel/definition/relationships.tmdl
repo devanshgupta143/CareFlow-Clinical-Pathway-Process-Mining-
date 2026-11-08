@@ -1,0 +1,4 @@
+relationship AutoDetected_Rel_1
+	fromColumn: clinical_events.Department
+	toColumn: dim_departments.Department_Name
+

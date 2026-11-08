@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "careflow_clinical_pathway_process_mining"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "d2b53f0b-f8a0-4fcc-9a1a-892dccdfdacb"
+  }
+}

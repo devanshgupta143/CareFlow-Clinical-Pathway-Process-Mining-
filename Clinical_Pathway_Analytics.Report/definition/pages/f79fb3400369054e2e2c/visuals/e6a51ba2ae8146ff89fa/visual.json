@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "e6a51ba2ae8146ff89fa",
   "position": {
-    "x": 1170.5583810411397,
-    "y": 368.10011982425777,
+    "x": 944,
+    "y": 370,
     "z": 9000,
-    "height": 439.87964318998803,
-    "width": 725.15723605378787,
+    "height": 400,
+    "width": 952,
     "tabOrder": 9000
   },
   "visual": {
@@ -185,7 +185,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Pathway Variant Frequency - Patient Cases'"
+                  "Value": "'Pathway Variant Frequency - Patient Cases (all observed paths)'"
                 }
               }
             },

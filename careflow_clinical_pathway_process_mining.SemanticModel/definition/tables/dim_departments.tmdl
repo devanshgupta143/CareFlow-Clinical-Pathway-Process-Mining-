@@ -1,0 +1,35 @@
+table dim_departments
+	lineageTag: 2398f9ce-36cd-4d02-90ef-0fdaddfc1922
+
+	column Department_ID
+		dataType: string
+		lineageTag: 2bd9c4aa-b72f-4165-9d99-a7318a795d0a
+		summarizeBy: none
+		sourceColumn: Department_ID
+
+	column Department_Name
+		dataType: string
+		lineageTag: 97f209fa-a79e-49b0-8bd1-3435da2b460c
+		summarizeBy: none
+		sourceColumn: Department_Name
+
+	column Cost_Center
+		dataType: string
+		lineageTag: cbc37564-461a-498b-a4e0-a0cbb72c839a
+		summarizeBy: none
+		sourceColumn: Cost_Center
+
+	partition dim_departments = m
+		mode: import
+		source =
+				#table(
+				    type table [
+				        Department_ID = text,
+				        Department_Name = text,
+				        Cost_Center = text
+				    ],
+				    {}
+				)
+
+	annotation PBI_ResultType = Table
+

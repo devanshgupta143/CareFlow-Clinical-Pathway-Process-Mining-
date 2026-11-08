@@ -1,7 +1,7 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
   "name": "ad9a827eab730386eaeb",
-  "displayName": "Clinical Pathway Rework & Loop Analysis",
+  "displayName": "Process Mining & Bottleneck Analysis",
   "displayOption": "FitToPage",
   "height": 1080,
   "width": 1920

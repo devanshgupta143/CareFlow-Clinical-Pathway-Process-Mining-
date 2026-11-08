@@ -3,9 +3,9 @@
   "name": "521ae0416d5d1751e46b",
   "position": {
     "x": 608,
-    "y": 95,
+    "y": 230,
     "z": 3000,
-    "height": 935,
+    "height": 790,
     "width": 1288,
     "tabOrder": 3000
   },
@@ -42,11 +42,11 @@
                       "Entity": "mock_hospital_logs"
                     }
                   },
-                  "Property": "Activity_Name"
+                  "Property": "Stage"
                 }
               },
-              "queryRef": "mock_hospital_logs.Activity_Name",
-              "nativeQueryRef": "Activity_Name",
+              "queryRef": "mock_hospital_logs.Stage",
+              "nativeQueryRef": "Stage",
               "active": true
             }
           ]
@@ -61,11 +61,11 @@
                       "Entity": "mock_hospital_logs"
                     }
                   },
-                  "Property": "Average Events Per Case"
+                  "Property": "Avg Wait Time Hours"
                 }
               },
-              "queryRef": "mock_hospital_logs.Average Events Per Case",
-              "nativeQueryRef": "Average Events Per Case"
+              "queryRef": "mock_hospital_logs.Avg Wait Time Hours",
+              "nativeQueryRef": "Avg Wait Time Hours"
             }
           ]
         }
@@ -158,7 +158,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Activity Repeats by Department'"
+                  "Value": "'Average Stage Wait Time by Department'"
                 }
               }
             },

@@ -1,0 +1,178 @@
+table clinical_events
+	lineageTag: 89d30cf5-51c3-4f15-9ea1-aaf34914e197
+
+	column Case_ID
+		dataType: string
+		lineageTag: 0f444ea6-159d-48e8-996e-30a077f2f47d
+		summarizeBy: none
+		sourceColumn: Case_ID
+
+	column Activity_Name
+		dataType: string
+		lineageTag: 7ed8019c-9e03-40d1-979e-28fa69c269bc
+		summarizeBy: none
+		sourceColumn: Activity_Name
+
+	column Timestamp
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: c3ea6f05-63fd-4365-9d35-c303fbc64f32
+		summarizeBy: none
+		sourceColumn: Timestamp
+
+	column Department
+		dataType: string
+		lineageTag: 87b3fabd-7dae-48fa-bd09-4f61dbab30b0
+		summarizeBy: none
+		sourceColumn: Department
+
+	column DurationDays
+		dataType: double
+		formatString: 0.00
+		lineageTag: 42f94662-07d4-433d-b68d-5b13e25d9726
+		summarizeBy: none
+		sourceColumn: DurationDays
+
+	column Hospital
+		dataType: string
+		lineageTag: 3db76509-9a9d-4c84-8270-a9cda71f9ce0
+		summarizeBy: none
+		sourceColumn: Hospital
+
+	column Patient_Type
+		dataType: string
+		lineageTag: 2a4e8d2b-e866-40a8-a049-38a29a8ef66e
+		summarizeBy: none
+		sourceColumn: Patient_Type
+
+	column Primary_Diagnosis
+		dataType: string
+		lineageTag: 10c6a9f1-3525-40f6-a6bc-1aec92d4e287
+		summarizeBy: none
+		sourceColumn: Primary_Diagnosis
+
+	column Stage
+		dataType: string
+		lineageTag: 9d47bfe1-026e-4404-a92c-306552d8f28b
+		summarizeBy: none
+		sourceColumn: Stage
+
+	column Wait_Time_Hours
+		dataType: double
+		formatString: 0.00
+		lineageTag: 08ffb665-7b6f-4656-8a8b-48c11b11935e
+		summarizeBy: none
+		sourceColumn: Wait_Time_Hours
+
+	column Process_Time_Hours
+		dataType: double
+		formatString: 0.00
+		lineageTag: 1b7378ec-b51e-4386-8c26-3fd8d62c9d18
+		summarizeBy: none
+		sourceColumn: Process_Time_Hours
+
+	partition clinical_events = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(
+				        File.Contents("C:\Users\Lenovo\CareFlow-Clinical-Pathway-Process-Mining\data\clinical_events.csv"),
+				        [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]
+				    ),
+				    PromotedHeaders = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+				    CleanHeaders = Table.TransformColumnNames(PromotedHeaders, each Text.Trim(_)),
+				    RemovedPatientName = Table.RemoveColumns(
+				        CleanHeaders,
+				        {"patient_name"},
+				        MissingField.Ignore
+				    ),
+				    RenamedColumns = Table.RenameColumns(
+				        RemovedPatientName,
+				        {
+				            {"case_id", "Case_ID"},
+				            {"event_activity", "Activity_Name"},
+				            {"event_time", "Timestamp"},
+				            {"department", "Department"},
+				            {"hospital", "Hospital"},
+				            {"patient_type", "Patient_Type"},
+				            {"primary_diagnosis", "Primary_Diagnosis"},
+				            {"stage", "Stage"},
+				            {"wait_time_hours", "Wait_Time_Hours"},
+				            {"process_time_hours", "Process_Time_Hours"}
+				        },
+				        MissingField.Error
+				    ),
+				    CleanedText = Table.TransformColumns(
+				        RenamedColumns,
+				        {
+				            {"Case_ID", each if _ = null then null else Text.Trim(Text.From(_)), type nullable text},
+				            {"Activity_Name", each if _ = null then null else Text.Trim(Text.From(_)), type nullable text},
+				            {"Department", each if _ = null then null else Text.Trim(Text.From(_)), type nullable text},
+				            {"Hospital", each if _ = null then null else Text.Trim(Text.From(_)), type nullable text},
+				            {"Patient_Type", each if _ = null then null else Text.Trim(Text.From(_)), type nullable text},
+				            {"Primary_Diagnosis", each if _ = null then null else Text.Trim(Text.From(_)), type nullable text},
+				            {"Stage", each if _ = null then null else Text.Trim(Text.From(_)), type nullable text}
+				        }
+				    ),
+				    TypedValues = Table.TransformColumns(
+				        CleanedText,
+				        {
+				            {"Timestamp", each try DateTime.From(_) otherwise null, type nullable datetime},
+				            {"Wait_Time_Hours", each try Number.From(_) otherwise null, type nullable number},
+				            {"Process_Time_Hours", each try Number.From(_) otherwise null, type nullable number}
+				        }
+				    ),
+				    CaseDurations = Table.Group(
+				        TypedValues,
+				        {"Case_ID"},
+				        {
+				            {
+				                "DurationDays",
+				                each
+				                    let
+				                        ValidTimestamps = List.RemoveNulls([Timestamp])
+				                    in
+				                        if List.IsEmpty(ValidTimestamps) then
+				                            null
+				                        else
+				                            Duration.TotalDays(List.Max(ValidTimestamps) - List.Min(ValidTimestamps)),
+				                type nullable number
+				            }
+				        }
+				    ),
+				    MergedDurations = Table.NestedJoin(
+				        TypedValues,
+				        {"Case_ID"},
+				        CaseDurations,
+				        {"Case_ID"},
+				        "CaseDuration",
+				        JoinKind.LeftOuter
+				    ),
+				    ExpandedDurations = Table.ExpandTableColumn(
+				        MergedDurations,
+				        "CaseDuration",
+				        {"DurationDays"},
+				        {"DurationDays"}
+				    ),
+				    Result = Table.TransformColumnTypes(
+				        ExpandedDurations,
+				        {
+				            {"Case_ID", type text},
+				            {"Activity_Name", type text},
+				            {"Timestamp", type datetime},
+				            {"Department", type text},
+				            {"Hospital", type text},
+				            {"Patient_Type", type text},
+				            {"Primary_Diagnosis", type text},
+				            {"Stage", type text},
+				            {"Wait_Time_Hours", type number},
+				            {"Process_Time_Hours", type number},
+				            {"DurationDays", type number}
+				        },
+				        "en-US"
+				    )
+				in
+				    Result
+
+	annotation PBI_ResultType = Table
+

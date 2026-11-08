@@ -2,8 +2,8 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "81254fe0291784a807a2",
   "position": {
-    "x": 1450.3144721075757,
-    "y": 233.7435760884037,
+    "x": 1437,
+    "y": 226,
     "z": 4000,
     "height": 130,
     "width": 450,
@@ -168,7 +168,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Process Rework Rate'"
+                  "Value": "'Process Rework / Exception Rate'"
                 }
               }
             },

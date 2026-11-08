@@ -1,0 +1,54 @@
+table _Measures
+	lineageTag: 393e4133-b5a1-44db-a78b-46a183e42060
+
+	measure 'Total Patients' = DISTINCTCOUNT('clinical_events'[Case_ID])
+		formatString: #,0
+		lineageTag: 0a2e3b2a-aa01-493e-a393-3f841bdb138b
+
+	measure 'Avg Duration (Days)' =
+			AVERAGEX(
+			    VALUES('clinical_events'[Case_ID]),
+			    VAR CurrentCase = 'clinical_events'[Case_ID]
+			    RETURN
+			        CALCULATE(
+			            MAX('dim_patients'[Total_Length_of_Stay_Days]),
+			            TREATAS({CurrentCase}, 'dim_patients'[Case_ID])
+			        )
+			)
+		formatString: 0.00
+		lineageTag: 412873bb-e816-467e-a244-683e3667a0c1
+
+	measure 'Total Process Time (Hours)' =
+			CALCULATE(
+			    SUM('dim_patients'[Total_Process_Time_Hours]),
+			    TREATAS(
+			        VALUES('clinical_events'[Case_ID]),
+			        'dim_patients'[Case_ID]
+			    )
+			)
+		formatString: 0.00
+		lineageTag: a21cd3f9-42cc-46b3-b858-b3bc74dd6bd6
+
+	measure 'Avg Length of Stay (Days)' = [Avg Duration (Days)]
+		formatString: 0.00
+		lineageTag: 08638c11-950d-4c12-b2fa-2043b0d57b2f
+
+	measure 'Readmission Rate %' =
+			VAR VisibleCases = VALUES('clinical_events'[Case_ID])
+			VAR ReadmittedCases =
+			    CALCULATE(
+			        DISTINCTCOUNT('dim_patients'[Case_ID]),
+			        'dim_patients'[Is_Readmitted] = TRUE(),
+			        TREATAS(VisibleCases, 'dim_patients'[Case_ID])
+			    )
+			RETURN
+			    DIVIDE(ReadmittedCases, COUNTROWS(VisibleCases), 0)
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: ab08c285-b101-4c92-8f1b-a7a91b12a1d6
+
+	measure 'Stage Duration Variance' = [Total Process Time (Hours)] - 72
+		formatString: 0.00
+		lineageTag: 6b31e084-7f6b-4228-a57c-067b7ffef013
+
+	annotation PBI_ResultType = Table
+

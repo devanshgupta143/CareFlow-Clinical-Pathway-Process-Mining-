@@ -1,0 +1,60 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "9dbb11d3d4d74d4c9ef1",
+  "position": {
+    "x": 1450,
+    "y": 16,
+    "z": 13000,
+    "height": 56,
+    "width": 445,
+    "tabOrder": 13000
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "mock_hospital_logs"
+                    }
+                  },
+                  "Property": "Data Refresh Timestamp"
+                }
+              },
+              "queryRef": "mock_hospital_logs.Data Refresh Timestamp",
+              "nativeQueryRef": "Data Refresh Timestamp"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Last Data Refresh'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

@@ -1,5 +1,11 @@
 # Star Schema Data Model Architecture
 
+> The enterprise PBIP table schema and build steps for
+> `Fact_Clinical_Events`, `Dim_Patients`, `Dim_Departments`, and `Dim_Date`
+> are maintained in
+> [docs/enterprise_power_bi_implementation.md](docs/enterprise_power_bi_implementation.md).
+> That document reflects source availability and the optional patient-ID map.
+
 ## Model Overview
 
 - **Architecture Type**: Star schema with a case-grain hub and event/transition facts.

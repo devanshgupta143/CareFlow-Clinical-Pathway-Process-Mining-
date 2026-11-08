@@ -1,0 +1,74 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 568,
+            "y": 25
+          },
+          "nodeIndex": "_Measures",
+          "nodeLineageTag": "393e4133-b5a1-44db-a78b-46a183e42060",
+          "size": {
+            "height": 224,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 334,
+            "y": -25
+          },
+          "nodeIndex": "clinical_events",
+          "nodeLineageTag": "89d30cf5-51c3-4f15-9ea1-aaf34914e197",
+          "size": {
+            "height": 224,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 50,
+            "y": 11
+          },
+          "nodeIndex": "dim_departments",
+          "nodeLineageTag": "2398f9ce-36cd-4d02-90ef-0fdaddfc1922",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 852,
+            "y": 37
+          },
+          "nodeIndex": "dim_patients",
+          "nodeLineageTag": "89311672-5073-4f52-abf2-4cce76e96cd6",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}

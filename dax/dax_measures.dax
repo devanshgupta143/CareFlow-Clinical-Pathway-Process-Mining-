@@ -1,0 +1,134 @@
+// Measures for the Fact_Clinical_Events star schema.
+// Length_of_Stay_Hours and Is_Readmission are case-level values repeated on
+// event rows; aggregate them at Case_ID grain to prevent event-row inflation.
+
+Total Patients =
+VAR PatientKeys =
+    FILTER(
+        VALUES('Fact_Clinical_Events'[Patient_ID]),
+        NOT ISBLANK('Fact_Clinical_Events'[Patient_ID])
+    )
+RETURN
+    COUNTROWS(PatientKeys)
+
+Total Cases =
+    DISTINCTCOUNT('Fact_Clinical_Events'[Case_ID])
+
+Avg Length of Stay (Days) =
+VAR CasesInContext =
+    VALUES('Fact_Clinical_Events'[Case_ID])
+VAR CaseGrainLOS =
+    ADDCOLUMNS(
+        CasesInContext,
+        "__LOSHours",
+            CALCULATE(MAX('Fact_Clinical_Events'[Length_of_Stay_Hours]))
+    )
+RETURN
+    DIVIDE(AVERAGEX(CaseGrainLOS, [__LOSHours]), 24)
+
+Total Process Time (Hours) =
+VAR CasesInContext =
+    VALUES('Fact_Clinical_Events'[Case_ID])
+RETURN
+    SUMX(
+        CasesInContext,
+        CALCULATE(MAX('Fact_Clinical_Events'[Length_of_Stay_Hours]))
+    )
+
+Readmission Rate % =
+DIVIDE([Readmitted Patients], [Total Patients], 0)
+
+Patients with Known Outcomes =
+VAR PatientOutcomes =
+    ADDCOLUMNS(
+        FILTER(
+            VALUES('Fact_Clinical_Events'[Patient_ID]),
+            NOT ISBLANK('Fact_Clinical_Events'[Patient_ID])
+        ),
+        "__KnownOutcome",
+            CALCULATE(
+                COUNTROWS(
+                    FILTER(
+                        VALUES('Fact_Clinical_Events'[Is_Readmission]),
+                        NOT ISBLANK('Fact_Clinical_Events'[Is_Readmission])
+                    )
+                )
+            )
+    )
+VAR KnownPatients =
+    FILTER(PatientOutcomes, [__KnownOutcome] > 0)
+RETURN
+    COUNTROWS(KnownPatients)
+
+Readmitted Patients =
+VAR PatientOutcomes =
+    ADDCOLUMNS(
+        FILTER(
+            VALUES('Fact_Clinical_Events'[Patient_ID]),
+            NOT ISBLANK('Fact_Clinical_Events'[Patient_ID])
+        ),
+        "__Readmitted",
+            CALCULATE(
+                COUNTROWS('Fact_Clinical_Events'),
+                'Fact_Clinical_Events'[Is_Readmission] = TRUE()
+            )
+    )
+RETURN
+    COUNTROWS(FILTER(PatientOutcomes, [__Readmitted] > 0))
+
+Readmission Rate Known Outcomes % =
+VAR KnownPatients = [Patients with Known Outcomes]
+RETURN
+    IF(
+        KnownPatients = 0,
+        BLANK(),
+        DIVIDE([Readmitted Patients], KnownPatients)
+    )
+
+Patient Satisfaction Avg =
+CALCULATE(
+    AVERAGE('Dim_Patients'[Satisfaction_Score]),
+    CROSSFILTER(
+        'Dim_Patients'[Patient_ID],
+        'Fact_Clinical_Events'[Patient_ID],
+        BOTH
+    )
+)
+
+Target Process Time =
+    BLANK()
+
+Stage Duration Variance =
+VAR TargetHours = [Target Process Time]
+RETURN
+    IF(
+        ISBLANK(TargetHours),
+        BLANK(),
+        [Total Process Time (Hours)] - TargetHours
+    )
+
+Avg Event Stage Duration (Hours) =
+    AVERAGE('Fact_Clinical_Events'[Stage_Duration_Hours])
+
+Avg Wait Time (Hours) =
+    AVERAGE('Fact_Clinical_Events'[Wait_Time_Hours])
+
+Medium Wait Threshold (Hours) =
+    BLANK()
+
+High Wait Threshold (Hours) =
+    BLANK()
+
+Bottleneck Status =
+VAR WaitHours = [Avg Wait Time (Hours)]
+VAR MediumThreshold = [Medium Wait Threshold (Hours)]
+VAR HighThreshold = [High Wait Threshold (Hours)]
+RETURN
+    SWITCH(
+        TRUE(),
+        ISBLANK(WaitHours), "No data",
+        ISBLANK(MediumThreshold) || ISBLANK(HighThreshold), "No approved threshold",
+        WaitHours >= HighThreshold, "High",
+        WaitHours >= MediumThreshold, "Medium",
+        "Low"
+    )

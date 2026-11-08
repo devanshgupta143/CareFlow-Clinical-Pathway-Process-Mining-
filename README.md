@@ -25,10 +25,19 @@ Refined report visual formatting, tooltips, and measure performance in Power BI.
 
 ## Process Mining and PBIP Integration
 
-Run `python src\process_mining.py` from the repository root to generate the
-Power BI import tables under `data\processed`. See
-[docs/power_bi_integration.md](docs/power_bi_integration.md) for the output
-schema, model relationships, DAX measures, and PBIP setup steps.
+Build the enterprise star-schema tables for the two-page report with
+`python scripts\build_enterprise_model.py`. The output schema, relationship
+contract, DAX, and Power Query function are documented in
+[docs/enterprise_power_bi_implementation.md](docs/enterprise_power_bi_implementation.md).
+
+For the two-page CareFlow dashboard, run
+`python scripts\build_powerbi_dataset.py` from the repository root. It builds
+the normalized CSV tables under `data\processed`. See
+[docs/careflow_executive_report_spec.md](docs/careflow_executive_report_spec.md)
+for the model relationships, DAX measures, layout, and PBIP setup steps.
+
+The generic PM4Py pipeline is also available for other event logs:
+`python src\process_mining.py --output-dir data\pm4py_processed`.
 ## Updates (Nov 4, 2026)
 Configured dataset schema mappings and validated event log structures.
 Refined process mining script to output throughput times and bottleneck tables.

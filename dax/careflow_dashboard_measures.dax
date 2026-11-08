@@ -1,0 +1,287 @@
+// Measures for the CSV model produced by scripts/build_powerbi_dataset.py.
+// Add these to a dedicated measures table in the semantic model.
+
+Total Patients =
+    DISTINCTCOUNT(FactCases[CaseID])
+
+Total Patients Previous Year =
+    CALCULATE(
+        [Total Patients],
+        SAMEPERIODLASTYEAR(DimDate[Date])
+    )
+
+Total Patients YoY Change (%) =
+VAR PriorYear = [Total Patients Previous Year]
+RETURN
+    IF(
+        ISBLANK(PriorYear),
+        BLANK(),
+        DIVIDE([Total Patients] - PriorYear, PriorYear)
+    )
+
+Avg Length of Stay (Days) =
+    AVERAGE(FactCases[TotalLengthOfStayDays])
+
+Avg Length of Stay Previous Period (Days) =
+VAR PeriodStart =
+    MINX(ALLSELECTED(DimDate[Date]), DimDate[Date])
+VAR PeriodEnd =
+    MAXX(ALLSELECTED(DimDate[Date]), DimDate[Date])
+VAR PeriodLength =
+    DATEDIFF(PeriodStart, PeriodEnd, DAY) + 1
+RETURN
+    IF(
+        ISBLANK(PeriodStart) || ISBLANK(PeriodEnd),
+        BLANK(),
+        CALCULATE(
+            [Avg Length of Stay (Days)],
+            REMOVEFILTERS(DimDate),
+            DATESBETWEEN(
+                DimDate[Date],
+                PeriodStart - PeriodLength,
+                PeriodStart - 1
+            )
+        )
+    )
+
+Avg Length of Stay vs Previous Period (%) =
+VAR PriorPeriod = [Avg Length of Stay Previous Period (Days)]
+RETURN
+    IF(
+        ISBLANK(PriorPeriod),
+        BLANK(),
+        DIVIDE([Avg Length of Stay (Days)] - PriorPeriod, PriorPeriod)
+    )
+
+Total Process Time (Hours) =
+    SUM(FactCases[TotalProcessTimeHours])
+
+Avg Process Time per Encounter (Hours) =
+    AVERAGE(FactCases[TotalProcessTimeHours])
+
+Readmission Rate (%) =
+VAR KnownOutcomes =
+    CALCULATE(
+        DISTINCTCOUNT(FactCases[CaseID]),
+        FILTER(
+            FactCases,
+            NOT ISBLANK(FactCases[IsReadmitted])
+        )
+    )
+VAR ReadmittedCases =
+    CALCULATE(
+        DISTINCTCOUNT(FactCases[CaseID]),
+        KEEPFILTERS(FactCases[IsReadmitted] = TRUE())
+    )
+RETURN
+    IF(
+        KnownOutcomes = 0,
+        BLANK(),
+        DIVIDE(ReadmittedCases, KnownOutcomes)
+    )
+
+Readmission Benchmark (%) =
+    0.08
+
+Readmission Benchmark Status =
+SWITCH(
+    TRUE(),
+    ISBLANK([Readmission Rate (%)]), "No outcome data",
+    [Readmission Rate (%)] < [Readmission Benchmark (%)], "Below 8% benchmark",
+    "At or above 8% benchmark"
+)
+
+Patient Satisfaction (%) =
+    DIVIDE(AVERAGE(FactCases[PatientSatisfactionPct]), 100)
+
+Avg Stage Duration (Hours) =
+    AVERAGE(FactEvents[ProcessTimeHours])
+
+Avg Stage Wait (Hours) =
+    AVERAGE(FactEvents[WaitTimeHours])
+
+Avg Transition Wait (Hours) =
+    AVERAGE(FactTransitions[WaitTimeHours])
+
+Total Transition Wait (Hours) =
+    SUM(FactTransitions[WaitTimeHours])
+
+Transition Wait Share of Process and Wait (%) =
+VAR TotalProcessAndWait =
+    CALCULATE(
+        SUM(FactEvents[ProcessTimeHours]),
+        REMOVEFILTERS(DimStage)
+    )
+        + CALCULATE(
+            [Total Transition Wait (Hours)],
+            REMOVEFILTERS(DimStage)
+        )
+RETURN
+    DIVIDE(
+        [Total Transition Wait (Hours)],
+        TotalProcessAndWait
+    )
+
+Stage Event Count =
+    COUNTROWS(FactEvents)
+
+Stage Patients =
+    DISTINCTCOUNT(FactEvents[CaseID])
+
+Stage Completion (%) =
+    DIVIDE([Stage Patients], [Total Patients])
+
+Stage Patients Previous Stage =
+VAR CurrentStageOrder = SELECTEDVALUE(DimStage[StageOrder])
+RETURN
+    IF(
+        ISBLANK(CurrentStageOrder) || CurrentStageOrder = 1,
+        BLANK(),
+        CALCULATE(
+            [Stage Patients],
+            FILTER(
+                ALL(DimStage),
+                DimStage[StageOrder] = CurrentStageOrder - 1
+            )
+        )
+    )
+
+Stage Conversion (%) =
+    DIVIDE([Stage Patients], [Stage Patients Previous Stage])
+
+Avg LOS Target (Days) =
+    CALCULATE(
+        AVERAGE(Targets[TargetValue]),
+        Targets[Metric] = "Avg LOS Days"
+    )
+
+Avg Process Time Target (Hours) =
+    CALCULATE(
+        AVERAGE(Targets[TargetValue]),
+        Targets[Metric] = "Avg Process Time Hours"
+    )
+
+Avg Process Time Variance (Hours) =
+VAR TargetHours = [Avg Process Time Target (Hours)]
+RETURN
+    IF(
+        ISBLANK(TargetHours),
+        BLANK(),
+        [Avg Process Time per Encounter (Hours)] - TargetHours
+    )
+
+Avg Process Time Variance (%) =
+VAR TargetHours = [Avg Process Time Target (Hours)]
+RETURN
+    IF(
+        ISBLANK(TargetHours),
+        BLANK(),
+        DIVIDE([Avg Process Time Variance (Hours)], TargetHours)
+    )
+
+Avg Stage Duration Target (Hours) =
+    CALCULATE(
+        AVERAGE(Targets[TargetValue]),
+        Targets[Metric] = "Stage Duration Hours"
+    )
+
+Stage Duration Variance (Hours) =
+VAR TargetHours = [Avg Stage Duration Target (Hours)]
+RETURN
+    IF(
+        ISBLANK(TargetHours),
+        BLANK(),
+        [Avg Stage Duration (Hours)] - TargetHours
+    )
+
+Stage Duration Variance (%) =
+VAR TargetHours = [Avg Stage Duration Target (Hours)]
+RETURN
+    IF(
+        ISBLANK(TargetHours),
+        BLANK(),
+        DIVIDE([Stage Duration Variance (Hours)], TargetHours)
+    )
+
+Avg Stage Wait Medium Threshold (Hours) =
+    MAX(WaitThresholds[MediumHours])
+
+Avg Stage Wait High Threshold (Hours) =
+    MAX(WaitThresholds[HighHours])
+
+Bottleneck Status =
+VAR ActualWait = [Avg Transition Wait (Hours)]
+VAR MediumThreshold = [Avg Stage Wait Medium Threshold (Hours)]
+VAR HighThreshold = [Avg Stage Wait High Threshold (Hours)]
+RETURN
+    SWITCH(
+        TRUE(),
+        ISBLANK(ActualWait), "No data",
+        ISBLANK(MediumThreshold) || ISBLANK(HighThreshold), "No approved threshold",
+        ActualWait >= HighThreshold, "High",
+        ActualWait >= MediumThreshold, "Medium",
+        "Low"
+    )
+
+Flow Cases =
+    DISTINCTCOUNT(FactTransitions[CaseID])
+
+Delayed Discharge Cases =
+    CALCULATE(
+        DISTINCTCOUNT(FactCases[CaseID]),
+        KEEPFILTERS(FactCases[IsDelayed] = TRUE())
+    )
+
+Delayed Discharge Rate (%) =
+VAR KnownDelayStatus =
+    CALCULATE(
+        DISTINCTCOUNT(FactCases[CaseID]),
+        FILTER(
+            FactCases,
+            NOT ISBLANK(FactCases[IsDelayed])
+        )
+    )
+RETURN
+    DIVIDE([Delayed Discharge Cases], KnownDelayStatus)
+
+Delayed Case Reason Share (%) =
+VAR DelayedCasesForReason =
+    CALCULATE(
+        DISTINCTCOUNT(FactCases[CaseID]),
+        FactCases[IsDelayed] = TRUE()
+    )
+VAR AllDelayedCases =
+    CALCULATE(
+        [Delayed Discharge Cases],
+        REMOVEFILTERS(FactCases[DelayedDischargeReason])
+    )
+RETURN
+    DIVIDE(DelayedCasesForReason, AllDelayedCases)
+
+Cycle Time Band =
+VAR Hours = FactCases[CycleTimeHours]
+RETURN
+    SWITCH(
+        TRUE(),
+        ISBLANK(Hours), BLANK(),
+        Hours <= 6, "0-6h",
+        Hours <= 12, "6-12h",
+        Hours <= 18, "12-18h",
+        Hours <= 24, "18-24h",
+        Hours <= 30, "24-30h",
+        ">30h"
+    )
+
+Cycle Time Band Sort =
+VAR Hours = FactCases[CycleTimeHours]
+RETURN
+    SWITCH(
+        TRUE(),
+        ISBLANK(Hours), BLANK(),
+        Hours <= 6, 1,
+        Hours <= 12, 2,
+        Hours <= 18, 3,
+        Hours <= 24, 4,
+        Hours <= 30, 5,
+        6
+    )

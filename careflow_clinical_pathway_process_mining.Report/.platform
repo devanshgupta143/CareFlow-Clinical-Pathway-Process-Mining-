@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "careflow_clinical_pathway_process_mining"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "3eca12fb-4ea5-4027-8328-da7092bae382"
+  }
+}

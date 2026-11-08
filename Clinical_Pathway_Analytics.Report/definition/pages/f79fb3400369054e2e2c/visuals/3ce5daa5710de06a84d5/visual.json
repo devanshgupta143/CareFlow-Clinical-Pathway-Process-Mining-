@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "3ce5daa5710de06a84d5",
   "position": {
-    "x": 23.926507788576757,
-    "y": 815.341765410731,
+    "x": 24,
+    "y": 790,
     "z": 8000,
-    "height": 259.51058447610171,
-    "width": 1871.7891093063508,
+    "height": 270,
+    "width": 1872,
     "tabOrder": 8000
   },
   "visual": {
@@ -23,11 +23,11 @@
                       "Entity": "mock_hospital_logs"
                     }
                   },
-                  "Property": "Activity_Name"
+                  "Property": "Stage"
                 }
               },
-              "queryRef": "mock_hospital_logs.Activity_Name",
-              "nativeQueryRef": "Activity_Name",
+              "queryRef": "mock_hospital_logs.Stage",
+              "nativeQueryRef": "Stage",
               "active": true
             }
           ]
@@ -61,11 +61,11 @@
                       "Entity": "mock_hospital_logs"
                     }
                   },
-                  "Property": "Avg Staging Time Hours"
+                  "Property": "Avg Wait Time Hours"
                 }
               },
-              "queryRef": "mock_hospital_logs.Avg Staging Time Hours",
-              "nativeQueryRef": "Avg Staging Time Hours"
+              "queryRef": "mock_hospital_logs.Avg Wait Time Hours",
+              "nativeQueryRef": "Avg Wait Time Hours"
             }
           ]
         }
@@ -87,7 +87,7 @@
                               "Entity": "mock_hospital_logs"
                             }
                           },
-                          "Property": "Avg Staging Time Hours"
+                          "Property": "Avg Wait Time Hours"
                         }
                       },
                       "FillRule": {
@@ -129,7 +129,7 @@
                 }
               }
             ],
-            "metadata": "mock_hospital_logs.Avg Staging Time Hours"
+            "metadata": "mock_hospital_logs.Avg Wait Time Hours"
           }
         }
       ]
@@ -251,7 +251,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Wait-Time Detail by Department and Activity'"
+                  "Value": "'Stage Wait-Time Detail by Department'"
                 }
               }
             },

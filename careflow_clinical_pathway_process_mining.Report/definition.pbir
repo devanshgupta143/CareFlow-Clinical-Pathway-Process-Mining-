@@ -1,0 +1,8 @@
+{
+  "version": "4.0",
+  "datasetReference": {
+    "byPath": {
+      "path": "../careflow_clinical_pathway_process_mining.SemanticModel"
+    }
+  }
+}

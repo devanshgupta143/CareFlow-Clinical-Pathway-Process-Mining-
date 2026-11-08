@@ -1,0 +1,13 @@
+{
+  "name": "CareFlow Executive",
+  "dataColors": [
+    "#00B4D8",
+    "#7209B7",
+    "#4BB543",
+    "#F72585",
+    "#0F1E36"
+  ],
+  "background": "#F8FAFC",
+  "foreground": "#0F1E36",
+  "tableAccent": "#00B4D8"
+}

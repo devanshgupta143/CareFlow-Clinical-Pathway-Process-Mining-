@@ -1,0 +1,162 @@
+table dim_patients
+	lineageTag: 89311672-5073-4f52-abf2-4cce76e96cd6
+
+	column Case_ID
+		dataType: string
+		lineageTag: 61f4975b-e561-4229-9db0-47a29f501092
+		summarizeBy: none
+		sourceColumn: Case_ID
+
+	column Age
+		dataType: int64
+		formatString: 0
+		lineageTag: 5299ad45-ddfc-4655-ae0c-04d9a9d12ed0
+		summarizeBy: none
+		sourceColumn: Age
+
+	column Gender
+		dataType: string
+		lineageTag: 1eea7245-cfef-45e8-90de-6c8ce4e8304b
+		summarizeBy: none
+		sourceColumn: Gender
+
+	column Risk_Score
+		dataType: double
+		formatString: 0.00
+		lineageTag: f8346aed-3809-44f1-b7b3-80f0cdfdc6e8
+		summarizeBy: none
+		sourceColumn: Risk_Score
+
+	column Satisfaction_Score
+		dataType: double
+		formatString: 0.00
+		lineageTag: e56af805-5d70-4d03-8575-654a6b0de26b
+		summarizeBy: none
+		sourceColumn: Satisfaction_Score
+
+	column Total_Length_of_Stay_Days
+		dataType: double
+		formatString: 0.0000
+		lineageTag: 65e91f36-2010-4b54-aa4e-7de1c46d614c
+		summarizeBy: none
+		sourceColumn: Total_Length_of_Stay_Days
+
+	column Total_Process_Time_Hours
+		dataType: double
+		formatString: 0.0000
+		lineageTag: 35a6c970-a320-40d0-b87c-24fd0bea4f32
+		summarizeBy: none
+		sourceColumn: Total_Process_Time_Hours
+
+	column Is_Readmitted
+		dataType: boolean
+		lineageTag: 1fc44efa-a504-4810-8d46-5f1672ac923c
+		summarizeBy: none
+		sourceColumn: Is_Readmitted
+
+	column Patient_Satisfaction_Pct
+		dataType: double
+		formatString: 0.0000
+		lineageTag: 8b948835-5723-43ae-8be8-b4e1791498a9
+		summarizeBy: none
+		sourceColumn: Patient_Satisfaction_Pct
+
+	column Delayed_Discharge_Reason
+		dataType: string
+		lineageTag: 50a99e98-1e61-4d20-a9dc-6fb65deca8f8
+		summarizeBy: none
+		sourceColumn: Delayed_Discharge_Reason
+
+	partition dim_patients = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(
+				        File.Contents("C:\\Users\\Lenovo\\CareFlow-Clinical-Pathway-Process-Mining\\data\\case_metadata.csv"),
+				        [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]
+				    ),
+				    PromotedHeaders = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+				    CleanHeaders = Table.TransformColumnNames(PromotedHeaders, each Text.Trim(_)),
+				    RenamedColumns = Table.RenameColumns(
+				        CleanHeaders,
+				        {
+				            {"case_id", "Case_ID"},
+				            {"total_length_of_stay_days", "Total_Length_of_Stay_Days"},
+				            {"total_process_time_hours", "Total_Process_Time_Hours"},
+				            {"is_readmitted", "Is_Readmitted"},
+				            {"patient_satisfaction_pct", "Patient_Satisfaction_Pct"},
+				            {"delayed_discharge_reason", "Delayed_Discharge_Reason"}
+				        },
+				        MissingField.Error
+				    ),
+				    WithAge = if Table.HasColumns(RenamedColumns, "Age") then
+				        RenamedColumns
+				    else
+				        Table.AddColumn(RenamedColumns, "Age", each null, Int64.Type),
+				    WithGender = if Table.HasColumns(WithAge, "Gender") then
+				        WithAge
+				    else
+				        Table.AddColumn(WithAge, "Gender", each null, type nullable text),
+				    WithRiskScore = if Table.HasColumns(WithGender, "Risk_Score") then
+				        WithGender
+				    else
+				        Table.AddColumn(WithGender, "Risk_Score", each null, type nullable number),
+				    WithSatisfactionScore = if Table.HasColumns(WithRiskScore, "Satisfaction_Score") then
+				        WithRiskScore
+				    else
+				        Table.AddColumn(WithRiskScore, "Satisfaction_Score", each [Patient_Satisfaction_Pct], type nullable number),
+				    CleanText = Table.TransformColumns(
+				        WithSatisfactionScore,
+				        {
+				            {"Case_ID", each if _ = null then null else Text.Trim(Text.From(_)), type nullable text},
+				            {"Delayed_Discharge_Reason", each if _ = null or Text.Lower(Text.Trim(Text.From(_))) = "none" then null else Text.Trim(Text.From(_)), type nullable text}
+				        }
+				    ),
+				    TypedValues = Table.TransformColumns(
+				        CleanText,
+				        {
+				            {"Total_Length_of_Stay_Days", each try Number.From(_) otherwise null, type nullable number},
+				            {"Total_Process_Time_Hours", each try Number.From(_) otherwise null, type nullable number},
+				            {"Is_Readmitted", each try Logical.From(_) otherwise null, type nullable logical},
+				            {"Patient_Satisfaction_Pct", each try Number.From(_) otherwise null, type nullable number},
+				            {"Satisfaction_Score", each try Number.From(_) otherwise null, type nullable number},
+				            {"Age", each try Int64.From(_) otherwise null, Int64.Type},
+				            {"Gender", each if _ = null then null else Text.Trim(Text.From(_)), type nullable text},
+				            {"Risk_Score", each try Number.From(_) otherwise null, type nullable number}
+				        }
+				    ),
+				    Result = Table.TransformColumnTypes(
+				        Table.SelectColumns(
+				            TypedValues,
+				            {
+				                "Case_ID",
+				                "Age",
+				                "Gender",
+				                "Risk_Score",
+				                "Satisfaction_Score",
+				                "Total_Length_of_Stay_Days",
+				                "Total_Process_Time_Hours",
+				                "Is_Readmitted",
+				                "Patient_Satisfaction_Pct",
+				                "Delayed_Discharge_Reason"
+				            }
+				        ),
+				        {
+				            {"Case_ID", type text},
+				            {"Age", Int64.Type},
+				            {"Gender", type text},
+				            {"Risk_Score", type number},
+				            {"Satisfaction_Score", type number},
+				            {"Total_Length_of_Stay_Days", type number},
+				            {"Total_Process_Time_Hours", type number},
+				            {"Is_Readmitted", type logical},
+				            {"Patient_Satisfaction_Pct", type number},
+				            {"Delayed_Discharge_Reason", type text}
+				        },
+				        "en-US"
+				    )
+				in
+				    Result
+
+	annotation PBI_ResultType = Table
+

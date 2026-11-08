@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "4e4b038a6a7c4c58ad1c",
   "position": {
-    "x": 944.17680734922124,
-    "y": 88.344028757821874,
+    "x": 966,
+    "y": 80,
     "z": 11000,
-    "height": 132.5160431367328,
-    "width": 360.73811742777264,
+    "height": 124,
+    "width": 450,
     "tabOrder": 11000
   },
   "visual": {
@@ -23,11 +23,11 @@
                       "Entity": "mock_hospital_logs"
                     }
                   },
-                  "Property": "Activity_Name"
+                  "Property": "Diagnosis"
                 }
               },
-              "queryRef": "mock_hospital_logs.Activity_Name",
-              "nativeQueryRef": "Activity_Name",
+              "queryRef": "mock_hospital_logs.Diagnosis",
+              "nativeQueryRef": "Diagnosis",
               "active": true
             }
           ]
@@ -132,7 +132,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Activity'"
+                  "Value": "'Diagnosis (service-line field unavailable)'"
                 }
               }
             },

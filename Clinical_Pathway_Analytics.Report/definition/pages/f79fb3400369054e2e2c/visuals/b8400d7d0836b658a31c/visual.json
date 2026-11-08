@@ -2,8 +2,8 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "b8400d7d0836b658a31c",
   "position": {
-    "x": 973.62481693516179,
-    "y": 233.7435760884037,
+    "x": 966,
+    "y": 226,
     "z": 3000,
     "height": 130,
     "width": 450,
@@ -23,11 +23,11 @@
                       "Entity": "mock_hospital_logs"
                     }
                   },
-                  "Property": "Avg Staging Time Hours"
+                  "Property": "Adherence Rate"
                 }
               },
-              "queryRef": "mock_hospital_logs.Avg Staging Time Hours",
-              "nativeQueryRef": "Avg Staging Time Hours"
+              "queryRef": "mock_hospital_logs.Adherence Rate",
+              "nativeQueryRef": "Adherence Rate"
             }
           ]
         }
@@ -42,7 +42,7 @@
                     "Entity": "mock_hospital_logs"
                   }
                 },
-                "Property": "Avg Staging Time Hours"
+                "Property": "Adherence Rate"
               }
             },
             "direction": "Descending"
@@ -168,7 +168,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Average Wait Between Events (Hours)'"
+                  "Value": "'Pathway Adherence Rate'"
                 }
               }
             },
